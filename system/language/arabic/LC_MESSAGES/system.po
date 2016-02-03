@@ -1,0 +1,848 @@
+# CODEIGNITER GETTEXT FILES.
+# Copyright (c) 2014 - 2016, British Columbia Institute of Technology
+# This file is distributed under the same license as the PACKAGE package.
+# EllisLab Dev Team <https://codeigniter.com>, 2016.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: CodeIgniter\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-02-02 23:00+0100\n"
+"PO-Revision-Date: 2016-02-03 10:35+0100\n"
+"Language: ar_DZ\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 1.8.6\n"
+"Last-Translator: Kader Bouyakoub <bkader@mail.com>\n"
+"Language-Team: Kader Bouyakoub <bkader@mail.com>\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: _;__;_n;_d\n"
+
+# Lines in : calendar_lang.php
+msgid "Su"
+msgstr "أح"
+
+msgid "Mo"
+msgstr "إث"
+
+msgid "Tu"
+msgstr "ثل"
+
+msgid "We"
+msgstr "أر"
+
+msgid "Th"
+msgstr "خم"
+
+msgid "Fr"
+msgstr "جم"
+
+msgid "Sa"
+msgstr "سب"
+
+msgid "Sun"
+msgstr "أح"
+
+msgid "Mon"
+msgstr "إث"
+
+msgid "Tue"
+msgstr "ثل"
+
+msgid "Wed"
+msgstr "أر"
+
+msgid "Thu"
+msgstr "خم"
+
+msgid "Fri"
+msgstr "جم"
+
+msgid "Sat"
+msgstr "سب"
+
+msgid "Sunday"
+msgstr "الأحد"
+
+msgid "Monday"
+msgstr "الإثنين"
+
+msgid "Tuesday"
+msgstr "الثلاثاء"
+
+msgid "Wednesday"
+msgstr "الأربعاء"
+
+msgid "Thursday"
+msgstr "الخميس"
+
+msgid "Friday"
+msgstr "الجمعة"
+
+msgid "Saturday"
+msgstr "السبت"
+
+msgid "Jan"
+msgstr "ينا"
+
+msgid "Feb"
+msgstr "فبر"
+
+msgid "Mar"
+msgstr "مار"
+
+msgid "Apr"
+msgstr "أبر"
+
+msgid "Jun"
+msgstr "يون"
+
+msgid "Jul"
+msgstr "يول"
+
+msgid "Aug"
+msgstr "أغس"
+
+msgid "Sep"
+msgstr "سبت"
+
+msgid "Oct"
+msgstr "أوك"
+
+msgid "Nov"
+msgstr "نوف"
+
+msgid "Dec"
+msgstr "ديس"
+
+msgid "January"
+msgstr "يناير"
+
+msgid "February"
+msgstr "فبراير"
+
+msgid "March"
+msgstr "مارس"
+
+msgid "April"
+msgstr "إبريل"
+
+msgid "May"
+msgstr "مايو"
+
+msgid "June"
+msgstr "يونيو"
+
+msgid "July"
+msgstr "يوليو"
+
+msgid "August"
+msgstr "أغسطس"
+
+msgid "September"
+msgstr "سبتمبر"
+
+msgid "October"
+msgstr "أكتوبر"
+
+msgid "November"
+msgstr "نوفمبر"
+
+msgid "December"
+msgstr "ديسمبر"
+
+# date_lang.php
+msgid "Year"
+msgstr "Année"
+
+msgid "Years"
+msgstr "Années"
+
+msgid "Month"
+msgstr "Mois"
+
+msgid "Months"
+msgstr "Mois"
+
+msgid "Week"
+msgstr "Semaine"
+
+msgid "Weeks"
+msgstr "Semaines"
+
+msgid "Day"
+msgstr "Jour"
+
+msgid "Days"
+msgstr "Jours"
+
+msgid "Hour"
+msgstr "Heure"
+
+msgid "Hours"
+msgstr "Heures"
+
+msgid "Minute"
+msgstr "Minute"
+
+msgid "Minutes"
+msgstr "Minutes"
+
+msgid "Second"
+msgstr "Seconde"
+
+msgid "Seconds"
+msgstr "Secondes"
+
+# timezones
+msgid "(UTC -12:00) Baker/Howland Island"
+msgstr "(UTC -12:00) Îles Baker / Howland"
+
+msgid "(UTC -11:00) Niue"
+msgstr "(UTC -11:00) Samoa fuseau horaire, Niue"
+
+msgid "(UTC -10:00) Hawaii-Aleutian Standard Time, Cook Islands, Tahiti"
+msgstr "(UTC -10:00) Hawaï et les Aléoutiennes, Îles Cook, Tahiti"
+
+msgid "(UTC -9:30) Marquesas Islands"
+msgstr "(UTC -9:30) Îles Marquises"
+
+msgid "(UTC -9:00) Alaska Standard Time, Gambier Islands"
+msgstr "(UTC -9:00) Heure normale d'Alaska, Îles Gambier"
+
+msgid "(UTC -8:00) Pacific Standard Time, Clipperton Island"
+msgstr "(UTC -8:00) Heure du Pacifique"
+
+msgid "(UTC -7:00) Mountain Standard Time"
+msgstr "(UTC -7:00) Heure des Rocheuses"
+
+msgid "(UTC -6:00) Central Standard Time"
+msgstr "(UTC -6:00) Heure centrale"
+
+msgid "(UTC -5:00) Eastern Standard Time, Western Caribbean Standard Time"
+msgstr "(UTC -5:00) Heure de l'Est, heure normale de l'Ouest des Caraïbes"
+
+msgid "(UTC -4:30) Venezuelan Standard Time"
+msgstr "(UTC -4:30) Heure normale vénézuélienne"
+
+msgid "(UTC -4:00) Atlantic Standard Time, Eastern Caribbean Standard Time"
+msgstr "(UTC -4:00) Heure de l'Atlantique, heure normale de l'Est des Caraïbes"
+
+msgid "(UTC -3:30) Newfoundland Standard Time"
+msgstr "(UTC -3:30) Heure normale de Terre-Neuve"
+
+msgid "(UTC -3:00) Argentina, Brazil, French Guiana, Uruguay"
+msgstr "(UTC -3:00) Argentine, Brésil, Guyane Française, Uruguay"
+
+msgid "(UTC -2:00) South Georgia/South Sandwich Islands"
+msgstr "(UTC -2:00) Géorgie du Sud/Îles Sandwich du Sud"
+
+msgid "(UTC -1:00) Azores, Cape Verde Islands"
+msgstr "(UTC -1:00) Açores, Cap-Vert"
+
+msgid "(UTC) Greenwich Mean Time, Western European Time"
+msgstr "(UTC) Greenwich heure normale, heure d'Europe occidentale"
+
+msgid "(UTC +1:00) Central European Time, West Africa Time"
+msgstr "(UTC +1:00) Heure d'Europe centrale, heure normale d'Afrique de l'Ouest"
+
+msgid "(UTC +2:00) Central Africa Time, Eastern European Time, Kaliningrad Time"
+msgstr "(UTC +2:00) Heure normale d'Afrique centrale, heure d'Europe orientale, heure normale de Kaliningrad"
+
+msgid "(UTC +3:00) Moscow Time, East Africa Time, Arabia Standard Time"
+msgstr "(UTC +3:00) Heure de Moscou, heure normale d'Afrique de l'Est"
+
+msgid "(UTC +3:30) Iran Standard Time"
+msgstr "(UTC +3:30) Heure normale d'Iran"
+
+msgid "(UTC +4:00) Azerbaijan Standard Time, Samara Time"
+msgstr "(UTC +4:00) Heure normale d'Azerbaïdjan, heure normale de Samara"
+
+msgid "(UTC +4:30) Afghanistan"
+msgstr "(UTC +4:30) Heure normale d'Afghanistan"
+
+msgid "(UTC +5:00) Pakistan Standard Time, Yekaterinburg Time"
+msgstr "(UTC +5:00) Heure normale de Pakistan, Ekaterinbourg"
+
+msgid "(UTC +5:30) Indian Standard Time, Sri Lanka Time"
+msgstr "(UTC +5:30) Heure normale d'Inde, heure Sri Lanka"
+
+msgid "(UTC +5:45) Nepal Time"
+msgstr "(UTC +5:45) Heure Népal"
+
+msgid "(UTC +6:00) Bangladesh Standard Time, Bhutan Time, Omsk Time"
+msgstr "(UTC +6:00) Heure Bangladesh, Bhoutan, Omsk"
+
+msgid "(UTC +6:30) Cocos Islands, Myanmar"
+msgstr "(UTC +6:30) Îles Cocos, Myanmar"
+
+msgid "(UTC +7:00) Krasnoyarsk Time, Cambodia, Laos, Thailand, Vietnam"
+msgstr "(UTC +7:00) Heure Krasnoïarsk, Cambodge, Laos, Thaïlande, Viêt Nam"
+
+msgid "(UTC +8:00) Australian Western Standard Time, Beijing Time, Irkutsk Time"
+msgstr "(UTC +8:00) Heure normale de l'Ouest de l'Australie, heure Beijing, Irkoutsk"
+
+msgid "(UTC +8:45) Australian Central Western Standard Time"
+msgstr "(UTC +8:45) Heure normale de l'Ouest de l'Australie centrale"
+
+msgid "(UTC +9:00) Japan Standard Time, Korea Standard Time, Yakutsk Time"
+msgstr "(UTC +9:00) Heure normale du Japon, heure normale de la Corée, heure Yakutsk"
+
+msgid "(UTC +9:30) Australian Central Standard Time"
+msgstr "(UTC +9:30) Heure normale de l'Australie centrale"
+
+msgid "(UTC +10:00) Australian Eastern Standard Time, Vladivostok Time"
+msgstr "(UTC +10:00) Heure normale de l'Australie occidentale, heure Vladivostok"
+
+msgid "(UTC +10:30) Lord Howe Island"
+msgstr "(UTC +10:30) L'île de Lord How"
+
+msgid "(UTC +11:00) Srednekolymsk Time, Solomon Islands, Vanuatu"
+msgstr "(UTC +11:00) Heure Magadan, heure Nouvelle-Calédonie, Îles Salomon"
+
+msgid "(UTC +11:30) Norfolk Island"
+msgstr "(UTC +11:30) Île Norfolk"
+
+msgid "(UTC +12:00) Fiji, Gilbert Islands, Kamchatka Time, New Zealand Standard Time"
+msgstr "(UTC +12:00) Heure Fidji, Îles Gilbert, Kamchatka, heure normale de la Nouvelle-Zélande"
+
+msgid "(UTC +12:45) Chatham Islands Standard Time"
+msgstr "(UTC +12:45) Heure normale des Îles Chatham"
+
+msgid "(UTC +13:00) Samoa Time Zone, Phoenix Islands Time, Tonga"
+msgstr "(UTC +13:00) Heure normale des Îles Phénix, heure Tonga"
+
+msgid "(UTC +14:00) Line Islands"
+msgstr "(UTC +14:00) Heure normale des Îles Line"
+
+# db_lang.php
+msgid "Unable to determine the database settings based on the connection string you submitted."
+msgstr "Impossible de déterminer les paramètres d'accès à la base de données en se basant sur la chaîne de connexion que vous avez fournie."
+
+msgid "Unable to connect to your database server using the provided settings."
+msgstr "Impossible de se connecter à la base de données en utilisant les paramètres fournis."
+
+msgid "Unable to select the specified database: %s"
+msgstr "Impossible de sélectionner cette base de données : %s"
+
+msgid "Unable to create the specified database: %s"
+msgstr "Impossible de créer cette base de données : %s"
+
+msgid "The query you submitted is not valid."
+msgstr "La requête que vous avez fournie est invalide."
+
+msgid "You must set the database table to be used with your query."
+msgstr "Vous devez spécifier une table pour effectuer votre requête."
+
+msgid "You must use the 'set' method to update an entry."
+msgstr "Vous devez utiliser la méthode 'set()' pour mettre à jour une entrée."
+
+msgid "You must specify an index to match on for batch updates."
+msgstr "Vous devez spécifier un index pour les mises à jour groupées."
+
+msgid "One or more rows submitted for batch updating is missing the specified index."
+msgstr "Une ou plusieurs rangées de la mise à jour groupée ne disposent pas de l'index requis."
+
+msgid "Updates are not allowed unless they contain a 'where' clause."
+msgstr "Il faut obligatoirement spécifier la clause 'WHERE' pour mettre à jour une entrée."
+
+msgid "Deletes are not allowed unless they contain a 'where' or 'like' clause."
+msgstr "Il faut obligatoirement spécifier la clause 'WHERE' pour supprimer une entrée."
+
+msgid "To fetch fields requires the name of the table as a parameter."
+msgstr "La méthode 'fetch_fields()' requiert le nom de la table cible en paramètre."
+
+msgid "This feature is not available for the database you are using."
+msgstr "Cette fonctionnalité n'est pas disponible pour la base de données utilisée."
+
+msgid "Transaction failure: Rollback performed."
+msgstr "Erreur de transaction : la transaction est annulée."
+
+msgid "Unable to drop the specified database."
+msgstr "Impossible d'effacer la base de données spécifiée."
+
+msgid "Unsupported feature of the database platform you are using."
+msgstr "Cette fonctionnalité n'est pas supportée par le système de gestion de bases de données utilisé."
+
+msgid "The file compression format you chose is not supported by your server."
+msgstr "Le format de compression choisi n'est pas supporté par votre serveur."
+
+msgid "Unable to write data to the file path you have submitted."
+msgstr "Impossible d'écrire des données au chemin de fichiers indiqué."
+
+msgid "The cache path you submitted is not valid or writable."
+msgstr "Le chemin de mise en cache indiqué n'est pas valide ou inscriptible."
+
+msgid "A table name is required for that operation."
+msgstr "Un nom de table est requis pour cette opération."
+
+msgid "A column name is required for that operation."
+msgstr "Un nom de champ est requis pour cette opération."
+
+msgid "A column definition is required for that operation."
+msgstr "Une définition de champ est requise pour cette opération."
+
+msgid "Unable to set client connection character set: %s"
+msgstr "Impossible de définir le jeu de caractères de la connexion client : %s"
+
+msgid "A Database Error Occurred"
+msgstr "Une erreur de la base de données s'est produite."
+
+# email_lang.php
+msgid "The email validation method must be passed an array."
+msgstr "La méthode de validation d'email n'accepte que les tableaux associatifs (array)."
+
+msgid "Invalid email address: %s"
+msgstr "Adresse email invalide : %s"
+
+msgid "Unable to locate the following email attachment: %s"
+msgstr "Impossible de localiser le fichier joint suivant : %s"
+
+msgid "Unable to open this attachment: %s"
+msgstr "Impossible d'ouvrir ce fichier joint : %s"
+
+msgid "Cannot send mail with no 'From' header."
+msgstr "Impossible d'envoyer un email sans en-tête 'From'."
+
+msgid "You must include recipients: To, Cc, or Bcc"
+msgstr "Vous devez spécifier des destinataires: To, Cc, ou Bcc"
+
+msgid "Unable to send email using PHP mail(). Your server might not be configured to send mail using this method."
+msgstr "Impossible d'envoyer des emails avec la fonction mail() de PHP. Votre serveur ne doit pas être configuré pour pouvoir utiliser cette méthode."
+
+msgid "Unable to send email using PHP Sendmail. Your server might not be configured to send mail using this method."
+msgstr "Impossible d'envoyer des emails avec la méthode Sendmail de PHP. Votre serveur ne doit pas être configuré pour pouvoir utiliser cette méthode."
+
+msgid "Unable to send email using PHP SMTP. Your server might not be configured to send mail using this method."
+msgstr "Impossible d'envoyer des emails avec la méthode SMTP de PHP. Votre serveur ne doit pas être configuré pour pouvoir utiliser cette méthode."
+
+msgid "Your message has been successfully sent using the following protocol: %s"
+msgstr "Votre message a bien été expédié par le protocole suivant : %s"
+
+msgid "Unable to open a socket to Sendmail. Please check settings."
+msgstr "Impossible d'ouvrir un socket avec Sendmail. Veuillez vérifier la configuration de votre environnement."
+
+msgid "You did not specify a SMTP hostname."
+msgstr "Vous n'avez pas spécificé d'hôte SMTP."
+
+msgid "The following SMTP error was encountered: %s"
+msgstr "L'erreur SMTP suivante s'est produite : %s"
+
+msgid "Error: You must assign a SMTP username and password."
+msgstr "Erreur : Vous devez spécifier un nom d'utilisateur et un mot de passe SMTP."
+
+msgid "Failed to send AUTH LOGIN command. Error: %s"
+msgstr "Échec lors de l'envoi de la commande AUTH LOGIN. Erreur : %s"
+
+msgid "Failed to authenticate username. Error: %s"
+msgstr "Impossible d'identifier le nom d'utilisateur. Erreur : %s"
+
+msgid "Failed to authenticate password. Error: %s"
+msgstr "Impossible d'identifier le mot de passe. Erreur : %s"
+
+msgid "Unable to send data: %s"
+msgstr "Impossible d'envoyer les données : %s"
+
+msgid "Exit status code: %s"
+msgstr "Code de retour : %s"
+
+# form_validation_lang.php
+msgid "The %s field is required."
+msgstr "Le champ %s est requis."
+
+msgid "The %s field must have a value."
+msgstr "Le champ %s doit avoir une valeur."
+
+msgid "The %s field must contain a valid email address."
+msgstr "Le champ %s doit contenir une adresse email valide."
+
+msgid "The %s field must contain all valid email addresses."
+msgstr "Le champ %s ne peut contenir que des adresses email valides."
+
+msgid "The %s field must contain a valid URL."
+msgstr "Le champ %s doit contenir une URL valide."
+
+msgid "The %s field must contain a valid IP."
+msgstr "Le champ %s doit contenir une IP valide."
+
+msgid "The %s field must be at least %s characters in length."
+msgstr "Le champ %s doit contenir au moins %s caractères."
+
+msgid "The %s field cannot exceed %s characters in length."
+msgstr "Le champ %s ne peut contenir plus de %s caractères."
+
+msgid "The %s field must be exactly %s characters in length."
+msgstr "Le champ %s doit contenir exactement %s caractères."
+
+msgid "The %s field may only contain alphabetical characters."
+msgstr "Le champ %s ne peut contenir que des caractères alphabétiques."
+
+msgid "The %s field may only contain alpha-numeric characters."
+msgstr "Le champ %s ne peut contenir que des caractères alphanumériques."
+
+msgid "The %s field may only contain alpha-numeric characters and spaces."
+msgstr "Le champ %s ne peut contenir que des caractères alphanumériques et des espaces."
+
+msgid "The %s field may only contain alpha-numeric characters, underscores, and dashes."
+msgstr "Le champ %s ne peut contenir que des caractères alphanumériques, des caractères de soulignement et des traits d'union."
+
+msgid "The %s field must contain only numbers."
+msgstr "Le champ %s doit contenir un nombre (caractères numériques)."
+
+msgid "The %s field must contain only numeric characters."
+msgstr "Le champ %s ne peut contenir que de signes du type nombre."
+
+msgid "The %s field must contain an integer."
+msgstr "Le champ %s doit contenir un nombre entier."
+
+msgid "The %s field is not in the correct format."
+msgstr "Le champ %s n'utilise pas le bon format."
+
+msgid "The %s field does not match the %s field."
+msgstr "Le champ %s doit correspondre au champ %s."
+
+msgid "The %s field must differ from the %s field."
+msgstr "Le champ %s doit être différent du champ %s."
+
+msgid "The %s field must contain a unique value."
+msgstr "Le champ %s doit contenir une valeur unique."
+
+msgid "The %s field must only contain digits."
+msgstr "Le champ %s ne peut contenir que des nombres positifs."
+
+msgid "The %s field must only contain digits and must be greater than zero."
+msgstr "Le champ %s ne peut contenir que des nombres plus grands que zéro."
+
+msgid "The %s field must contain a decimal number."
+msgstr "Le champ %s doit contenir un nombre décimal."
+
+msgid "The %s field must contain a number less than %s."
+msgstr "Le champ %s doit contenir un nombre inférieur à %s."
+
+msgid "The %s field must contain a number less than or equal to %s."
+msgstr "Le champ %s doit contenir un nombre inférieur ou égal à %s."
+
+msgid "The %s field must contain a number greater than %s."
+msgstr "Le champ %s doit contenir un nombre supérieur à %s."
+
+msgid "The %s field must contain a number greater than or equal to %s."
+msgstr "Le champ %s doit contenir un nombre supérieur ou égal à %s."
+
+msgid "Unable to access an error message corresponding to your field name %s."
+msgstr "Impossible d'accéder à un message d'erreur correspondant à votre champ nommé %s."
+
+msgid "The %s field must be one of: %s."
+msgstr "Le champ %s doit avoir une de ces valeurs : %s."
+
+# ftp_lang.php
+msgid "Unable to locate a valid connection ID. Please make sure you are connected before performing any file routines."
+msgstr "Impossible de déterminer une connexion valable. Veuillez vous assurer que vous êtes connecté(e) avant d'exécuter une tâche sur un fichier."
+
+msgid "Unable to connect to your FTP server using the supplied hostname."
+msgstr "Connexion au serveur FTP impossible avec le nom d'hôte (hostname) spécifié."
+
+msgid "Unable to login to your FTP server. Please check your username and password."
+msgstr "Connexion au serveur FTP impossible. Veuillez vérifier vos identifiants de connexion."
+
+msgid "Unable to create the directory you have specified."
+msgstr "Impossible de créer le dossier spécifié."
+
+msgid "Unable to change directories."
+msgstr "Impossible de changer de répertoire."
+
+msgid "Unable to set file permissions. Please check your path."
+msgstr "Impossible de changer les permissions du fichier. Veuillez vérifier le chemin d'accès. Note : cette fonctionnalité n'est disponible qu'avec PHP en version 5 ou supérieure."
+
+msgid "Unable to upload the specified file. Please check your path."
+msgstr "Impossible d'envoyer le fichier spécifié. Veuillez vérifier le chemin d'accès."
+
+msgid "Unable to download the specified file. Please check your path."
+msgstr "Impossible de récupérer le fichier spécifié. Veuillez vérifier le chemin d'accès."
+
+msgid "Unable to locate the source file. Please check your path."
+msgstr "Impossible de localiser le fichier source. Veuillez vérifier le chemin d'accès."
+
+msgid "Unable to rename the file."
+msgstr "Impossible de renommer le fichier."
+
+msgid "Unable to delete the file."
+msgstr "Impossible de supprimer le fichier."
+
+msgid "Unable to move the file. Please make sure the destination directory exists."
+msgstr "Impossible de déplacer le fichier. Veuillez vous assurer que le répertoire de destination existe."
+
+# imglib_lang.php
+msgid "You must specify a source image in your preferences."
+msgstr "Vous devez spécifier une image source dans vos préférences."
+
+msgid "The GD image library is required for this feature."
+msgstr "La librairie d'images GD est requise pour utiliser cette fonctionnalité"
+
+msgid "Your server must support the GD image library in order to determine the image properties."
+msgstr "Votre serveur doit prendre en charge la librairie d'images GD afin de déterminer les propriétés de l'image."
+
+msgid "Your server does not support the GD function required to process this type of image."
+msgstr "Votre serveur ne prend pas en charge les fonctions GD nécéssaires pour traiter ce type d'image."
+
+msgid "GIF images are often not supported due to licensing restrictions. You may have to use JPG or PNG images instead."
+msgstr "Souvent, les images GIF ne sont pas prises en charge en raison de restrictions de licence. Vous pourriez avoir à utiliser des images JPG ou PNG à la place."
+
+msgid "JPG images are not supported."
+msgstr "Les images JPG ne sont pas prises en charge."
+
+msgid "PNG images are not supported."
+msgstr "Les images PNG ne sont pas prises en charge."
+
+msgid "The image resize protocol specified in your preferences only works with JPEG or PNG image types."
+msgstr "Le protocole de redimensionnement d'images spécifié dans vos préférences fonctionne seulement avec les types d'images JPEG et PNG."
+
+msgid "An error was encountered while attempting to replace the file. Please make sure your file directory is writable."
+msgstr "Une erreur est survenue lors du remplacement du fichier. Assurez-vous que le répertoire est accessible en écriture."
+
+msgid "Image rotation does not appear to be supported by your server."
+msgstr "La rotation d'images ne semble pas être prise en charge par votre serveur."
+
+msgid "The path to your image library is not correct. Please set the correct path in your image preferences."
+msgstr "Le chemin vers votre librairie d'images est incorrect. Veuillez enter le bon chemin dans les préférences de votre image."
+
+msgid "Image processing failed. Please verify that your server supports the chosen protocol and that the path to your image library is correct."
+msgstr "Le traintement de l'image a échoué. Veuillez vous assurer que votre serveur prend en charge le protocole choisi et que le chemin vers votre librairie d'images est correct."
+
+msgid "An angle of rotation is required to rotate the image."
+msgstr "Un angle de rotation est nécéssaire pour faire tourner l'image."
+
+msgid "The path to the image is not correct."
+msgstr "Le chemin vers l'image est incorrect."
+
+msgid "The image copy routine failed."
+msgstr "La routine de copie d'image a échouée."
+
+msgid "Unable to find a font to use."
+msgstr "Impossible de trouver une police de caractères."
+
+msgid "Unable to save the image. Please make sure the image and file directory are writable."
+msgstr "Impossible de sauvegarder l'image. Veuillez vous assurer que l'image et le répertoire sont accessibles en écriture."
+
+# migration_lang.php
+msgid "No migrations were found."
+msgstr "Aucune migration trouvée."
+
+msgid "No migration could be found with the version number: %s."
+msgstr "Aucune migration n'a été trouvée avec le numéro de version : %d."
+
+msgid "There is a gap in the migration sequence near version number: %s."
+msgstr "Il y a un trou dans la séquence de migration près de la version numéro : %s."
+
+msgid "There are multiple migrations with the same version number: %s."
+msgstr "Il y a plusieurs migrations avec le même numéro de version : %d."
+
+msgid "The migration class '%s' could not be found."
+msgstr "La classe de migration '%s' n'a pas pu être trouvée."
+
+msgid "The migration class '%s' is missing an 'up' method."
+msgstr "La classe de migration '%s' ne dispose pas d'une méthode 'up'."
+
+msgid "The migration class '%s' is missing a 'down' method."
+msgstr "La classe de migration '%s' ne dispose pas d'une méthode 'down'."
+
+msgid "Migration '%s' has an invalid filename."
+msgstr "Le nom de fichier de la migration '%s' n'est pas valide."
+
+# number_lang.php
+msgid "TB"
+msgstr "To"
+
+msgid "GB"
+msgstr "Go"
+
+msgid "MB"
+msgstr "Mo"
+
+msgid "KB"
+msgstr "Ko"
+
+msgid "Bytes"
+msgstr "Octets"
+
+# pagination_lang.php
+msgid "&lsaquo; First"
+msgstr "&lsaquo; Première"
+
+msgid "&gt;"
+msgstr "&gt;"
+
+msgid "&lt;"
+msgstr "&lt;"
+
+msgid "Last &rsaquo;"
+msgstr "Dernière &rsaquo;"
+
+# profiler_lang.php
+msgid "DATABASE"
+msgstr "BASE DE DONNEES"
+
+msgid "CLASS/METHOD"
+msgstr "CLASSE/METHODE"
+
+msgid "BENCHMARKS"
+msgstr "BENCHMARKS"
+
+msgid "QUERIES"
+msgstr "REQUETES"
+
+msgid "GET DATA"
+msgstr "DONNEES GET"
+
+msgid "POST DATA"
+msgstr "DONNEES POST"
+
+msgid "URI STRING"
+msgstr "URI STRING"
+
+msgid "MEMORY USAGE"
+msgstr "UTILISATION MEMOIRE"
+
+msgid "CONFIG VARIABLES"
+msgstr "VARIABLES CONFIG"
+
+msgid "SESSION DATA"
+msgstr "DONNEES SESSION"
+
+msgid "HTTP HEADERS"
+msgstr "EN-TETES HTTP"
+
+msgid "Database driver is not currently loaded"
+msgstr "Le driver de la base de données n'est actuellement pas chargé"
+
+msgid "No queries were run"
+msgstr "Aucune requête n'a été exécutée"
+
+msgid "No POST data exists"
+msgstr "Aucune donnée POST n'existe"
+
+msgid "No GET data exists"
+msgstr "Aucune donnée GET n'existe"
+
+msgid "No URI data exists"
+msgstr "Aucune donnée URI n'existe"
+
+msgid "Memory Usage Unavailable"
+msgstr "Utilisation de la mémoire indisponible"
+
+msgid "No Profile data - all Profiler sections have been disabled."
+msgstr "Pas de données du profil - toute section est desactivée."
+
+msgid "Hide"
+msgstr "Cacher"
+
+msgid "Show"
+msgstr "Montrer"
+
+msgid "seconds"
+msgstr "secondes"
+
+# unit_test_lang.php
+msgid "Test Name"
+msgstr "Nom du test"
+
+msgid "Test Datatype"
+msgstr "Type des données de test"
+
+msgid "Expected Datatype"
+msgstr "Type attendu"
+
+msgid "Result"
+msgstr "Résultat"
+
+msgid "Undefined Test Name"
+msgstr "Nom du test non défini"
+
+msgid "File Name"
+msgstr "Nom du fichier"
+
+msgid "Line Number"
+msgstr "Numéro de ligne"
+
+msgid "Passed"
+msgstr "Passé"
+
+msgid "Failed"
+msgstr "Échoué"
+
+msgid "Boolean"
+msgstr "Booléen"
+
+msgid "Integer"
+msgstr "Nombre entier"
+
+msgid "Float"
+msgstr "Nombre réel"
+
+msgid "String"
+msgstr "Chaine de caractères"
+
+msgid "Array"
+msgstr "Tableau"
+
+msgid "Object"
+msgstr "Objet"
+
+msgid "Resource"
+msgstr "Ressource"
+
+msgid "Null"
+msgstr "Null"
+
+msgid "Notes"
+msgstr "Notes"
+
+# upload_lang.php
+msgid "Unable to find a post variable called userfile."
+msgstr "Impossible de trouver une variable de type POST nommée userfile."
+
+msgid "The uploaded file exceeds the maximum allowed size in your PHP configuration file."
+msgstr "Le fichier envoyé dépasse la taille limite définie dans votre fichier de configuration PHP."
+
+msgid "The uploaded file exceeds the maximum size allowed by the submission form."
+msgstr "Le fichier chargé dépasse la taille limite définie par le formulaire d'envoi."
+
+msgid "The file was only partially uploaded."
+msgstr "Le fichier n'a été que partiellement envoyé."
+
+msgid "The temporary folder is missing."
+msgstr "Le dossier temporaire manque."
+
+msgid "The file could not be written to disk."
+msgstr "Impossible d'écrire le fichier sur disque."
+
+msgid "The file upload was stopped by extension."
+msgstr "Le chargement du fichier a été arrêté par extension."
+
+msgid "You did not select a file to upload."
+msgstr "Vous n'avez pas sélectionné de fichier à envoyer."
+
+msgid "The filetype you are attempting to upload is not allowed."
+msgstr "Le type de fichier que vous tentez d'envoyer n'est pas autorisé."
+
+msgid "The file you are attempting to upload is larger than the permitted size."
+msgstr "Le fichier que vous tentez d'envoyer est plus gros que la taille autorisée."
+
+msgid "The image you are attempting to upload doesn't fit into the allowed dimensions."
+msgstr "L'image que vous tentez d'envoyer dépasse les valeurs maximales autorisées pour la hauteur ou la largeur."
+
+msgid "A problem was encountered while attempting to move the uploaded file to the final destination."
+msgstr "Une erreur est survenue lors du déplacement du fichier envoyé vers sa destination finale."
+
+msgid "The upload path does not appear to be valid."
+msgstr "Le chemin de destination semble invalide."
+
+msgid "You have not specified any allowed file types."
+msgstr "Vous n'avez pas spécifié les types de fichier autorisés."
+
+msgid "The file name you submitted already exists on the server."
+msgstr "Un fichier avec le même nom que celui que vous avez envoyé existe déjà sur le serveur."
+
+msgid "The upload destination folder does not appear to be writable."
+msgstr "Le répertoire de destination ne semble pas être accessible en écriture."

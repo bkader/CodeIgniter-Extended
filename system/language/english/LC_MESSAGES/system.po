@@ -1,0 +1,848 @@
+# CODEIGNITER GETTEXT FILES.
+# Copyright (c) 2014 - 2016, British Columbia Institute of Technology
+# This file is distributed under the same license as the PACKAGE package.
+# EllisLab Dev Team <https://codeigniter.com>, 2016.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: CodeIgniter\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-02-02 23:00+0100\n"
+"PO-Revision-Date: 2016-02-03 10:13+0100\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 1.8.6\n"
+"Last-Translator: Kader Bouyakoub <bkader@mail.com>\n"
+"Language-Team: Kader Bouyakoub <bkader@mail.com>\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: _;__;_n;_d\n"
+
+# calendar_lang.php
+msgid "Su"
+msgstr ""
+
+msgid "Mo"
+msgstr ""
+
+msgid "Tu"
+msgstr ""
+
+msgid "We"
+msgstr ""
+
+msgid "Th"
+msgstr ""
+
+msgid "Fr"
+msgstr ""
+
+msgid "Sa"
+msgstr ""
+
+msgid "Sun"
+msgstr ""
+
+msgid "Mon"
+msgstr ""
+
+msgid "Tue"
+msgstr ""
+
+msgid "Wed"
+msgstr ""
+
+msgid "Thu"
+msgstr ""
+
+msgid "Fri"
+msgstr ""
+
+msgid "Sat"
+msgstr ""
+
+msgid "Sunday"
+msgstr ""
+
+msgid "Monday"
+msgstr ""
+
+msgid "Tuesday"
+msgstr ""
+
+msgid "Wednesday"
+msgstr ""
+
+msgid "Thursday"
+msgstr ""
+
+msgid "Friday"
+msgstr ""
+
+msgid "Saturday"
+msgstr ""
+
+msgid "Jan"
+msgstr ""
+
+msgid "Feb"
+msgstr ""
+
+msgid "Mar"
+msgstr ""
+
+msgid "Apr"
+msgstr ""
+
+msgid "Jun"
+msgstr ""
+
+msgid "Jul"
+msgstr ""
+
+msgid "Aug"
+msgstr ""
+
+msgid "Sep"
+msgstr ""
+
+msgid "Oct"
+msgstr ""
+
+msgid "Nov"
+msgstr ""
+
+msgid "Dec"
+msgstr ""
+
+msgid "January"
+msgstr ""
+
+msgid "February"
+msgstr ""
+
+msgid "March"
+msgstr ""
+
+msgid "April"
+msgstr ""
+
+msgid "May"
+msgstr ""
+
+msgid "June"
+msgstr ""
+
+msgid "July"
+msgstr ""
+
+msgid "August"
+msgstr ""
+
+msgid "September"
+msgstr ""
+
+msgid "October"
+msgstr ""
+
+msgid "November"
+msgstr ""
+
+msgid "December"
+msgstr ""
+
+# date_lang.php
+msgid "Year"
+msgstr ""
+
+msgid "Years"
+msgstr ""
+
+msgid "Month"
+msgstr ""
+
+msgid "Months"
+msgstr ""
+
+msgid "Week"
+msgstr ""
+
+msgid "Weeks"
+msgstr ""
+
+msgid "Day"
+msgstr ""
+
+msgid "Days"
+msgstr ""
+
+msgid "Hour"
+msgstr ""
+
+msgid "Hours"
+msgstr ""
+
+msgid "Minute"
+msgstr ""
+
+msgid "Minutes"
+msgstr ""
+
+msgid "Second"
+msgstr ""
+
+msgid "Seconds"
+msgstr ""
+
+# timezones
+msgid "(UTC -12:00) Baker/Howland Island"
+msgstr ""
+
+msgid "(UTC -11:00) Niue"
+msgstr ""
+
+msgid "(UTC -10:00) Hawaii-Aleutian Standard Time, Cook Islands, Tahiti"
+msgstr ""
+
+msgid "(UTC -9:30) Marquesas Islands"
+msgstr ""
+
+msgid "(UTC -9:00) Alaska Standard Time, Gambier Islands"
+msgstr ""
+
+msgid "(UTC -8:00) Pacific Standard Time, Clipperton Island"
+msgstr ""
+
+msgid "(UTC -7:00) Mountain Standard Time"
+msgstr ""
+
+msgid "(UTC -6:00) Central Standard Time"
+msgstr ""
+
+msgid "(UTC -5:00) Eastern Standard Time, Western Caribbean Standard Time"
+msgstr ""
+
+msgid "(UTC -4:30) Venezuelan Standard Time"
+msgstr ""
+
+msgid "(UTC -4:00) Atlantic Standard Time, Eastern Caribbean Standard Time"
+msgstr ""
+
+msgid "(UTC -3:30) Newfoundland Standard Time"
+msgstr ""
+
+msgid "(UTC -3:00) Argentina, Brazil, French Guiana, Uruguay"
+msgstr ""
+
+msgid "(UTC -2:00) South Georgia/South Sandwich Islands"
+msgstr ""
+
+msgid "(UTC -1:00) Azores, Cape Verde Islands"
+msgstr ""
+
+msgid "(UTC) Greenwich Mean Time, Western European Time"
+msgstr ""
+
+msgid "(UTC +1:00) Central European Time, West Africa Time"
+msgstr ""
+
+msgid "(UTC +2:00) Central Africa Time, Eastern European Time, Kaliningrad Time"
+msgstr ""
+
+msgid "(UTC +3:00) Moscow Time, East Africa Time, Arabia Standard Time"
+msgstr ""
+
+msgid "(UTC +3:30) Iran Standard Time"
+msgstr ""
+
+msgid "(UTC +4:00) Azerbaijan Standard Time, Samara Time"
+msgstr ""
+
+msgid "(UTC +4:30) Afghanistan"
+msgstr ""
+
+msgid "(UTC +5:00) Pakistan Standard Time, Yekaterinburg Time"
+msgstr ""
+
+msgid "(UTC +5:30) Indian Standard Time, Sri Lanka Time"
+msgstr ""
+
+msgid "(UTC +5:45) Nepal Time"
+msgstr ""
+
+msgid "(UTC +6:00) Bangladesh Standard Time, Bhutan Time, Omsk Time"
+msgstr ""
+
+msgid "(UTC +6:30) Cocos Islands, Myanmar"
+msgstr ""
+
+msgid "(UTC +7:00) Krasnoyarsk Time, Cambodia, Laos, Thailand, Vietnam"
+msgstr ""
+
+msgid "(UTC +8:00) Australian Western Standard Time, Beijing Time, Irkutsk Time"
+msgstr ""
+
+msgid "(UTC +8:45) Australian Central Western Standard Time"
+msgstr ""
+
+msgid "(UTC +9:00) Japan Standard Time, Korea Standard Time, Yakutsk Time"
+msgstr ""
+
+msgid "(UTC +9:30) Australian Central Standard Time"
+msgstr ""
+
+msgid "(UTC +10:00) Australian Eastern Standard Time, Vladivostok Time"
+msgstr ""
+
+msgid "(UTC +10:30) Lord Howe Island"
+msgstr ""
+
+msgid "(UTC +11:00) Srednekolymsk Time, Solomon Islands, Vanuatu"
+msgstr ""
+
+msgid "(UTC +11:30) Norfolk Island"
+msgstr ""
+
+msgid "(UTC +12:00) Fiji, Gilbert Islands, Kamchatka Time, New Zealand Standard Time"
+msgstr ""
+
+msgid "(UTC +12:45) Chatham Islands Standard Time"
+msgstr ""
+
+msgid "(UTC +13:00) Samoa Time Zone, Phoenix Islands Time, Tonga"
+msgstr ""
+
+msgid "(UTC +14:00) Line Islands"
+msgstr ""
+
+# db_lang.php
+msgid "Unable to determine the database settings based on the connection string you submitted."
+msgstr ""
+
+msgid "Unable to connect to your database server using the provided settings."
+msgstr ""
+
+msgid "Unable to select the specified database: %s"
+msgstr ""
+
+msgid "Unable to create the specified database: %s"
+msgstr ""
+
+msgid "The query you submitted is not valid."
+msgstr ""
+
+msgid "You must set the database table to be used with your query."
+msgstr ""
+
+msgid "You must use the 'set' method to update an entry."
+msgstr ""
+
+msgid "You must specify an index to match on for batch updates."
+msgstr ""
+
+msgid "One or more rows submitted for batch updating is missing the specified index."
+msgstr ""
+
+msgid "Updates are not allowed unless they contain a 'where' clause."
+msgstr ""
+
+msgid "Deletes are not allowed unless they contain a 'where' or 'like' clause."
+msgstr ""
+
+msgid "To fetch fields requires the name of the table as a parameter."
+msgstr ""
+
+msgid "This feature is not available for the database you are using."
+msgstr ""
+
+msgid "Transaction failure: Rollback performed."
+msgstr ""
+
+msgid "Unable to drop the specified database."
+msgstr ""
+
+msgid "Unsupported feature of the database platform you are using."
+msgstr ""
+
+msgid "The file compression format you chose is not supported by your server."
+msgstr ""
+
+msgid "Unable to write data to the file path you have submitted."
+msgstr ""
+
+msgid "The cache path you submitted is not valid or writable."
+msgstr ""
+
+msgid "A table name is required for that operation."
+msgstr ""
+
+msgid "A column name is required for that operation."
+msgstr ""
+
+msgid "A column definition is required for that operation."
+msgstr ""
+
+msgid "Unable to set client connection character set: %s"
+msgstr ""
+
+msgid "A Database Error Occurred"
+msgstr ""
+
+# email_lang.php
+msgid "The email validation method must be passed an array."
+msgstr ""
+
+msgid "Invalid email address: %s"
+msgstr ""
+
+msgid "Unable to locate the following email attachment: %s"
+msgstr ""
+
+msgid "Unable to open this attachment: %s"
+msgstr ""
+
+msgid "Cannot send mail with no 'From' header."
+msgstr ""
+
+msgid "You must include recipients: To, Cc, or Bcc"
+msgstr ""
+
+msgid "Unable to send email using PHP mail(). Your server might not be configured to send mail using this method."
+msgstr ""
+
+msgid "Unable to send email using PHP Sendmail. Your server might not be configured to send mail using this method."
+msgstr ""
+
+msgid "Unable to send email using PHP SMTP. Your server might not be configured to send mail using this method."
+msgstr ""
+
+msgid "Your message has been successfully sent using the following protocol: %s"
+msgstr ""
+
+msgid "Unable to open a socket to Sendmail. Please check settings."
+msgstr ""
+
+msgid "You did not specify a SMTP hostname."
+msgstr ""
+
+msgid "The following SMTP error was encountered: %s"
+msgstr ""
+
+msgid "Error: You must assign a SMTP username and password."
+msgstr ""
+
+msgid "Failed to send AUTH LOGIN command. Error: %s"
+msgstr ""
+
+msgid "Failed to authenticate username. Error: %s"
+msgstr ""
+
+msgid "Failed to authenticate password. Error: %s"
+msgstr ""
+
+msgid "Unable to send data: %s"
+msgstr ""
+
+msgid "Exit status code: %s"
+msgstr ""
+
+# form_validation_lang.php
+msgid "The %s field is required."
+msgstr ""
+
+msgid "The %s field must have a value."
+msgstr ""
+
+msgid "The %s field must contain a valid email address."
+msgstr ""
+
+msgid "The %s field must contain all valid email addresses."
+msgstr ""
+
+msgid "The %s field must contain a valid URL."
+msgstr ""
+
+msgid "The %s field must contain a valid IP."
+msgstr ""
+
+msgid "The %s field must be at least %s characters in length."
+msgstr ""
+
+msgid "The %s field cannot exceed %s characters in length."
+msgstr ""
+
+msgid "The %s field must be exactly %s characters in length."
+msgstr ""
+
+msgid "The %s field may only contain alphabetical characters."
+msgstr ""
+
+msgid "The %s field may only contain alpha-numeric characters."
+msgstr ""
+
+msgid "The %s field may only contain alpha-numeric characters and spaces."
+msgstr ""
+
+msgid "The %s field may only contain alpha-numeric characters, underscores, and dashes."
+msgstr ""
+
+msgid "The %s field must contain only numbers."
+msgstr ""
+
+msgid "The %s field must contain only numeric characters."
+msgstr ""
+
+msgid "The %s field must contain an integer."
+msgstr ""
+
+msgid "The %s field is not in the correct format."
+msgstr ""
+
+msgid "The %s field does not match the %s field."
+msgstr ""
+
+msgid "The %s field must differ from the %s field."
+msgstr ""
+
+msgid "The %s field must contain a unique value."
+msgstr ""
+
+msgid "The %s field must only contain digits."
+msgstr ""
+
+msgid "The %s field must only contain digits and must be greater than zero."
+msgstr ""
+
+msgid "The %s field must contain a decimal number."
+msgstr ""
+
+msgid "The %s field must contain a number less than %s."
+msgstr ""
+
+msgid "The %s field must contain a number less than or equal to %s."
+msgstr ""
+
+msgid "The %s field must contain a number greater than %s."
+msgstr ""
+
+msgid "The %s field must contain a number greater than or equal to %s."
+msgstr ""
+
+msgid "Unable to access an error message corresponding to your field name %s."
+msgstr ""
+
+msgid "The %s field must be one of: %s."
+msgstr ""
+
+# ftp_lang.php
+msgid "Unable to locate a valid connection ID. Please make sure you are connected before performing any file routines."
+msgstr ""
+
+msgid "Unable to connect to your FTP server using the supplied hostname."
+msgstr ""
+
+msgid "Unable to login to your FTP server. Please check your username and password."
+msgstr ""
+
+msgid "Unable to create the directory you have specified."
+msgstr ""
+
+msgid "Unable to change directories."
+msgstr ""
+
+msgid "Unable to set file permissions. Please check your path."
+msgstr ""
+
+msgid "Unable to upload the specified file. Please check your path."
+msgstr ""
+
+msgid "Unable to download the specified file. Please check your path."
+msgstr ""
+
+msgid "Unable to locate the source file. Please check your path."
+msgstr ""
+
+msgid "Unable to rename the file."
+msgstr ""
+
+msgid "Unable to delete the file."
+msgstr ""
+
+msgid "Unable to move the file. Please make sure the destination directory exists."
+msgstr ""
+
+# imglib_lang.php
+msgid "You must specify a source image in your preferences."
+msgstr ""
+
+msgid "The GD image library is required for this feature."
+msgstr ""
+
+msgid "Your server must support the GD image library in order to determine the image properties."
+msgstr ""
+
+msgid "Your server does not support the GD function required to process this type of image."
+msgstr ""
+
+msgid "GIF images are often not supported due to licensing restrictions. You may have to use JPG or PNG images instead."
+msgstr ""
+
+msgid "JPG images are not supported."
+msgstr ""
+
+msgid "PNG images are not supported."
+msgstr ""
+
+msgid "The image resize protocol specified in your preferences only works with JPEG or PNG image types."
+msgstr ""
+
+msgid "An error was encountered while attempting to replace the file. Please make sure your file directory is writable."
+msgstr ""
+
+msgid "Image rotation does not appear to be supported by your server."
+msgstr ""
+
+msgid "The path to your image library is not correct. Please set the correct path in your image preferences."
+msgstr ""
+
+msgid "Image processing failed. Please verify that your server supports the chosen protocol and that the path to your image library is correct."
+msgstr ""
+
+msgid "An angle of rotation is required to rotate the image."
+msgstr ""
+
+msgid "The path to the image is not correct."
+msgstr ""
+
+msgid "The image copy routine failed."
+msgstr ""
+
+msgid "Unable to find a font to use."
+msgstr ""
+
+msgid "Unable to save the image. Please make sure the image and file directory are writable."
+msgstr ""
+
+# migration_lang.php
+msgid "No migrations were found."
+msgstr ""
+
+msgid "No migration could be found with the version number: %s."
+msgstr ""
+
+msgid "There is a gap in the migration sequence near version number: %s."
+msgstr ""
+
+msgid "There are multiple migrations with the same version number: %s."
+msgstr ""
+
+msgid "The migration class '%s' could not be found."
+msgstr ""
+
+msgid "The migration class '%s' is missing an 'up' method."
+msgstr ""
+
+msgid "The migration class '%s' is missing a 'down' method."
+msgstr ""
+
+msgid "Migration '%s' has an invalid filename."
+msgstr ""
+
+# number_lang.php
+msgid "TB"
+msgstr ""
+
+msgid "GB"
+msgstr ""
+
+msgid "MB"
+msgstr ""
+
+msgid "KB"
+msgstr ""
+
+msgid "Bytes"
+msgstr ""
+
+# pagination_lang.php
+msgid "&lsaquo; First"
+msgstr ""
+
+msgid "&gt;"
+msgstr ""
+
+msgid "&lt;"
+msgstr ""
+
+msgid "Last &rsaquo;"
+msgstr ""
+
+# profiler_lang.php
+msgid "DATABASE"
+msgstr ""
+
+msgid "CLASS/METHOD"
+msgstr ""
+
+msgid "BENCHMARKS"
+msgstr ""
+
+msgid "QUERIES"
+msgstr ""
+
+msgid "GET DATA"
+msgstr ""
+
+msgid "POST DATA"
+msgstr ""
+
+msgid "URI STRING"
+msgstr ""
+
+msgid "MEMORY USAGE"
+msgstr ""
+
+msgid "CONFIG VARIABLES"
+msgstr ""
+
+msgid "SESSION DATA"
+msgstr ""
+
+msgid "HTTP HEADERS"
+msgstr ""
+
+msgid "Database driver is not currently loaded"
+msgstr ""
+
+msgid "No queries were run"
+msgstr ""
+
+msgid "No POST data exists"
+msgstr ""
+
+msgid "No GET data exists"
+msgstr ""
+
+msgid "No URI data exists"
+msgstr ""
+
+msgid "Memory Usage Unavailable"
+msgstr ""
+
+msgid "No Profile data - all Profiler sections have been disabled."
+msgstr ""
+
+msgid "Hide"
+msgstr ""
+
+msgid "Show"
+msgstr ""
+
+msgid "seconds"
+msgstr ""
+
+# unit_test_lang.php
+msgid "Test Name"
+msgstr ""
+
+msgid "Test Datatype"
+msgstr ""
+
+msgid "Expected Datatype"
+msgstr ""
+
+msgid "Result"
+msgstr ""
+
+msgid "Undefined Test Name"
+msgstr ""
+
+msgid "File Name"
+msgstr ""
+
+msgid "Line Number"
+msgstr ""
+
+msgid "Passed"
+msgstr ""
+
+msgid "Failed"
+msgstr ""
+
+msgid "Boolean"
+msgstr ""
+
+msgid "Integer"
+msgstr ""
+
+msgid "Float"
+msgstr ""
+
+msgid "String"
+msgstr ""
+
+msgid "Array"
+msgstr ""
+
+msgid "Object"
+msgstr ""
+
+msgid "Resource"
+msgstr ""
+
+msgid "Null"
+msgstr ""
+
+msgid "Notes"
+msgstr ""
+
+# upload_lang.php
+msgid "Unable to find a post variable called userfile."
+msgstr ""
+
+msgid "The uploaded file exceeds the maximum allowed size in your PHP configuration file."
+msgstr ""
+
+msgid "The uploaded file exceeds the maximum size allowed by the submission form."
+msgstr ""
+
+msgid "The file was only partially uploaded."
+msgstr ""
+
+msgid "The temporary folder is missing."
+msgstr ""
+
+msgid "The file could not be written to disk."
+msgstr ""
+
+msgid "The file upload was stopped by extension."
+msgstr ""
+
+msgid "You did not select a file to upload."
+msgstr ""
+
+msgid "The filetype you are attempting to upload is not allowed."
+msgstr ""
+
+msgid "The file you are attempting to upload is larger than the permitted size."
+msgstr ""
+
+msgid "The image you are attempting to upload doesn't fit into the allowed dimensions."
+msgstr ""
+
+msgid "A problem was encountered while attempting to move the uploaded file to the final destination."
+msgstr ""
+
+msgid "The upload path does not appear to be valid."
+msgstr ""
+
+msgid "You have not specified any allowed file types."
+msgstr ""
+
+msgid "The file name you submitted already exists on the server."
+msgstr ""
+
+msgid "The upload destination folder does not appear to be writable."
+msgstr ""
