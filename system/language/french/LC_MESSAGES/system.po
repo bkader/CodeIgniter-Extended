@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: CodeIgniter\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-02-02 23:00+0100\n"
-"PO-Revision-Date: 2016-02-04 07:24+0100\n"
+"PO-Revision-Date: 2016-02-04 11:39+0100\n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -659,24 +659,31 @@ msgid "Unable to display the image"
 msgstr "Impossible d'afficher l'image"
 
 # migration_lang.php
+#: system/libraries/Migration.php:309
 msgid "No migrations were found."
 msgstr "Aucune migration trouvée."
 
+#: system/libraries/Migration.php:211
 msgid "No migration could be found with the version number: %s."
 msgstr "Aucune migration n'a été trouvée avec le numéro de version : %d."
 
+#: system/libraries/Migration.php:240
 msgid "There is a gap in the migration sequence near version number: %s."
 msgstr "Il y a un trou dans la séquence de migration près de la version numéro : %s."
 
+#: system/libraries/Migration.php:368
 msgid "There are multiple migrations with the same version number: %s."
 msgstr "Il y a plusieurs migrations avec le même numéro de version : %d."
 
+#: system/libraries/Migration.php:250
 msgid "The migration class '%s' could not be found."
 msgstr "La classe de migration '%s' n'a pas pu être trouvée."
 
+#: system/libraries/Migration.php:268
 msgid "The migration class '%s' is missing an 'up' method."
 msgstr "La classe de migration '%s' ne dispose pas d'une méthode 'up'."
 
+#: system/libraries/Migration.php:272
 msgid "The migration class '%s' is missing a 'down' method."
 msgstr "La classe de migration '%s' ne dispose pas d'une méthode 'down'."
 
@@ -700,15 +707,19 @@ msgid "Bytes"
 msgstr "Octets"
 
 # pagination_lang.php
+#: system/libraries/Pagination.php:339
 msgid "&lsaquo; First"
 msgstr "&lsaquo; Première"
 
+#: system/libraries/Pagination.php:342
 msgid "&gt;"
 msgstr "&gt;"
 
+#: system/libraries/Pagination.php:345
 msgid "&lt;"
 msgstr "&lt;"
 
+#: system/libraries/Pagination.php:348
 msgid "Last &rsaquo;"
 msgstr "Dernière &rsaquo;"
 

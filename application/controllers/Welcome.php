@@ -20,6 +20,9 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
+		$this->load->helper('date');
+		echo timezone_menu();
+		exit;
 		$this->load->view('welcome_message');
 	}
 }

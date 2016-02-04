@@ -330,12 +330,22 @@ class CI_Pagination {
 	public function __construct($params = array())
 	{
 		$this->CI =& get_instance();
-		$this->CI->load->language('pagination');
 		foreach (array('first_link', 'next_link', 'prev_link', 'last_link') as $key)
 		{
-			if (($val = $this->CI->lang->line('pagination_'.$key)) !== FALSE)
+			switch ($key)
 			{
-				$this->$key = $val;
+				case 'first_link':
+					$this->$key = _dgettext("system", "&lsaquo; First");
+					break;
+				case 'next_link':
+					$this->$key = _dgettext("system", "&gt;");
+					break;
+				case 'prev_link':
+					$this->$key = _dgettext("system", "&lt;");
+					break;
+				case 'last_link':
+					$this->$key = _dgettext("system", "Last &rsaquo;");
+					break;
 			}
 		}
 

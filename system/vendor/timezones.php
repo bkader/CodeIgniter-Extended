@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 $timezones = array(
 	'UM12'   => '(UTC -12:00) Baker/Howland Island',
-	'UM11'   => '(UTC -11:00) Samoa Time Zone, Niue',
+	'UM11'   => '(UTC -11:00) Niue',
 	'UM10'   => '(UTC -10:00) Hawaii-Aleutian Standard Time, Cook Islands, Tahiti',
 	'UM95'   => '(UTC -9:30) Marquesas Islands',
 	'UM9'    => '(UTC -9:00) Alaska Standard Time, Gambier Islands',
@@ -20,13 +20,13 @@ $timezones = array(
 	'UTC'    => '(UTC) Greenwich Mean Time, Western European Time',
 	'UP1'    => '(UTC +1:00) Central European Time, West Africa Time',
 	'UP2'    => '(UTC +2:00) Central Africa Time, Eastern European Time, Kaliningrad Time',
-	'UP3'    => '(UTC +3:00) Moscow Time, East Africa Time',
+	'UP3'    => '(UTC +3:00) Moscow Time, East Africa Time, Arabia Standard Time',
 	'UP35'   => '(UTC +3:30) Iran Standard Time',
 	'UP4'    => '(UTC +4:00) Azerbaijan Standard Time, Samara Time',
 	'UP45'   => '(UTC +4:30) Afghanistan',
 	'UP5'    => '(UTC +5:00) Pakistan Standard Time, Yekaterinburg Time',
 	'UP55'   => '(UTC +5:30) Indian Standard Time, Sri Lanka Time',
-	'UP574'  => '(UTC +5:45) Nepal Time',
+	'UP575'  => '(UTC +5:45) Nepal Time',
 	'UP6'    => '(UTC +6:00) Bangladesh Standard Time, Bhutan Time, Omsk Time',
 	'UP65'   => '(UTC +6:30) Cocos Islands, Myanmar',
 	'UP7'    => '(UTC +7:00) Krasnoyarsk Time, Cambodia, Laos, Thailand, Vietnam',
@@ -40,9 +40,9 @@ $timezones = array(
 	'UP115'  => '(UTC +11:30) Norfolk Island',
 	'UP12'   => '(UTC +12:00) Fiji, Gilbert Islands, Kamchatka Time, New Zealand Standard Time',
 	'UP1275' => '(UTC +12:45) Chatham Islands Standard Time',
-	'UP13'   => '(UTC +13:00) Phoenix Islands Time, Tonga',
-	'UP14'   => '(UTC +14:00) Line Islands'
-	);
+	'UP13'   => '(UTC +13:00) Samoa Time Zone, Phoenix Islands Time, Tonga',
+	'UP14'   => '(UTC +14:00) Line Islands',
+);
 
 /* End of file timezones.php */
 /* Location: ./system/vendor/timezones.php */

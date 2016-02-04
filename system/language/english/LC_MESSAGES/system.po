@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: CodeIgniter\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-02-02 23:00+0100\n"
-"PO-Revision-Date: 2016-02-04 07:24+0100\n"
+"PO-Revision-Date: 2016-02-04 11:39+0100\n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -659,24 +659,31 @@ msgid "Unable to display the image"
 msgstr ""
 
 # migration_lang.php
+#: system/libraries/Migration.php:309
 msgid "No migrations were found."
 msgstr ""
 
+#: system/libraries/Migration.php:211
 msgid "No migration could be found with the version number: %s."
 msgstr ""
 
+#: system/libraries/Migration.php:240
 msgid "There is a gap in the migration sequence near version number: %s."
 msgstr ""
 
+#: system/libraries/Migration.php:368
 msgid "There are multiple migrations with the same version number: %s."
 msgstr ""
 
+#: system/libraries/Migration.php:250
 msgid "The migration class '%s' could not be found."
 msgstr ""
 
+#: system/libraries/Migration.php:268
 msgid "The migration class '%s' is missing an 'up' method."
 msgstr ""
 
+#: system/libraries/Migration.php:272
 msgid "The migration class '%s' is missing a 'down' method."
 msgstr ""
 
@@ -700,15 +707,19 @@ msgid "Bytes"
 msgstr ""
 
 # pagination_lang.php
+#: system/libraries/Pagination.php:339
 msgid "&lsaquo; First"
 msgstr ""
 
+#: system/libraries/Pagination.php:342
 msgid "&gt;"
 msgstr ""
 
+#: system/libraries/Pagination.php:345
 msgid "&lt;"
 msgstr ""
 
+#: system/libraries/Pagination.php:348
 msgid "Last &rsaquo;"
 msgstr ""
 

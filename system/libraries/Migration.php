@@ -140,9 +140,6 @@ class CI_Migration {
 		// Add trailing slash if not set
 		$this->_migration_path = rtrim($this->_migration_path, '/').'/';
 
-		// Load migration language
-		$this->lang->load('migration');
-
 		// They'll probably be using dbforge
 		$this->load->dbforge();
 
@@ -211,7 +208,7 @@ class CI_Migration {
 
 		if ($target_version > 0 && ! isset($migrations[$target_version]))
 		{
-			$this->_error_string = sprintf($this->lang->line('migration_not_found'), $target_version);
+			$this->_error_string = sprintf(_dgettext("system", "No migration could be found with the version number: %s."), $target_version);
 			return FALSE;
 		}
 
@@ -240,7 +237,7 @@ class CI_Migration {
 			// Check for sequence gaps
 			if ($this->_migration_type === 'sequential' && $previous !== FALSE && abs($number - $previous) > 1)
 			{
-				$this->_error_string = sprintf($this->lang->line('migration_sequence_gap'), $number);
+				$this->_error_string = sprintf(_dgettext("system", "There is a gap in the migration sequence near version number: %s."), $number);
 				return FALSE;
 			}
 
@@ -250,7 +247,7 @@ class CI_Migration {
 			// Validate the migration file structure
 			if ( ! class_exists($class, FALSE))
 			{
-				$this->_error_string = sprintf($this->lang->line('migration_class_doesnt_exist'), $class);
+				$this->_error_string = sprintf(_dgettext("system", "The migration class '%s' could not be found."), $class);
 				return FALSE;
 			}
 
@@ -265,7 +262,14 @@ class CI_Migration {
 				$instance = new $class();
 				if ( ! is_callable(array($instance, $method)))
 				{
-					$this->_error_string = sprintf($this->lang->line('migration_missing_'.$method.'_method'), $class);
+					if ($method === 'up')
+					{
+						$this->_error_string = sprintf(_dgettext("system", "The migration class '%s' is missing an 'up' method."), $class);
+					}
+					else
+					{
+						$this->_error_string = sprintf(_dgettext("system", "The migration class '%s' is missing a 'down' method."), $class);
+					}
 					return FALSE;
 				}
 
@@ -302,7 +306,7 @@ class CI_Migration {
 
 		if (empty($migrations))
 		{
-			$this->_error_string = $this->lang->line('migration_none_found');
+			$this->_error_string = _dgettext("system", "No migrations were found.");
 			return FALSE;
 		}
 
@@ -361,7 +365,7 @@ class CI_Migration {
 				// There cannot be duplicate migration numbers
 				if (isset($migrations[$number]))
 				{
-					$this->_error_string = sprintf($this->lang->line('migration_multiple_version'), $number);
+					$this->_error_string = sprintf(_dgettext("system", "There are multiple migrations with the same version number: %s."), $number);
 					show_error($this->_error_string);
 				}
 

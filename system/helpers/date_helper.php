@@ -190,7 +190,7 @@ if ( ! function_exists('timespan'))
 
 		if ($years > 0)
 		{
-			$str[] = $years.' '.($years > 1 ? __("Years") : __('Year'));
+			$str[] = $years.' '.($years > 1 ? _dgettext("system", "Years") : _dgettext("system", "Year"));
 		}
 
 		$seconds -= $years * 31557600;
@@ -200,7 +200,7 @@ if ( ! function_exists('timespan'))
 		{
 			if ($months > 0)
 			{
-				$str[] = $months.' '.($months > 1 ? __("Months") : __('Month'));
+				$str[] = $months.' '.($months > 1 ? _dgettext("system", "Months") : _dgettext("system", "Month"));
 			}
 
 			$seconds -= $months * 2629743;
@@ -212,7 +212,7 @@ if ( ! function_exists('timespan'))
 		{
 			if ($weeks > 0)
 			{
-				$str[] = $weeks.' '.($weeks > 1 ? __("Weeks") : __("Week"));
+				$str[] = $weeks.' '.($weeks > 1 ? _dgettext("system", "Weeks") : _dgettext("system", "Week"));
 			}
 
 			$seconds -= $weeks * 604800;
@@ -224,7 +224,7 @@ if ( ! function_exists('timespan'))
 		{
 			if ($days > 0)
 			{
-				$str[] = $days.' '.($days > 1 ? __("Days") : __("Day"));
+				$str[] = $days.' '.($days > 1 ? _dgettext("system", "Days") : _dgettext("system", "Day"));
 			}
 
 			$seconds -= $days * 86400;
@@ -236,7 +236,7 @@ if ( ! function_exists('timespan'))
 		{
 			if ($hours > 0)
 			{
-				$str[] = $hours.' '.($hours > 1 ? __("Hours") : __("Hour"));
+				$str[] = $hours.' '.($hours > 1 ? _dgettext("system", "Hours") : _dgettext("system", "Hour"));
 			}
 
 			$seconds -= $hours * 3600;
@@ -248,7 +248,7 @@ if ( ! function_exists('timespan'))
 		{
 			if ($minutes > 0)
 			{
-				$str[] = $minutes.' '.($minutes > 1 ? __("Minutes") : __("Minute"));
+				$str[] = $minutes.' '.($minutes > 1 ? _dgettext("system", "Minutes") : _dgettext("system", "Minute"));
 			}
 
 			$seconds -= $minutes * 60;
@@ -256,7 +256,7 @@ if ( ! function_exists('timespan'))
 
 		if (count($str) === 0)
 		{
-			$str[] = $seconds.' '.($seconds > 1 ? __("Seconds") : __("Second"));
+			$str[] = $seconds.' '.($seconds > 1 ? _dgettext("system", "Seconds") : _dgettext("system", "Second"));
 		}
 
 		return implode(', ', $str);
@@ -587,7 +587,7 @@ if ( ! function_exists('timezone_menu'))
 		foreach ($timezones as $key => $val)
 		{
 			$selected = ($default === $key) ? ' selected="selected"' : '';
-			$menu .= '<option value="'.timezones($key).'"'.$selected.'>'.__($val)."</option>\n";
+			$menu .= '<option value="'.timezones($key).'"'.$selected.'>'._dgettext("system", $val)."</option>\n";
 		}
 
 		return $menu.'</select>';
