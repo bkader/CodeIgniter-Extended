@@ -638,6 +638,7 @@ msgstr "Le traintement de l'image a échoué. Veuillez vous assurer que votre se
 msgid "An angle of rotation is required to rotate the image."
 msgstr "Un angle de rotation est nécéssaire pour faire tourner l'image."
 
+#: system/libraries/Image_lib.php:1661
 msgid "The path to the image is not correct."
 msgstr "Le chemin vers l'image est incorrect."
 

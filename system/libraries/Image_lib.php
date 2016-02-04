@@ -1659,7 +1659,7 @@ class CI_Image_lib {
 
 		if ( ! file_exists($path))
 		{
-			$this->set_error('imglib_invalid_path');
+			$this->set_error(_dgettext("system", "The path to the image is not correct."));
 			return FALSE;
 		}
 
@@ -1812,20 +1812,20 @@ class CI_Image_lib {
 	public function set_error($msg)
 	{
 		$CI =& get_instance();
-		$CI->lang->load('imglib');
+		//$CI->lang->load('imglib');
 
 		if (is_array($msg))
 		{
 			foreach ($msg as $val)
 			{
-				$msg = ($CI->lang->line($val) === FALSE) ? $val : $CI->lang->line($val);
+				//$msg = ($CI->lang->line($val) === FALSE) ? $val : $CI->lang->line($val);
 				$this->error_msg[] = $msg;
 				log_message('error', $msg);
 			}
 		}
 		else
 		{
-			$msg = ($CI->lang->line($msg) === FALSE) ? $msg : $CI->lang->line($msg);
+			//$msg = ($CI->lang->line($msg) === FALSE) ? $msg : $CI->lang->line($msg);
 			$this->error_msg[] = $msg;
 			log_message('error', $msg);
 		}

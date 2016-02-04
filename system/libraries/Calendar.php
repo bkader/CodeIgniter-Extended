@@ -372,17 +372,17 @@ class CI_Calendar {
 		{
 			$month_names = array(
 				'01' => _dgettext("system", "January"),
-				'02' => _d("system", "February"),
-				'03' => _d("system", "March"),
-				'04' => _d("system", "April"),
-				'05' => _d("system", "May"),
-				'06' => _d("system", "June"),
-				'07' => _d("system", "July"),
-				'08' => _d("system", "August"),
-				'09' => _d("system", "September"),
-				'10' => _d("system", "October"),
-				'11' => _d("system", "November"),
-				'12' => _d("system", "December"),
+				'02' => _dgettext("system", "February"),
+				'03' => _dgettext("system", "March"),
+				'04' => _dgettext("system", "April"),
+				'05' => _dgettext("system", "May"),
+				'06' => _dgettext("system", "June"),
+				'07' => _dgettext("system", "July"),
+				'08' => _dgettext("system", "August"),
+				'09' => _dgettext("system", "September"),
+				'10' => _dgettext("system", "October"),
+				'11' => _dgettext("system", "November"),
+				'12' => _dgettext("system", "December"),
 			);
 		}
 		return ucfirst($month_names[$month]);

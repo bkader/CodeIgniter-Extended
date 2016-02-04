@@ -638,6 +638,7 @@ msgstr ""
 msgid "An angle of rotation is required to rotate the image."
 msgstr ""
 
+#: system/libraries/Image_lib.php:1662
 msgid "The path to the image is not correct."
 msgstr ""
 

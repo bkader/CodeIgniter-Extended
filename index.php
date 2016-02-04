@@ -296,6 +296,13 @@ switch (ENVIRONMENT)
 	require_once BASEPATH.'vendor/php-gettext/gettext.inc';
 
 /*
+ * ------------------------------------------------------
+ * Load the dot-notation function
+ * ------------------------------------------------------
+ */
+	require_once BASEPATH.'vendor/dot-notation.php';
+
+/*
  * --------------------------------------------------------------------
  * LOAD THE BOOTSTRAP FILE
  * --------------------------------------------------------------------

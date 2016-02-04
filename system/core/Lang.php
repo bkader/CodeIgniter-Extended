@@ -92,8 +92,8 @@ class CI_Lang {
         // Application Language then system's
         T_bindtextdomain('application', APPPATH.'language');
         T_bindtextdomain('system', BASEPATH.'language');
-        T_textdomain('application');
         T_bind_textdomain_codeset('application', 'UTF-8');
+        T_textdomain('application');
         unset($lang);
 	}
 	// --------------------------------------------------------------------

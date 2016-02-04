@@ -294,25 +294,11 @@ function _ngettext($singular, $plural, $number) {
 }
 
 /**
-* Alias of the above function [EDIT]
-*/
-function _n($singular, $plural, $number) {
-  return _ngettext($singular, $plural, $number);
-}
-
-/**
  * Override the current domain.
  */
 function _dgettext($domain, $msgid) {
     $l10n = _get_reader($domain);
     return _encode($l10n->translate($msgid));
-}
-
-/**
- * Alias of _dgettext [EDIT]
- */
-function _d($domain, $msgid) {
-  return _dgettext($domain, $msgid);
 }
 
 /**
@@ -545,5 +531,7 @@ if (!function_exists('gettext')) {
                           $number, $category);
     }
 }
+
+require('extend.php');
 
 ?>
