@@ -739,13 +739,13 @@ class CI_Email {
 		{
 			if (strpos($file, '://') === FALSE && ! file_exists($file))
 			{
-				$this->_set_error_message(__("Unable to locate the following email attachment: %s"), $file);
+				$this->_set_error_message(_dgettext("system", "Unable to locate the following email attachment: %s"), $file);
 				return FALSE;
 			}
 
 			if ( ! $fp = @fopen($file, 'rb'))
 			{
-				$this->_set_error_message(__("Unable to open this attachment: %s"), $file);
+				$this->_set_error_message(_dgettext("system", "Unable to open this attachment: %s"), $file);
 				return FALSE;
 			}
 
@@ -1065,7 +1065,7 @@ class CI_Email {
 	{
 		if ( ! is_array($email))
 		{
-			$this->_set_error_message(__("The email validation method must be passed an array."));
+			$this->_set_error_message(_dgettext("system", "The email validation method must be passed an array."));
 			return FALSE;
 		}
 
@@ -1073,7 +1073,7 @@ class CI_Email {
 		{
 			if ( ! $this->valid_email($val))
 			{
-				$this->_set_error_message(__("Invalid email address: %s"), $val);
+				$this->_set_error_message(_dgettext("system", "Invalid email address: %s"), $val);
 				return FALSE;
 			}
 		}
@@ -1661,7 +1661,7 @@ class CI_Email {
 	{
 		if ( ! isset($this->_headers['From']))
 		{
-			$this->_set_error_message(__("Cannot send mail with no 'From' header."));
+			$this->_set_error_message(_dgettext("system", "Cannot send mail with no 'From' header."));
 			return FALSE;
 		}
 
@@ -1674,7 +1674,7 @@ class CI_Email {
 			&& ! isset($this->_bcc_array) && ! isset($this->_headers['Bcc'])
 			&& ! isset($this->_headers['Cc']))
 		{
-			$this->_set_error_message(__("You must include recipients: To, Cc, or Bcc"));
+			$this->_set_error_message(_dgettext("system", "You must include recipients: To, Cc, or Bcc"));
 			return FALSE;
 		}
 
@@ -1810,20 +1810,20 @@ class CI_Email {
 		{
 			if ($this->_get_protocol() === 'mail')
 			{
-				$this->_set_error_message(__("Unable to send email using PHP mail(). Your server might not be configured to send mail using this method."));
+				$this->_set_error_message(_dgettext("system", "Unable to send email using PHP mail(). Your server might not be configured to send mail using this method."));
 			}
 			elseif ($this->_get_protocol() === 'sendmail')
 			{
-				$this->_set_error_message(__("Unable to send email using PHP Sendmail. Your server might not be configured to send mail using this method."));
+				$this->_set_error_message(_dgettext("system", "Unable to send email using PHP Sendmail. Your server might not be configured to send mail using this method."));
 			}
 			else
 			{
-				$this->_set_error_message(__("Unable to send email using PHP SMTP. Your server might not be configured to send mail using this method."));
+				$this->_set_error_message(_dgettext("system", "Unable to send email using PHP SMTP. Your server might not be configured to send mail using this method."));
 			}
 			return FALSE;
 		}
 
-		$this->_set_error_message(__("Your message has been successfully sent using the following protocol: %s"), $this->_get_protocol());
+		$this->_set_error_message(_dgettext("system", "Your message has been successfully sent using the following protocol: %s"), $this->_get_protocol());
 		return TRUE;
 	}
 
@@ -1879,8 +1879,8 @@ class CI_Email {
 
 		if ($status !== 0)
 		{
-			$this->_set_error_message(__("Exit status code: %s"), $status);
-			$this->_set_error_message(__("Unable to open a socket to Sendmail. Please check settings."));
+			$this->_set_error_message(_dgettext("system", "Exit status code: %s"), $status);
+			$this->_set_error_message(_dgettext("system", "Unable to open a socket to Sendmail. Please check settings."));
 			return FALSE;
 		}
 
@@ -1898,7 +1898,7 @@ class CI_Email {
 	{
 		if ($this->smtp_host === '')
 		{
-			$this->_set_error_message(__("You did not specify a SMTP hostname."));
+			$this->_set_error_message(_dgettext("system", "You did not specify a SMTP hostname."));
 			return FALSE;
 		}
 
@@ -1958,7 +1958,7 @@ class CI_Email {
 
 		if (strpos($reply, '250') !== 0)
 		{
-			$this->_set_error_message(__("The following SMTP error was encountered: %s"), $reply);
+			$this->_set_error_message(_dgettext("system", "The following SMTP error was encountered: %s"), $reply);
 			return FALSE;
 		}
 
@@ -1998,7 +1998,7 @@ class CI_Email {
 
 		if ( ! is_resource($this->_smtp_connect))
 		{
-			$this->_set_error_message(__("The following SMTP error was encountered: %s"), $errno.' '.$errstr);
+			$this->_set_error_message(_dgettext("system", "The following SMTP error was encountered: %s"), $errno.' '.$errstr);
 			return FALSE;
 		}
 
@@ -2014,7 +2014,7 @@ class CI_Email {
 
 			if ($crypto !== TRUE)
 			{
-				$this->_set_error_message(__("The following SMTP error was encountered: %s"), $this->_get_smtp_data());
+				$this->_set_error_message(_dgettext("system", "The following SMTP error was encountered: %s"), $this->_get_smtp_data());
 				return FALSE;
 			}
 		}
@@ -2094,7 +2094,7 @@ class CI_Email {
 
 		if ((int) substr($reply, 0, 3) !== $resp)
 		{
-			$this->_set_error_message(__("The following SMTP error was encountered: %s"), $reply);
+			$this->_set_error_message(_dgettext("system", "The following SMTP error was encountered: %s"), $reply);
 			return FALSE;
 		}
 
@@ -2122,7 +2122,7 @@ class CI_Email {
 
 		if ($this->smtp_user === '' && $this->smtp_pass === '')
 		{
-			$this->_set_error_message(__("Error: You must assign a SMTP username and password."));
+			$this->_set_error_message(_dgettext("system", "Error: You must assign a SMTP username and password."));
 			return FALSE;
 		}
 
@@ -2136,7 +2136,7 @@ class CI_Email {
 		}
 		elseif (strpos($reply, '334') !== 0)
 		{
-			$this->_set_error_message(__("Failed to send AUTH LOGIN command. Error: %s"), $reply);
+			$this->_set_error_message(_dgettext("system", "Failed to send AUTH LOGIN command. Error: %s"), $reply);
 			return FALSE;
 		}
 
@@ -2146,7 +2146,7 @@ class CI_Email {
 
 		if (strpos($reply, '334') !== 0)
 		{
-			$this->_set_error_message(__("Failed to authenticate username. Error: %s"), $reply);
+			$this->_set_error_message(_dgettext("system", "Failed to authenticate username. Error: %s"), $reply);
 			return FALSE;
 		}
 
@@ -2156,7 +2156,7 @@ class CI_Email {
 
 		if (strpos($reply, '235') !== 0)
 		{
-			$this->_set_error_message(__("Failed to authenticate password. Error: %s"), $reply);
+			$this->_set_error_message(_dgettext("system", "Failed to authenticate password. Error: %s"), $reply);
 			return FALSE;
 		}
 
@@ -2204,7 +2204,7 @@ class CI_Email {
 
 		if ($result === FALSE)
 		{
-			$this->_set_error_message(__("Unable to send data: %s"), $data);
+			$this->_set_error_message(_dgettext("system", "Unable to send data: %s"), $data);
 			return FALSE;
 		}
 

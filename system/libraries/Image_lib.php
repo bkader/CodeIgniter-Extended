@@ -487,7 +487,7 @@ class CI_Image_lib {
 		// Is there a source image? If not, there's no reason to continue
 		if ($this->source_image === '')
 		{
-			$this->set_error('imglib_source_image_required');
+			$this->set_error(_dgettext("system", "You must specify a source image in your preferences."));
 			return FALSE;
 		}
 
@@ -499,7 +499,7 @@ class CI_Image_lib {
 		 */
 		if ( ! function_exists('getimagesize'))
 		{
-			$this->set_error('imglib_gd_required_for_props');
+			$this->set_error(_dgettext("system", "Your server must support the GD image library in order to determine the image properties."));
 			return FALSE;
 		}
 
@@ -704,7 +704,7 @@ class CI_Image_lib {
 
 		if ($this->rotation_angle === '' OR ! in_array($this->rotation_angle, $degs))
 		{
-			$this->set_error('imglib_rotation_angle_required');
+			$this->set_error(_dgettext("system", "An angle of rotation is required to rotate the image."));
 			return FALSE;
 		}
 
@@ -848,7 +848,7 @@ class CI_Image_lib {
 		// Do we have a vaild library path?
 		if ($this->library_path === '')
 		{
-			$this->set_error('imglib_libpath_invalid');
+			$this->set_error(_dgettext("system", "The path to your image library is not correct. Please set the correct path in your image preferences."));
 			return FALSE;
 		}
 
@@ -893,7 +893,7 @@ class CI_Image_lib {
 		// Did it work?
 		if ($retval > 0)
 		{
-			$this->set_error('imglib_image_process_failed');
+			$this->set_error(_dgettext("system", "Image processing failed. Please verify that your server supports the chosen protocol and that the path to your image library is correct."));
 			return FALSE;
 		}
 
@@ -916,7 +916,7 @@ class CI_Image_lib {
 	{
 		if ($this->library_path === '')
 		{
-			$this->set_error('imglib_libpath_invalid');
+			$this->set_error(_dgettext("system", "The path to your image library is not correct. Please set the correct path in your image preferences."));
 			return FALSE;
 		}
 
@@ -976,7 +976,7 @@ class CI_Image_lib {
 		// Did it work?
 		if ($retval > 0)
 		{
-			$this->set_error('imglib_image_process_failed');
+			$this->set_error(_dgettext("system", "Image processing failed. Please verify that your server supports the chosen protocol and that the path to your image library is correct."));
 			return FALSE;
 		}
 
@@ -1138,7 +1138,8 @@ class CI_Image_lib {
 	{
 		if ( ! function_exists('imagecolortransparent'))
 		{
-			$this->set_error('imglib_gd_required');
+			$this->set_error(_dgettext("system", "The GD image library is required for this feature."));
+
 			return FALSE;
 		}
 
@@ -1257,7 +1258,7 @@ class CI_Image_lib {
 
 		if ($this->wm_use_truetype === TRUE && ! file_exists($this->wm_font_path))
 		{
-			$this->set_error('imglib_missing_font');
+			$this->set_error(_dgettext("system", "Unable to find a font to use."));
 			return FALSE;
 		}
 
@@ -1440,7 +1441,10 @@ class CI_Image_lib {
 			case 1:
 				if ( ! function_exists('imagecreatefromgif'))
 				{
-					$this->set_error(array('imglib_unsupported_imagecreate', 'imglib_gif_not_supported'));
+					$this->set_error(array(
+						_dgettext("system", "Your server does not support the GD function required to process this type of image."),
+						_dgettext("system", "GIF images are often not supported due to licensing restrictions. You may have to use JPG or PNG images instead."),
+					));
 					return FALSE;
 				}
 
@@ -1448,7 +1452,10 @@ class CI_Image_lib {
 			case 2:
 				if ( ! function_exists('imagecreatefromjpeg'))
 				{
-					$this->set_error(array('imglib_unsupported_imagecreate', 'imglib_jpg_not_supported'));
+					$this->set_error(array(
+						_dgettext("system", "Your server does not support the GD function required to process this type of image."),
+						_dgettext("system", "JPG images are not supported."),
+					));
 					return FALSE;
 				}
 
@@ -1456,13 +1463,18 @@ class CI_Image_lib {
 			case 3:
 				if ( ! function_exists('imagecreatefrompng'))
 				{
-					$this->set_error(array('imglib_unsupported_imagecreate', 'imglib_png_not_supported'));
+					$this->set_error(array(
+						_dgettext("system", "Your server does not support the GD function required to process this type of image."),
+						_dgettext("system", "PNG images are not supported."),
+					));
 					return FALSE;
 				}
 
 				return imagecreatefrompng($path);
 			default:
-				$this->set_error(array('imglib_unsupported_imagecreate'));
+				$this->set_error(array(
+					_dgettext("system", "Your server does not support the GD function required to process this type of image."),
+				));
 				return FALSE;
 		}
 	}
@@ -1485,44 +1497,55 @@ class CI_Image_lib {
 			case 1:
 				if ( ! function_exists('imagegif'))
 				{
-					$this->set_error(array('imglib_unsupported_imagecreate', 'imglib_gif_not_supported'));
+					$this->set_error(array(
+						_dgettext("system", "Your server does not support the GD function required to process this type of image."),
+						_dgettext("system", "GIF images are often not supported due to licensing restrictions. You may have to use JPG or PNG images instead."),
+					));
 					return FALSE;
 				}
 
 				if ( ! @imagegif($resource, $this->full_dst_path))
 				{
-					$this->set_error('imglib_save_failed');
+					$this->set_error(_dgettext("system", "Unable to save the image. Please make sure the image and file directory are writable."));
 					return FALSE;
 				}
 			break;
 			case 2:
 				if ( ! function_exists('imagejpeg'))
 				{
-					$this->set_error(array('imglib_unsupported_imagecreate', 'imglib_jpg_not_supported'));
+					$this->set_error(array(
+						_dgettext("system", "Your server does not support the GD function required to process this type of image."),
+						_dgettext("system", "JPG images are not supported."),
+					));
 					return FALSE;
 				}
 
 				if ( ! @imagejpeg($resource, $this->full_dst_path, $this->quality))
 				{
-					$this->set_error('imglib_save_failed');
+					$this->set_error(_dgettext("system", "Unable to save the image. Please make sure the image and file directory are writable."));
 					return FALSE;
 				}
 			break;
 			case 3:
 				if ( ! function_exists('imagepng'))
 				{
-					$this->set_error(array('imglib_unsupported_imagecreate', 'imglib_png_not_supported'));
+					$this->set_error(array(
+						_dgettext("system", "Your server does not support the GD function required to process this type of image."),
+						_dgettext("system", "PNG images are not supported."),
+					));
 					return FALSE;
 				}
 
 				if ( ! @imagepng($resource, $this->full_dst_path))
 				{
-					$this->set_error('imglib_save_failed');
+					$this->set_error(_dgettext("system", "Unable to save the image. Please make sure the image and file directory are writable."));
 					return FALSE;
 				}
 			break;
 			default:
-				$this->set_error(array('imglib_unsupported_imagecreate'));
+				$this->set_error(array(
+					_dgettext("system", "Your server does not support the GD function required to process this type of image.")
+				));
 				return FALSE;
 			break;
 		}
@@ -1553,7 +1576,7 @@ class CI_Image_lib {
 				break;
 			case 3	:	imagepng($resource);
 				break;
-			default:	echo 'Unable to display the image';
+			default:	echo _dgettext("system", "Unable to display the image");
 				break;
 		}
 	}

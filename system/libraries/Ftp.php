@@ -156,7 +156,7 @@ class CI_FTP {
 		{
 			if ($this->debug === TRUE)
 			{
-				$this->_error(__("Unable to connect to your FTP server using the supplied hostname."));
+				$this->_error(_dgettext("system", "Unable to connect to your FTP server using the supplied hostname."));
 			}
 
 			return FALSE;
@@ -166,7 +166,7 @@ class CI_FTP {
 		{
 			if ($this->debug === TRUE)
 			{
-				$this->_error(__("Unable to login to your FTP server. Please check your username and password."));
+				$this->_error(_dgettext("system", "Unable to login to your FTP server. Please check your username and password."));
 			}
 
 			return FALSE;
@@ -206,7 +206,7 @@ class CI_FTP {
 		{
 			if ($this->debug === TRUE)
 			{
-				$this->_error(__("Unable to locate a valid connection ID. Please make sure you are connected before performing any file routines."));
+				$this->_error(_dgettext("system", "Unable to locate a valid connection ID. Please make sure you are connected before performing any file routines."));
 			}
 
 			return FALSE;
@@ -243,7 +243,7 @@ class CI_FTP {
 		{
 			if ($this->debug === TRUE && $suppress_debug === FALSE)
 			{
-				$this->_error(__("Unable to change directories."));
+				$this->_error(_dgettext("system", "Unable to change directories."));
 			}
 
 			return FALSE;
@@ -274,7 +274,7 @@ class CI_FTP {
 		{
 			if ($this->debug === TRUE)
 			{
-				$this->_error(__("Unable to create the directory you have specified."));
+				$this->_error(_dgettext("system", "Unable to create the directory you have specified."));
 			}
 
 			return FALSE;
@@ -309,7 +309,7 @@ class CI_FTP {
 
 		if ( ! file_exists($locpath))
 		{
-			$this->_error(__("Unable to locate the source file. Please check your path."));
+			$this->_error(_dgettext("system", "Unable to locate the source file. Please check your path."));
 			return FALSE;
 		}
 
@@ -329,7 +329,7 @@ class CI_FTP {
 		{
 			if ($this->debug === TRUE)
 			{
-				$this->_error(__("Unable to upload the specified file. Please check your path."));
+				$this->_error(_dgettext("system", "Unable to upload the specified file. Please check your path."));
 			}
 
 			return FALSE;
@@ -377,7 +377,7 @@ class CI_FTP {
 		{
 			if ($this->debug === TRUE)
 			{
-				$this->_error(__("Unable to download the specified file. Please check your path."));
+				$this->_error(_dgettext("system", "Unable to download the specified file. Please check your path."));
 			}
 
 			return FALSE;
@@ -411,11 +411,11 @@ class CI_FTP {
 			{
 				if ($move === FALSE)
 				{
-					$this->_error(__("Unable to rename the file."));
+					$this->_error(_dgettext("system", "Unable to rename the file."));
 				}
 				else
 				{
-					$this->_error(__("Unable to move the file. Please make sure the destination directory exists."));
+					$this->_error(_dgettext("system", "Unable to move the file. Please make sure the destination directory exists."));
 				}
 			}
 
@@ -460,7 +460,7 @@ class CI_FTP {
 		{
 			if ($this->debug === TRUE)
 			{
-				$this->_error(__("Unable to delete the file."));
+				$this->_error(_dgettext("system", "Unable to delete the file."));
 			}
 
 			return FALSE;
@@ -506,7 +506,7 @@ class CI_FTP {
 		{
 			if ($this->debug === TRUE)
 			{
-				$this->_error(__("Unable to delete the file."));
+				$this->_error(_dgettext("system", "Unable to delete the file."));
 			}
 
 			return FALSE;
@@ -535,7 +535,7 @@ class CI_FTP {
 		{
 			if ($this->debug === TRUE)
 			{
-				$this->_error(__("Unable to set file permissions. Please check your path."));
+				$this->_error(_dgettext("system", "Unable to set file permissions. Please check your path."));
 			}
 
 			return FALSE;

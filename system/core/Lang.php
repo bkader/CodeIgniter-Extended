@@ -89,10 +89,11 @@ class CI_Lang {
 		$lang = empty($config['language']) ? 'english' : $config['language'];
         T_setlocale(LC_MESSAGES, $lang);
 
-        // System Language
+        // Application Language then system's
+        T_bindtextdomain('application', APPPATH.'language');
         T_bindtextdomain('system', BASEPATH.'language');
-        T_bind_textdomain_codeset('system', 'UTF-8');
-        T_textdomain('system');
+        T_textdomain('application');
+        T_bind_textdomain_codeset('application', 'UTF-8');
         unset($lang);
 	}
 	// --------------------------------------------------------------------

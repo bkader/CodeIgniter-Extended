@@ -94,7 +94,7 @@ class CI_Encrypt {
 	{
 		if (($this->_mcrypt_exists = function_exists('mcrypt_encrypt')) === FALSE)
 		{
-			show_error('The Encrypt library requires the Mcrypt extension.');
+			show_error(_dgettext("system", "The Encrypt library requires the Mcrypt extension."));
 		}
 
 		log_message('info', 'Encrypt Class Initialized');
@@ -124,7 +124,7 @@ class CI_Encrypt {
 
 			if ( ! strlen($key))
 			{
-				show_error('In order to use the encryption class requires that you set an encryption key in your config file.');
+				show_error(_dgettext("system", "In order to use the encryption class requires that you set an encryption key in your config file."));
 			}
 		}
 

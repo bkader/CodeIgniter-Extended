@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: CodeIgniter\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-02-02 23:00+0100\n"
-"PO-Revision-Date: 2016-02-03 10:13+0100\n"
+"PO-Revision-Date: 2016-02-04 07:24+0100\n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -537,61 +537,83 @@ msgid "The %s field must be one of: %s."
 msgstr ""
 
 # ftp_lang.php
+#: system/libraries/Ftp.php:209
 msgid "Unable to locate a valid connection ID. Please make sure you are connected before performing any file routines."
 msgstr ""
 
+#: system/libraries/Ftp.php:159
 msgid "Unable to connect to your FTP server using the supplied hostname."
 msgstr ""
 
+#: system/libraries/Ftp.php:169
 msgid "Unable to login to your FTP server. Please check your username and password."
 msgstr ""
 
+#: system/libraries/Ftp.php:277
 msgid "Unable to create the directory you have specified."
 msgstr ""
 
+#: system/libraries/Ftp.php:246
 msgid "Unable to change directories."
 msgstr ""
 
+#: system/libraries/Ftp.php:538
 msgid "Unable to set file permissions. Please check your path."
 msgstr ""
 
+#: system/libraries/Ftp.php:332
 msgid "Unable to upload the specified file. Please check your path."
 msgstr ""
 
+#: system/libraries/Ftp.php:380
 msgid "Unable to download the specified file. Please check your path."
 msgstr ""
 
+#: system/libraries/Ftp.php:312
 msgid "Unable to locate the source file. Please check your path."
 msgstr ""
 
+#: system/libraries/Ftp.php:414
 msgid "Unable to rename the file."
 msgstr ""
 
+#: system/libraries/Ftp.php:463 system/libraries/Ftp.php:509
 msgid "Unable to delete the file."
 msgstr ""
 
+#: system/libraries/Ftp.php:418
 msgid "Unable to move the file. Please make sure the destination directory exists."
 msgstr ""
 
 # imglib_lang.php
+#: system/libraries/Image_lib.php:490
 msgid "You must specify a source image in your preferences."
 msgstr ""
 
+#: system/libraries/Image_lib.php:1141
 msgid "The GD image library is required for this feature."
 msgstr ""
 
+#: system/libraries/Image_lib.php:502
 msgid "Your server must support the GD image library in order to determine the image properties."
 msgstr ""
 
+#: system/libraries/Image_lib.php:1445 system/libraries/Image_lib.php:1456
+#: system/libraries/Image_lib.php:1467 system/libraries/Image_lib.php:1476
+#: system/libraries/Image_lib.php:1501 system/libraries/Image_lib.php:1517
+#: system/libraries/Image_lib.php:1533 system/libraries/Image_lib.php:1547
 msgid "Your server does not support the GD function required to process this type of image."
 msgstr ""
 
+#: system/libraries/Image_lib.php:1446 system/libraries/Image_lib.php:1502
 msgid "GIF images are often not supported due to licensing restrictions. You may have to use JPG or PNG images instead."
 msgstr ""
 
+#: system/libraries/Image_lib.php:1457 system/libraries/Image_lib.php:1518
 msgid "JPG images are not supported."
 msgstr ""
 
+#: system/libraries/Image_lib.php:1468 system/libraries/Image_lib.php:1534
 msgid "PNG images are not supported."
 msgstr ""
 
@@ -604,12 +626,15 @@ msgstr ""
 msgid "Image rotation does not appear to be supported by your server."
 msgstr ""
 
+#: system/libraries/Image_lib.php:851 system/libraries/Image_lib.php:919
 msgid "The path to your image library is not correct. Please set the correct path in your image preferences."
 msgstr ""
 
+#: system/libraries/Image_lib.php:896 system/libraries/Image_lib.php:979
 msgid "Image processing failed. Please verify that your server supports the chosen protocol and that the path to your image library is correct."
 msgstr ""
 
+#: system/libraries/Image_lib.php:707
 msgid "An angle of rotation is required to rotate the image."
 msgstr ""
 
@@ -619,10 +644,17 @@ msgstr ""
 msgid "The image copy routine failed."
 msgstr ""
 
+#: system/libraries/Image_lib.php:1261
 msgid "Unable to find a font to use."
 msgstr ""
 
+#: system/libraries/Image_lib.php:1509 system/libraries/Image_lib.php:1525
+#: system/libraries/Image_lib.php:1541
 msgid "Unable to save the image. Please make sure the image and file directory are writable."
+msgstr ""
+
+#: system/libraries/Image_lib.php:1579
+msgid "Unable to display the image"
 msgstr ""
 
 # migration_lang.php
@@ -845,4 +877,16 @@ msgid "The file name you submitted already exists on the server."
 msgstr ""
 
 msgid "The upload destination folder does not appear to be writable."
+msgstr ""
+
+#: system/libraries/Encrypt.php:100
+msgid "The Encrypt library requires the Mcrypt extension."
+msgstr ""
+
+#: system/libraries/Encrypt.php:127
+msgid "In order to use the encryption class requires that you set an encryption key in your config file."
+msgstr ""
+
+#: system/libraries/Encryption.php:163
+msgid "Encryption: Unable to find an available encryption driver."
 msgstr ""

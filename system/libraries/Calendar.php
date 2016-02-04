@@ -354,35 +354,35 @@ class CI_Calendar {
 		if ($this->month_type === 'short')
 		{
 			$month_names = array(
-				'01' => __("Jan"),
-				'02' => __("Feb"),
-				'03' => __("Mar"),
-				'04' => __("Apr"),
-				'05' => __("May"),
-				'06' => __("Jui"),
-				'07' => __("Jul"),
-				'08' => __("Aug"),
-				'09' => __("Sep"),
-				'10' => __("Oct"),
-				'11' => __("Nov"),
-				'12' => __("Dec"),
+				'01' => _dgettext("system", "Jan"),
+				'02' => _dgettext("system", "Feb"),
+				'03' => _dgettext("system", "Mar"),
+				'04' => _dgettext("system", "Apr"),
+				'05' => _dgettext("system", "May"),
+				'06' => _dgettext("system", "Jui"),
+				'07' => _dgettext("system", "Jul"),
+				'08' => _dgettext("system", "Aug"),
+				'09' => _dgettext("system", "Sep"),
+				'10' => _dgettext("system", "Oct"),
+				'11' => _dgettext("system", "Nov"),
+				'12' => _dgettext("system", "Dec"),
 			);
 		}
 		else
 		{
 			$month_names = array(
-				'01' => __("January"),
-				'02' => __("February"),
-				'03' => __("March"),
-				'04' => __("April"),
-				'05' => __("May"),
-				'06' => __("June"),
-				'07' => __("July"),
-				'08' => __("August"),
-				'09' => __("September"),
-				'10' => __("October"),
-				'11' => __("November"),
-				'12' => __("December"),
+				'01' => _dgettext("system", "January"),
+				'02' => _d("system", "February"),
+				'03' => _d("system", "March"),
+				'04' => _d("system", "April"),
+				'05' => _d("system", "May"),
+				'06' => _d("system", "June"),
+				'07' => _d("system", "July"),
+				'08' => _d("system", "August"),
+				'09' => _d("system", "September"),
+				'10' => _d("system", "October"),
+				'11' => _d("system", "November"),
+				'12' => _d("system", "December"),
 			);
 		}
 		return ucfirst($month_names[$month]);
@@ -409,37 +409,37 @@ class CI_Calendar {
 		if ($this->day_type === 'long')
 		{
 			$day_names = array(
-				__("Sunday"),
-				__("Monday"),
-				__("Tuesday"),
-				__("Wednesday"),
-				__("Thursday"),
-				__("Friday"),
-				__("Saturday"),
+				_dgettext("system", "Sunday"),
+				_dgettext("system", "Monday"),
+				_dgettext("system", "Tuesday"),
+				_dgettext("system", "Wednesday"),
+				_dgettext("system", "Thursday"),
+				_dgettext("system", "Friday"),
+				_dgettext("system", "Saturday"),
 			);
 		}
 		elseif ($this->day_type === 'short')
 		{
 			$day_names = array(
-				__("Sun"),
-				__("Mon"),
-				__("Tue"),
-				__("Wed"),
-				__("Thu"),
-				__("Fri"),
-				__("Sat"),
+				_dgettext("system", "Sun"),
+				_dgettext("system", "Mon"),
+				_dgettext("system", "Tue"),
+				_dgettext("system", "Wed"),
+				_dgettext("system", "Thu"),
+				_dgettext("system", "Fri"),
+				_dgettext("system", "Sat"),
 			);
 		}
 		else
 		{
 			$day_names = array(
-				__("Su"),
-				__("Mo"),
-				__("Tu"),
-				__("We"),
-				__("Th"),
-				__("Fr"),
-				__("Sa"),
+				_dgettext("system", "Su"),
+				_dgettext("system", "Mo"),
+				_dgettext("system", "Tu"),
+				_dgettext("system", "We"),
+				_dgettext("system", "Th"),
+				_dgettext("system", "Fr"),
+				_dgettext("system", "Sa"),
 			);
 		}
 		return $day_names;
