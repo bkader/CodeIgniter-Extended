@@ -53,11 +53,6 @@ $config = array(
 		'timezone'    => 'UP1',
 
 		/**
-		 * Folder holding images and uploaded files
-		 */
-		'datafolder'  => APPPATH.'appdata/',
-
-		/**
 		 * Enable/Disable the use of CDN
 		 *
 		 * For external libraries like jquery and other
@@ -139,67 +134,6 @@ $config = array(
 		'date'     => 'Y-m-d',
 		'time'     => 'H:i',
 		'datetime' => 'Y-m-d H:i'
-	),
-
-	/**
-	 * Website Images Settings
-	 */
-	'image' => array(
-
-		/**
-		 * Enable/Disable Image Cropping
-		 */
-		'crop' => true,
-
-		/**
-		 * Different images sizes (square)
-		 */
-		'topbar' => 20,
-		'tiny'   => 32,
-		'small'  => 50,
-		'medium' => 100,
-		'large'  => 200,
-	),
-
-	/**
-	 * Accounts Settings
-	 */
-	'account' => array(
-
-		/**
-		 * Minimum age required
-		 */
-		'min_age' => 13,
-
-		/**
-		 * Different Lengths
-		 */
-		'min_length' => array(
-			'username'  => 5,
-			'password'  => 8,
-			'firstname' => 3,
-			'lastname'  => 3,
-		),
-		'max_length' => array(
-			'username'  => 32,
-			'password'  => 20,
-			'firstname' => 14,
-			'lastname'  => 14,
-		),
-
-		/**
-		 * Account Activation Config
-		 */
-		'activation' => array(
-
-			// Enable/Disable account activation
-			'enabled'    => true,
-
-			// For how long the account is held before
-			// it gets wiped out of the system.
-			'key_expire' => 172800,
-		),
-
 	),
 
 );
