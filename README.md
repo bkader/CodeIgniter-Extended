@@ -81,7 +81,7 @@ echo hash_password('PASSWORD')
 if (check_password('PASSWORD', 'HASHED_PASSWORD')...
 ```
 
-# [DEMO](http://demo.ianhub.com/ci3/)
+# [DEMO](http://bit.ly/CI3GitHub)
 On this demo, the current language is automatically handled according to browser's supported language.
 It is stored in a _session_ + _cookie_. You can change the language by clicking the links on the page.
 
