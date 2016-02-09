@@ -5,70 +5,33 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <head>
 	<meta charset="utf-8">
 	<title><?php echo __("Welcome to CodeIgniter"); ?></title>
-
-	<style type="text/css">
-
-	::selection { background-color: #E13300; color: white; }
-	::-moz-selection { background-color: #E13300; color: white; }
-
+	<link rel="stylesheet" href="http://static.ianhub.com/dinakit/css/dinakit.css">
+	<link href='https://fonts.googleapis.com/css?family=Ubuntu:400,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
+	<style>
 	body {
-		background-color: #fff;
-		margin: 40px;
-		font: 13px/20px normal Helvetica, Arial, sans-serif;
-		color: #4F5155;
+		font: 14px/1.5 "Ubuntu", Tahoma, Arial, sans-serif;
+		background-color: #e5e5e5;
+		padding-top: 10px;
+	}
+	@media (min-width: 768px) {
+		body {
+			padding-top: 25px;
+		}
+	}
+	.btn-dropdown>ul>li>a>.flag {
+		margin-right: 5px;
 	}
 
-	a {
-		color: #003399;
-		background-color: transparent;
-		font-weight: normal;
+	.box-action.float-rtl {
+		right: auto !important;
+		left: 0 !important;
 	}
-
-	h1 {
-		color: #444;
-		background-color: transparent;
-		border-bottom: 1px solid #D0D0D0;
-		font-size: 19px;
-		font-weight: normal;
-		margin: 0 0 14px 0;
-		padding: 14px 15px 10px 15px;
+	.menu-right.menu-rtl {
+		left: 0 !important;
+		right: auto !important;
 	}
-
-	code {
-		font-family: Consolas, Monaco, Courier New, Courier, monospace;
-		font-size: 12px;
-		background-color: #f9f9f9;
-		border: 1px solid #D0D0D0;
-		color: #002166;
-		display: block;
-		margin: 14px 0 14px 0;
-		padding: 12px 10px 12px 10px;
-	}
-
-	#body {
-		margin: 0 15px 0 15px;
-	}
-
-	p.footer {
-		text-align: right;
-		font-size: 11px;
-		border-top: 1px solid #D0D0D0;
-		line-height: 32px;
-		padding: 0 10px 0 10px;
-		margin: 20px 0 0 0;
-	}
-
-	#container {
-		margin: 10px;
-		border: 1px solid #D0D0D0;
-		box-shadow: 0 0 8px #D0D0D0;
-	}
-
-	.pull-right {
-		float: right;
-	}
-	.pull-right.rtl {
-		float: left;
+	.menu-right.menu-rtl>li>a {
+		text-align: right !important;
 	}
 	</style>
 </head>
@@ -83,23 +46,46 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   ga('send', 'pageview');
 </script>
 
-<div id="container">
-	<h1><?php echo __("Welcome to CodeIgniter"); ?> <small>.: <a href="http://bit.ly/CI3GitHub" target="_blank">Github</a> :.</small> <small class="pull-right <?php echo current_lang('direction'); ?>"><?php echo current_lang('name'); ?> : <a href="<?php echo site_url('welcome/lang/en'); ?>">EN</a> &#124; <a href="<?php echo site_url('welcome/lang/fr'); ?>">FR</a> &#124; <a href="<?php echo site_url('welcome/lang/ar'); ?>">عربي</a>&#124; <a href="<?php echo site_url('welcome/lang/it'); ?>">IT</a> &#124; <a href="<?php echo site_url('welcome/lang/es'); ?>">ES</a> &#124; <a href="<?php echo site_url('welcome/lang/de'); ?>">DE</a> &#124; <a href="<?php echo site_url('welcome/lang/pt'); ?>">PT</a></small></h1>
-
-	<div id="body">
-		<p><?php echo __("The page you are looking at is being generated dynamically by CodeIgniter."); ?></p>
-
-		<p><?php echo __("If you would like to edit this page you'll find it located at:"); ?></p>
-		<code>application/views/welcome_message.php</code>
-
-		<p><?php echo __("The corresponding controller for this page is found at:"); ?></p>
-		<code>application/controllers/Welcome.php</code>
-
-		<p><?php echo __("If you are exploring CodeIgniter for the very first time, you should start by reading the"); ?> <a href="http://www.codeigniter.com/user_guide/" target="_blank"><?php echo __("User Guide"); ?></a>.</p>
+<div class="container">
+	<div class="row">
+		<div class="col-x-12">
+			<div class="box">
+				<div class="box-header">
+					<h4><?php echo __("Welcome to CodeIgniter"); ?></h4>
+					<div class="box-action float-<?php echo current_lang('direction'); ?>">
+						<div class="btn-dropdown">
+							<a href="#" role="button" class="btn btn-small toggle-dropdown" title="<?php echo current_lang('name'); ?>"><i class="flag flag-<?php echo current_lang('flag'); ?>"></i></a>
+							<ul class="menu-right menu-<?php echo current_lang('direction'); ?>">
+<?php foreach($this->i18n->languages() as $key => $lang): if (current_lang('folder') <> $key): ?>
+								<li><a href="<?php echo site_url('welcome/lang/'.$lang['code']); ?>"><i class="flag flag-<?php echo $lang['flag']; ?>"></i> <?php echo $lang['name']; ?></a></li>
+<?php endif; endforeach; ?>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="box-content">
+					<p><?php echo __("The page you are looking at is being generated dynamically by CodeIgniter."); ?></p>
+					<p><?php echo __("If you would like to edit this page you'll find it located at:"); ?></p>
+					<code>application/views/welcome_message.php</code>
+					<p><?php echo __("The corresponding controller for this page is found at:"); ?></p>
+					<code>application/controllers/Welcome.php</code>
+					<p><?php echo __("If you are exploring CodeIgniter for the very first time, you should start by reading the"); ?> <a href="http://www.codeigniter.com/user_guide/" target="_blank"><?php echo __("User Guide"); ?></a>.</p>
+				</div>
+				<div class="box-footer text-right">
+					<a href="http://bit.ly/CI3GitHub" class="btn btn-small float-left btn-github" target="_blank"><i class="fa fa-github-square"></i> Github</a>
+					<?php echo __("Page rendered in"); ?> <strong>{elapsed_time}</strong> <?php echo _dgettext("system", "Seconds"); ?>. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?>
+				</div>
+			</div>
+		</div>
 	</div>
 
-	<p class="footer"><?php echo __("Page rendered in"); ?> <strong>{elapsed_time}</strong> <?php echo _dgettext("system", "Seconds"); ?>. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
+	<div id="body">
+	</div>
+
+	<p class="footer"</p>
 </div>
 
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script type="text/javascript" src="http://static.ianhub.com/dinakit/js/dinakit.js"></script>
 </body>
 </html>
