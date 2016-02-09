@@ -17,12 +17,35 @@ if ( ! function_exists('_ci'))
     }
 }
 
-if ( ! function_exists('lang')) {
+/**
+ * Remplacing CodeIgniter lang function
+ *
+ * @param   string
+ * @param   array
+ * @return  string
+ */
+if ( ! function_exists('lang'))
+{
     function lang($str, $args = array())
     {
         $line = _ci()->lang->line($str);
         $line or $line = $str;
         return ( ! empty($args)) ? vsprintf($line, (array) $args) : $line;
+    }
+}
+
+/**
+ * Get current language data
+ *
+ * @param   string
+ * @return  mixed
+ */
+if ( ! function_exists('current_lang'))
+{
+    function current_lang($return = FALSE)
+    {
+        class_exists('I18n') or _ci()->load->library('i18n');
+        return _ci()->i18n->get_current($return);
     }
 }
 

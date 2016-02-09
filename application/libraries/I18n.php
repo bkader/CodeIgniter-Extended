@@ -53,11 +53,7 @@ class I18n
     private function init($config = array())
     {
         // Load language helper
-        $this->CI->load->helper(array(
-            'cookie',
-            'i18n',
-            'language',
-        ));
+        $this->CI->load->helper(array('cookie','language'));
 
         // Make sure the session library is loaded
         class_exists('Session') or $this->CI->load->library('session');
