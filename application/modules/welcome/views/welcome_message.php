@@ -63,12 +63,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		border: 1px solid #D0D0D0;
 		box-shadow: 0 0 8px #D0D0D0;
 	}
+
+	.pull-right {
+		float: right;
+	}
+	.pull-right.rtl {
+		float: left;
+	}
 	</style>
 </head>
 <body>
 
 <div id="container">
-	<h1><?php echo __("Welcome to CodeIgniter"); ?> (<small><?php echo current_lang('name'); ?> : <a href="<?php echo site_url('welcome/lang/en'); ?>">English</a> &#124; <a href="<?php echo site_url('welcome/lang/fr'); ?>">Fran&ccedil;ais</a> &#124; <a href="<?php echo site_url('welcome/lang/ar'); ?>">العربية</a></small>)</h1>
+	<h1><?php echo __("Welcome to CodeIgniter"); ?> <small class="pull-right <?php echo current_lang('direction'); ?>"><?php echo current_lang('name'); ?> : <a href="<?php echo site_url('welcome/lang/en'); ?>">EN</a> &#124; <a href="<?php echo site_url('welcome/lang/fr'); ?>">FR</a> &#124; <a href="<?php echo site_url('welcome/lang/ar'); ?>">عربي</a>&#124; <a href="<?php echo site_url('welcome/lang/it'); ?>">IT</a>&#124; <a href="<?php echo site_url('welcome/lang/es'); ?>">ES</a></small></h1>
 
 	<div id="body">
 		<p><?php echo __("The page you are looking at is being generated dynamically by CodeIgniter."); ?></p>

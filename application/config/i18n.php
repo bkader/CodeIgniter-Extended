@@ -65,8 +65,19 @@ $config['i18n'] = array(
             'flag'      => 'dz',
         ),
 
+        // French
+        'italian' => array(
+            'name'      => 'Italiano',
+            'folder'    => 'italian',
+            'code'      => 'it',
+            'locale'    => 'it_IT',
+            'charset'   => 'UTF-8',
+            'direction' => 'ltr',
+            'flag'      => 'it',
+        ),
+
         // Spanish'
-/*        'spanish' => array(
+        'spanish' => array(
             'name'      => 'Español',
             'folder'    => 'spanish',
             'code'      => 'es',
@@ -74,7 +85,7 @@ $config['i18n'] = array(
             'charset'   => 'UTF-8',
             'direction' => 'ltr',
             'flag'      => 'es',
-        ),*/
+        ),
     ),
 
     // Language session name (default: lang)
