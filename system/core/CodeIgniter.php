@@ -59,6 +59,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /*
  * ------------------------------------------------------
+ * Load the php-gettext library before anything else
+ * ------------------------------------------------------
+ */
+	require_once BASEPATH.'vendor/php-gettext/gettext.inc';
+
+/*
+ * ------------------------------------------------------
+ * Load the dot-notation function
+ * ------------------------------------------------------
+ */
+	require_once BASEPATH.'vendor/dot-notation.php';
+
+/*
+ * ------------------------------------------------------
  *  Load the framework constants
  * ------------------------------------------------------
  */

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: CodeIgniter\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-02-02 23:00+0100\n"
-"PO-Revision-Date: 2016-02-03 10:18+0100\n"
+"PO-Revision-Date: 2016-02-08 22:49+0100\n"
 "Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,9 +20,26 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: _;__;_n;_d\n"
 
-# Test String
-msgid "Hello"
+msgid "Welcome to CodeIgniter"
 msgstr ""
 
-msgid "Hello, %s!"
+msgid ""
+"The page you are looking at is being generated dynamically by CodeIgniter."
+msgstr ""
+
+msgid "If you would like to edit this page you'll find it located at:"
+msgstr ""
+
+msgid "The corresponding controller for this page is found at:"
+msgstr ""
+
+msgid ""
+"If you are exploring CodeIgniter for the very first time, you should "
+"start by reading the"
+msgstr ""
+
+msgid "User Guide"
+msgstr ""
+
+msgid "Page rendered in"
 msgstr ""

@@ -58,7 +58,7 @@ $autoload['packages'] = array();
 |
 |	$autoload['libraries'] = array('user_agent' => 'ua');
 */
-$autoload['libraries'] = array();
+$autoload['libraries'] = array('events','i18n',);
 
 /*
 | -------------------------------------------------------------------
@@ -83,7 +83,7 @@ $autoload['drivers'] = array();
 |
 |	$autoload['helper'] = array('url', 'file');
 */
-$autoload['helper'] = array();
+$autoload['helper'] = array('url','array');
 
 /*
 | -------------------------------------------------------------------
@@ -97,7 +97,9 @@ $autoload['helper'] = array();
 | config files.  Otherwise, leave it blank.
 |
 */
-$autoload['config'] = array();
+$autoload['config'] = array(
+    'application',
+);
 
 /*
 | -------------------------------------------------------------------
@@ -127,3 +129,17 @@ $autoload['language'] = array();
 |	$autoload['model'] = array('first_model' => 'first');
 */
 $autoload['model'] = array();
+
+/**
+ * We make sure to load our debug hleper in case of development.
+ *
+ * To use it, simple echo a debug($param, $exit = false);
+ * Set the second param to true if you want to exit;
+ */
+if (ENVIRONMENT === 'development')
+{
+    array_push($autoload['helper'], 'debug');
+}
+
+/* End of file autoload.php */
+/* Location: ./application/config/autoload.php */
