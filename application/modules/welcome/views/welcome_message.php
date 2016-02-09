@@ -75,7 +75,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
 
 <div id="container">
-	<h1><?php echo __("Welcome to CodeIgniter"); ?> <small class="pull-right <?php echo current_lang('direction'); ?>"><?php echo current_lang('name'); ?> : <a href="<?php echo site_url('welcome/lang/en'); ?>">EN</a> &#124; <a href="<?php echo site_url('welcome/lang/fr'); ?>">FR</a> &#124; <a href="<?php echo site_url('welcome/lang/ar'); ?>">عربي</a>&#124; <a href="<?php echo site_url('welcome/lang/it'); ?>">IT</a>&#124; <a href="<?php echo site_url('welcome/lang/es'); ?>">ES</a></small></h1>
+	<h1><?php echo __("Welcome to CodeIgniter"); ?> <small>.: <a href="http://bit.ly/CI3GitHub" target="_blank">Github</a> :.</small> <small class="pull-right <?php echo current_lang('direction'); ?>"><?php echo current_lang('name'); ?> : <a href="<?php echo site_url('welcome/lang/en'); ?>">EN</a> &#124; <a href="<?php echo site_url('welcome/lang/fr'); ?>">FR</a> &#124; <a href="<?php echo site_url('welcome/lang/ar'); ?>">عربي</a>&#124; <a href="<?php echo site_url('welcome/lang/it'); ?>">IT</a>&#124; <a href="<?php echo site_url('welcome/lang/es'); ?>">ES</a></small></h1>
 
 	<div id="body">
 		<p><?php echo __("The page you are looking at is being generated dynamically by CodeIgniter."); ?></p>
