@@ -66,9 +66,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<div class="box-content">
 					<p><?php echo __("The page you are looking at is being generated dynamically by CodeIgniter."); ?></p>
 					<p><?php echo __("If you would like to edit this page you'll find it located at:"); ?></p>
-					<code>application/views/welcome_message.php</code>
+					<p><code>application/views/welcome_message.php</code></p>
 					<p><?php echo __("The corresponding controller for this page is found at:"); ?></p>
-					<code>application/controllers/Welcome.php</code>
+					<p><code>application/controllers/Welcome.php</code></p>
 					<p><?php echo __("If you are exploring CodeIgniter for the very first time, you should start by reading the"); ?> <a href="http://www.codeigniter.com/user_guide/" target="_blank"><?php echo __("User Guide"); ?></a>.</p>
 				</div>
 				<div class="box-footer text-right">

@@ -28,7 +28,7 @@ To echo the site name for instance, you just do:
 echo  $this->config->get('site.name');  // Return: "Website"
 ```
 
-You must have seen, as well, a _MY_Lang.php_ file inside the _application/core_ folder ! I simple edited the *line()* method so it cas, _AS WELL_ use the *dot-notation* method. Example:
+You must have seen, as well, a _MY_Lang.php_ file inside the _application/core_ folder ! I simple edited the *line()* method so it can, _AS WELL_, use the *dot-notation* method. Example:
 
 Let's suppose you have a language file 'main_lang.php' and that you loaded it.
 ```
