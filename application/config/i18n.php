@@ -76,7 +76,7 @@ $config['i18n'] = array(
             'flag'      => 'it',
         ),
 
-        // Spanish'
+        // Spanish
         'spanish' => array(
             'name'      => 'Español',
             'folder'    => 'spanish',
@@ -85,6 +85,28 @@ $config['i18n'] = array(
             'charset'   => 'UTF-8',
             'direction' => 'ltr',
             'flag'      => 'es',
+        ),
+
+        // Portuguese
+        'portuguese' => array(
+            'name'      => 'Português',
+            'folder'    => 'portuguese',
+            'code'      => 'pt',
+            'locale'    => 'pt_PR',
+            'charset'   => 'UTF-8',
+            'direction' => 'ltr',
+            'flag'      => 'pt',
+        ),
+
+        // German
+        'german' => array(
+            'name'      => 'Deutsche',
+            'folder'    => 'german',
+            'code'      => 'de',
+            'locale'    => 'de_DE',
+            'charset'   => 'UTF-8',
+            'direction' => 'ltr',
+            'flag'      => 'de',
         ),
     ),
 

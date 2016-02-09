@@ -74,8 +74,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </head>
 <body>
 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-73564021-2', 'auto');
+  ga('send', 'pageview');
+</script>
+
 <div id="container">
-	<h1><?php echo __("Welcome to CodeIgniter"); ?> <small>.: <a href="http://bit.ly/CI3GitHub" target="_blank">Github</a> :.</small> <small class="pull-right <?php echo current_lang('direction'); ?>"><?php echo current_lang('name'); ?> : <a href="<?php echo site_url('welcome/lang/en'); ?>">EN</a> &#124; <a href="<?php echo site_url('welcome/lang/fr'); ?>">FR</a> &#124; <a href="<?php echo site_url('welcome/lang/ar'); ?>">عربي</a>&#124; <a href="<?php echo site_url('welcome/lang/it'); ?>">IT</a>&#124; <a href="<?php echo site_url('welcome/lang/es'); ?>">ES</a></small></h1>
+	<h1><?php echo __("Welcome to CodeIgniter"); ?> <small>.: <a href="http://bit.ly/CI3GitHub" target="_blank">Github</a> :.</small> <small class="pull-right <?php echo current_lang('direction'); ?>"><?php echo current_lang('name'); ?> : <a href="<?php echo site_url('welcome/lang/en'); ?>">EN</a> &#124; <a href="<?php echo site_url('welcome/lang/fr'); ?>">FR</a> &#124; <a href="<?php echo site_url('welcome/lang/ar'); ?>">عربي</a>&#124; <a href="<?php echo site_url('welcome/lang/it'); ?>">IT</a> &#124; <a href="<?php echo site_url('welcome/lang/es'); ?>">ES</a> &#124; <a href="<?php echo site_url('welcome/lang/de'); ?>">DE</a> &#124; <a href="<?php echo site_url('welcome/lang/pt'); ?>">PT</a></small></h1>
 
 	<div id="body">
 		<p><?php echo __("The page you are looking at is being generated dynamically by CodeIgniter."); ?></p>
