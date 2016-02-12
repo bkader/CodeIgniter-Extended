@@ -78,11 +78,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			</div>
 		</div>
 	</div>
-
-	<div id="body">
-	</div>
-
-	<p class="footer"</p>
 </div>
 
 	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>

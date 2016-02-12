@@ -16,6 +16,12 @@ class MY_Controller extends CI_Controller
     protected $ignored_pages = array();
 
     /**
+     * Global view data
+     * @var  array
+     */
+    protected $data = array();
+
+    /**
      * Constructor
      */
     public function __construct()

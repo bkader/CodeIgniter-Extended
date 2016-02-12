@@ -554,12 +554,12 @@ class MY_Email extends CI_Email {
                     // If your system uses class autoloading feature,
                     // then the following require statement would not be needed.
                     if (!class_exists('PHPMailer', false)) {
-                        require_once BASEPATH.'vendor/phpmailer/PHPMailerAutoload.php';
+                        require_once BASEPATH.'vendor/PHPMailer/PHPMailerAutoload.php';
                     }
                     //
 
                     $this->phpmailer = new PHPMailer();
-                    $this->phpmailer->PluginDir = BASEPATH.'vendor/phpmailer/';
+                    $this->phpmailer->PluginDir = BASEPATH.'vendor/PHPMailer/';
                 }
 
                 // Refresh PHPMailer options.

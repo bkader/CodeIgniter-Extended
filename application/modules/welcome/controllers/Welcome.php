@@ -5,7 +5,8 @@ class Welcome extends MY_Controller
 {
 	public function index()
 	{
-		$this->load->view('welcome_message');
+		$this->data['title'] = __("Welcome to CodeIgniter");
+		$this->twig->display('welcome_message', $this->data);
 	}
 
 	public function lang($code = false)

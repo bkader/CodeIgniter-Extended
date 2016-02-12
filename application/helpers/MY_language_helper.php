@@ -50,6 +50,24 @@ if ( ! function_exists('current_lang'))
 }
 
 /**
+ * List all languages
+ *
+ * @param   string
+ * @return  array
+ */
+if ( ! function_exists('languages'))
+{
+    function languages($single = false)
+    {
+        class_exists('I18n') or _ci()->load->library('i18n');
+        $languages = _ci()->i18n->languages();
+        return ($single and array_key_exists($single, $languages))
+                ? $languages[$single] : $languages;
+
+    }
+}
+
+/**
  * Get a single phrase by name and index
  *
  * @access  public

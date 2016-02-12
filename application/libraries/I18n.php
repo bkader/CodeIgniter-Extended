@@ -90,12 +90,8 @@ class I18n
                 $this->CI->lang->load($file, $this->current['folder']);
             }
         }
-
-        // Change environment language
         T_setlocale(LC_MESSAGES, $this->current['folder']);
         T_bindtextdomain('application', APPPATH.'language');
-        //T_bind_textdomain_codeset('application', 'UTF-8');
-        //T_textdomain('application');
         return;
     }
 

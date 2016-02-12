@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="{{ current_lang('code')|lower }}" dir="{{ current_lang('direction')|lower }}">
+<head>
+    <meta charset="{{ current_lang('charset')|lower }}">
+    <title>{% block title %}{{ __("Welcome to CodeIgniter") }}{% endblock %}</title>
+    <link rel="stylesheet" href="http://static.ianhub.com/dinakit/css/dinakit.css">
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
+    <style>body{font:14px/1.5 "Ubuntu",Tahoma,Arial,sans-serif;padding-top:10px;background:#e5e5e5}@media (min-width: 768px){body{padding-top:25px}}.btn-dropdown>ul>li>a>.flag{margin-right:5px}.box-action.float-rtl{right:auto!important;left:0!important}.menu-right.menu-rtl{left:0!important;right:auto!important}.menu-right.menu-rtl>li>a{text-align:right!important}</style>
+</head>
+<body>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-73564021-2', 'auto');
+  ga('send', 'pageview');
+</script>
+
+{% block contents %}{% endblock %}
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="http://static.ianhub.com/dinakit/js/dinakit.js"></script>
+</body>
+</html>

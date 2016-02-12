@@ -58,7 +58,11 @@ $autoload['packages'] = array();
 |
 |	$autoload['libraries'] = array('user_agent' => 'ua');
 */
-$autoload['libraries'] = array('events','i18n',);
+$autoload['libraries'] = array(
+    'events',
+    'i18n',
+    'twig',
+);
 
 /*
 | -------------------------------------------------------------------
