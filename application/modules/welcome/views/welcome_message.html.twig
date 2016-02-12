@@ -27,7 +27,10 @@
 					<p>{{ __("If you are exploring CodeIgniter for the very first time, you should start by reading the") }} <a href="http://www.codeigniter.com/user_guide/" target="_blank">{{ __("User Guide") }}</a>.</p>
 				</div>
 				<div class="box-footer text-right">
-					<a href="http://bit.ly/CI3GitHub" class="btn btn-small float-left btn-github" target="_blank"><i class="fa fa-github-square"></i> Github</a>
+					<span class="float-left">
+						<a href="http://bit.ly/CI3GitHub" class="btn btn-small btn-github" target="_blank"><i class="fa fa-github-square"></i> Github</a>
+						<a href="{{ site_url() }}" class="btn btn-small btn-blue">View</a>
+					</span>
 					{{ __("Page rendered in") }} <strong>{elapsed_time}</strong> {{ _dgettext("system", "Seconds") }}. {% if ENVIRONMENT == 'development' %}CodeIgniter Version {{ CI_VERSION }}{% endif %}
 				</div>
 			</div>

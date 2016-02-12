@@ -7,33 +7,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<title><?php echo __("Welcome to CodeIgniter"); ?></title>
 	<link rel="stylesheet" href="http://static.ianhub.com/dinakit/css/dinakit.css">
 	<link href='https://fonts.googleapis.com/css?family=Ubuntu:400,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
-	<style>
-	body {
-		font: 14px/1.5 "Ubuntu", Tahoma, Arial, sans-serif;
-		background-color: #e5e5e5;
-		padding-top: 10px;
-	}
-	@media (min-width: 768px) {
-		body {
-			padding-top: 25px;
-		}
-	}
-	.btn-dropdown>ul>li>a>.flag {
-		margin-right: 5px;
-	}
-
-	.box-action.float-rtl {
-		right: auto !important;
-		left: 0 !important;
-	}
-	.menu-right.menu-rtl {
-		left: 0 !important;
-		right: auto !important;
-	}
-	.menu-right.menu-rtl>li>a {
-		text-align: right !important;
-	}
-	</style>
+	<style>body{font:14px/1.5 "Ubuntu",Tahoma,Arial,sans-serif;padding-top:10px;background:#e5e5e5}@media (min-width: 768px){body{padding-top:25px}}.btn-dropdown>ul>li>a>.flag{margin-right:5px}.box-action.float-rtl{right:auto!important;left:0!important}.menu-right.menu-rtl{left:0!important;right:auto!important}.menu-right.menu-rtl>li>a{text-align:right!important}</style>
 </head>
 <body>
 
@@ -72,7 +46,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<p><?php echo __("If you are exploring CodeIgniter for the very first time, you should start by reading the"); ?> <a href="http://www.codeigniter.com/user_guide/" target="_blank"><?php echo __("User Guide"); ?></a>.</p>
 				</div>
 				<div class="box-footer text-right">
-					<a href="http://bit.ly/CI3GitHub" class="btn btn-small float-left btn-github" target="_blank"><i class="fa fa-github-square"></i> Github</a>
+					<span class="float-left">
+						<a href="http://bit.ly/CI3GitHub" class="btn btn-small btn-github" target="_blank"><i class="fa fa-github-square"></i> Github</a>
+						<a href="<?php echo site_url('welcome/twig'); ?>" class="btn btn-small btn-red">Twig</a>
+					</span>
 					<?php echo __("Page rendered in"); ?> <strong>{elapsed_time}</strong> <?php echo _dgettext("system", "Seconds"); ?>. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?>
 				</div>
 			</div>

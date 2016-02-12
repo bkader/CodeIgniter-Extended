@@ -10,7 +10,7 @@ $config['twig'] = array(
     'paths' => array(VIEWPATH),
 
     // Path to cache folder (set to 'false' to disable)
-    'cache' => false, //APPPATH.'cache/twig',
+    'cache' => APPPATH.'cache/twig',
 
     // Add as many functions as you want
     'functions_asis' => array(),
