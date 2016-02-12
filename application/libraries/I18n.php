@@ -56,7 +56,7 @@ class I18n
         $this->CI->load->helper(array('cookie','language'));
 
         // Make sure the session library is loaded
-        class_exists('Session') or $this->CI->load->library('session');
+        class_exists('CI_Session') or $this->CI->load->library('session');
 
         // List all available languages
         $this->languages = $config['languages'];

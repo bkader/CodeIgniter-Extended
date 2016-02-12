@@ -61,13 +61,9 @@ class CI_Twig
 		}
 
 		if (method_exists($this->CI->router, 'fetch_module'))
-		{
 			$this->module = $this->CI->router->fetch_module();
-		}
 		if ($this->module !== null)
-		{
 			array_push($this->config['paths'], APPPATH.'modules/'.$this->module.'/views/');
-		}
 
 		// Add some useful globals
 		$this->addGlobal(array(
@@ -79,6 +75,9 @@ class CI_Twig
 			'VIEWPATH'    => VIEWPATH,
 			'DOMAIN'      => DOMAIN,
 		));
+
+		if (class_exists('CI_Session'))
+			$this->addGlobal('session', $this->CI->session);
 
 	}
 
