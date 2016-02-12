@@ -279,7 +279,7 @@ class I18n
             // change session and cookie
             $this->CI->session->set_userdata($this->session, $lang['folder']);
             set_cookie(array(
-                'name'   => 'lang',
+                'name'   => $this->cookie,
                 'value'  => $lang['folder'],
             ));
             return true;
