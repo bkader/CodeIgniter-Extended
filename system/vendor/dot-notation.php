@@ -16,6 +16,7 @@ if ( ! function_exists('dot'))
             user_error("Missing array path for array", E_USER_WARNING);
         }
         $parts = explode(".", $path);
+        is_array($arr) or $arr = (array) $arr;
         $path  =& $arr;
         foreach ($parts as $e)
         {
