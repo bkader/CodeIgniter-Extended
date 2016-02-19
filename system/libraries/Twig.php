@@ -230,7 +230,7 @@ class CI_Twig
 	 * @param array  $attributes [changed] only array is acceptable
 	 * @return string
 	 */
-	protected function safe_anchor($uri = '', $title = '', $attributes = array())
+	public function safe_anchor($uri = '', $title = '', $attributes = array())
 	{
 		$uri = html_escape($uri);
 		$title = html_escape($title);
