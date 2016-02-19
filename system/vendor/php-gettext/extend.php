@@ -45,5 +45,20 @@ if ( ! function_exists('_d'))
     }
 }
 
+/**
+ * Using gettext with passed arguments
+ *
+ * @param   string
+ * @param   array
+ * @return  string
+ */
+if ( ! function_exists('_t'))
+{
+    function _t($msgid, $args = null)
+    {
+        return ($args) ? vsprintf(__($msgid), (array) $args) : __($msgid);
+    }
+}
+
 /* End of file extend.php */
 /* Location: ./system/vendor/php-gettext/extend.php */
