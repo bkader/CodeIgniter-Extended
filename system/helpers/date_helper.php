@@ -587,7 +587,7 @@ if ( ! function_exists('timezone_menu'))
 		foreach ($timezones as $key => $val)
 		{
 			$selected = ($default === $key) ? ' selected="selected"' : '';
-			$menu .= '<option value="'.timezones($key).'"'.$selected.'>'._dgettext("system", $val)."</option>\n";
+			$menu .= '<option value="'.$key.'"'.$selected.'>'._dgettext("system", $val)."</option>\n";
 		}
 
 		return $menu.'</select>';

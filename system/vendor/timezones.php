@@ -1,6 +1,17 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+/**
+ * Timezones List
+ *
+ * @package 	CodeIgniter
+ * @subpackage 	Vendor
+ *
+ * @author 		Kader Bouyakoub
+ * @link 		@bkader <github>
+ * @link 		@Kader Bouyakoub <twitter>
+ */
+
 $timezones = array(
 	'UM12'   => '(UTC -12:00) Baker/Howland Island',
 	'UM11'   => '(UTC -11:00) Niue',
