@@ -908,7 +908,7 @@ msgid "Afghanistan"
 msgstr "Afghanistan"
 
 msgid "Åland Islands"
-msgstr "Aland"
+msgstr "Åland"
 
 msgid "Albania"
 msgstr "Albanie"

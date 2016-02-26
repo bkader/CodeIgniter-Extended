@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: CodeIgniter\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-02-02 23:00+0100\n"
-"PO-Revision-Date: 2016-02-04 12:13+0100\n"
+"PO-Revision-Date: 2016-02-26 20:02+0100\n"
+"Last-Translator: Kader Bouyakoub <bkader@mail.com>\n"
+"Language-Team: Kader Bouyakoub <bkader@mail.com>\n"
 "Language: ar_DZ\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 1.8.6\n"
-"Last-Translator: Kader Bouyakoub <bkader@mail.com>\n"
-"Language-Team: Kader Bouyakoub <bkader@mail.com>\n"
+"X-Generator: Eazy Po 0.9.5.3\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: _;__;_n;_d\n"
 
@@ -588,7 +588,7 @@ msgstr "تعذّر نقل الملف. الرجاء التأكد من وجود ا
 # imglib_lang.php
 #: system/libraries/Image_lib.php:490
 msgid "You must specify a source image in your preferences."
-msgstr ""
+msgstr "يجب عليك تحديد مصدر الصورة في خياراتك."
 
 #: system/libraries/Image_lib.php:1141
 msgid "The GD image library is required for this feature."
@@ -596,14 +596,14 @@ msgstr ""
 
 #: system/libraries/Image_lib.php:502
 msgid "Your server must support the GD image library in order to determine the image properties."
-msgstr ""
+msgstr "يجب أن يدعم الخادم مكتبة الصور GD من أجل تحديد خصائص الصورة."
 
 #: system/libraries/Image_lib.php:1445 system/libraries/Image_lib.php:1456
 #: system/libraries/Image_lib.php:1467 system/libraries/Image_lib.php:1476
 #: system/libraries/Image_lib.php:1501 system/libraries/Image_lib.php:1517
 #: system/libraries/Image_lib.php:1533 system/libraries/Image_lib.php:1547
 msgid "Your server does not support the GD function required to process this type of image."
-msgstr ""
+msgstr "لا يدعم الخادم الخاص بك وظيفة GD المطلوبة لمعالجة هذا النوع من الصور."
 
 #: system/libraries/Image_lib.php:1446 system/libraries/Image_lib.php:1502
 msgid "GIF images are often not supported due to licensing restrictions. You may have to use JPG or PNG images instead."
@@ -611,11 +611,11 @@ msgstr ""
 
 #: system/libraries/Image_lib.php:1457 system/libraries/Image_lib.php:1518
 msgid "JPG images are not supported."
-msgstr ""
+msgstr "الصور من نوع JPG غير مدعومة."
 
 #: system/libraries/Image_lib.php:1468 system/libraries/Image_lib.php:1534
 msgid "PNG images are not supported."
-msgstr ""
+msgstr "الصور من نوع PNG غير مدعومة."
 
 msgid "The image resize protocol specified in your preferences only works with JPEG or PNG image types."
 msgstr ""
@@ -636,7 +636,7 @@ msgstr ""
 
 #: system/libraries/Image_lib.php:707
 msgid "An angle of rotation is required to rotate the image."
-msgstr ""
+msgstr "زاوية الدوران مطلوبة لتدوير الصورة."
 
 #: system/libraries/Image_lib.php:1662
 msgid "The path to the image is not correct."
@@ -647,16 +647,16 @@ msgstr ""
 
 #: system/libraries/Image_lib.php:1261
 msgid "Unable to find a font to use."
-msgstr ""
+msgstr "تعذر العثور على خط للاستخدام."
 
 #: system/libraries/Image_lib.php:1509 system/libraries/Image_lib.php:1525
 #: system/libraries/Image_lib.php:1541
 msgid "Unable to save the image. Please make sure the image and file directory are writable."
-msgstr ""
+msgstr "غير قادر على حفظ الصورة. الرجاء التأكد من أن ملف الصورة والمجلد قابلة للكتابة."
 
 #: system/libraries/Image_lib.php:1579
 msgid "Unable to display the image"
-msgstr ""
+msgstr "غير قادر على عرض صورة"
 
 # migration_lang.php
 #: system/libraries/Migration.php:309
@@ -669,7 +669,7 @@ msgstr ""
 
 #: system/libraries/Migration.php:240
 msgid "There is a gap in the migration sequence near version number: %s."
-msgstr ""
+msgstr "هناك فجوة في تسلسل الهجرة بأعداد الإصدار : %s."
 
 #: system/libraries/Migration.php:368
 msgid "There are multiple migrations with the same version number: %s."
@@ -688,7 +688,7 @@ msgid "The migration class '%s' is missing a 'down' method."
 msgstr ""
 
 msgid "Migration '%s' has an invalid filename."
-msgstr ""
+msgstr "الهجرة '%s' له اسم الملف غير صالح."
 
 # number_lang.php
 msgid "TB"
@@ -746,7 +746,7 @@ msgid "URI STRING"
 msgstr ""
 
 msgid "MEMORY USAGE"
-msgstr ""
+msgstr "استخدام الذاكرة"
 
 msgid "CONFIG VARIABLES"
 msgstr ""
@@ -767,13 +767,13 @@ msgid "No POST data exists"
 msgstr ""
 
 msgid "No GET data exists"
-msgstr ""
+msgstr "لا يوجد بيانات GET"
 
 msgid "No URI data exists"
 msgstr ""
 
 msgid "Memory Usage Unavailable"
-msgstr ""
+msgstr "استخدام الذاكرة غير متوفر"
 
 msgid "No Profile data - all Profiler sections have been disabled."
 msgstr ""
@@ -807,7 +807,7 @@ msgid "File Name"
 msgstr ""
 
 msgid "Line Number"
-msgstr ""
+msgstr "رقم السطر"
 
 msgid "Passed"
 msgstr ""
@@ -816,7 +816,7 @@ msgid "Failed"
 msgstr ""
 
 msgid "Boolean"
-msgstr ""
+msgstr "منطقية"
 
 msgid "Integer"
 msgstr ""
@@ -828,7 +828,7 @@ msgid "String"
 msgstr ""
 
 msgid "Array"
-msgstr ""
+msgstr "مجموعة"
 
 msgid "Object"
 msgstr ""
@@ -844,7 +844,7 @@ msgstr ""
 
 # upload_lang.php
 msgid "Unable to find a post variable called userfile."
-msgstr ""
+msgstr "تعذر العثور على post يسمى userfile."
 
 msgid "The uploaded file exceeds the maximum allowed size in your PHP configuration file."
 msgstr ""
@@ -865,7 +865,7 @@ msgid "The file upload was stopped by extension."
 msgstr ""
 
 msgid "You did not select a file to upload."
-msgstr ""
+msgstr "انت لم تختر ملف للتحميل."
 
 msgid "The filetype you are attempting to upload is not allowed."
 msgstr ""
@@ -877,13 +877,13 @@ msgid "The image you are attempting to upload doesn't fit into the allowed dimen
 msgstr ""
 
 msgid "A problem was encountered while attempting to move the uploaded file to the final destination."
-msgstr ""
+msgstr "حدثت مشكلة أثناء محاولة نقل ملف مرفوع إلى الوجهة النهائية."
 
 msgid "The upload path does not appear to be valid."
 msgstr ""
 
 msgid "You have not specified any allowed file types."
-msgstr ""
+msgstr "لم تقم بتحديد أنواع الملفات المسموح بها."
 
 msgid "The file name you submitted already exists on the server."
 msgstr ""
@@ -902,3 +902,754 @@ msgstr ""
 #: system/libraries/Encryption.php:163
 msgid "Encryption: Unable to find an available encryption driver."
 msgstr ""
+
+# Countries List
+msgid "Afghanistan"
+msgstr "أفغانستان"
+
+msgid "Åland Islands"
+msgstr "جزر آلاند"
+
+msgid "Albania"
+msgstr "ألبانيا"
+
+msgid "Algeria"
+msgstr "الجزائر"
+
+msgid "American Samoa"
+msgstr "ساموا الأمريكية"
+
+msgid "Andorra"
+msgstr "أندورا"
+
+msgid "Angola"
+msgstr "أنغولا"
+
+msgid "Anguilla"
+msgstr "أنغيلا"
+
+msgid "Antarctica"
+msgstr "القطب الجنوبي"
+
+msgid "Antigua and Barbuda"
+msgstr "أنتيغوا وبربودا"
+
+msgid "Argentina"
+msgstr "الأرجنتين"
+
+msgid "Armenia"
+msgstr "أرمينيا"
+
+msgid "Aruba"
+msgstr "أروبا"
+
+msgid "Australia"
+msgstr "أستراليا"
+
+msgid "Austria"
+msgstr "النمسا"
+
+msgid "Azerbaijan"
+msgstr "أذربيجان"
+
+msgid "The Bahamas"
+msgstr "جزر البهاما"
+
+msgid "Bahrain"
+msgstr "البحرين"
+
+msgid "Bangladesh"
+msgstr "بنغلاديش"
+
+msgid "Barbados"
+msgstr "بربادوس"
+
+msgid "Belarus"
+msgstr "روسيا البيضاء"
+
+msgid "Belgium"
+msgstr "بلجيكا"
+
+msgid "Belize"
+msgstr "بليز"
+
+msgid "Benin"
+msgstr "بنين"
+
+msgid "Bermuda"
+msgstr "برمودا"
+
+msgid "Bhutan"
+msgstr "بوتان"
+
+msgid "Bolivia"
+msgstr "بوليفيا"
+
+msgid "Bonaire"
+msgstr "بونير"
+
+msgid "Bosnia and Herzegovina"
+msgstr "البوسنة والهرسك"
+
+msgid "Botswana"
+msgstr "بوتسوانا"
+
+msgid "Bouvet Island"
+msgstr "جزيرة بوفيت"
+
+msgid "Brazil"
+msgstr "البرازيل"
+
+msgid "British Indian Ocean Territory"
+msgstr "إقليم المحيط الهندي البريطاني"
+
+msgid "Brunei Darussalam"
+msgstr "بروناي دار السلام"
+
+msgid "Bulgaria"
+msgstr "بلغاريا"
+
+msgid "Burkina Faso"
+msgstr "بوركينا فاسو"
+
+msgid "Burundi"
+msgstr "بوروندي"
+
+msgid "Cambodia"
+msgstr "كمبوديا"
+
+msgid "Cameroon"
+msgstr "الكاميرون"
+
+msgid "Canada"
+msgstr "كندا"
+
+msgid "Cape Verde"
+msgstr "الرأس الأخضر"
+
+msgid "Cayman Islands"
+msgstr "جزر كايمان"
+
+msgid "Central African Republic"
+msgstr "جمهورية افريقيا الوسطى"
+
+msgid "Chad"
+msgstr "تشاد"
+
+msgid "Chile"
+msgstr "تشيلي"
+
+msgid "China"
+msgstr "الصين"
+
+msgid "Christmas Island"
+msgstr "جزيرة الكريسماس"
+
+msgid "Cocos (Keeling) Islands"
+msgstr "جزر كوكوس (كيلينغ)"
+
+msgid "Colombia"
+msgstr "كولومبيا"
+
+msgid "Comoros"
+msgstr "جزر القمر"
+
+msgid "Republic of the Congo"
+msgstr "جمهورية الكونغو"
+
+msgid "Democratic Republic of the Congo"
+msgstr "جمهورية الكونغو الديموقراطية"
+
+msgid "Cook Islands"
+msgstr "جزر كوك"
+
+msgid "Costa Rica"
+msgstr "كوستا ريكا"
+
+msgid "Côte d'Ivoire"
+msgstr "كوت ديفوار"
+
+msgid "Croatia"
+msgstr "كرواتيا"
+
+msgid "Cuba"
+msgstr "كوبا"
+
+msgid "Curaçao"
+msgstr "كوراساو"
+
+msgid "Cyprus"
+msgstr "قبرص"
+
+msgid "Czech Republic"
+msgstr "جمهورية التشيك"
+
+msgid "Denmark"
+msgstr "الدنمارك"
+
+msgid "Djibouti"
+msgstr "جيبوتي"
+
+msgid "Dominica"
+msgstr "دومينيكا"
+
+msgid "Dominican Republic"
+msgstr "جمهورية الدومنيكان"
+
+msgid "Ecuador"
+msgstr "الإكوادور"
+
+msgid "Egypt"
+msgstr "مصر"
+
+msgid "El Salvador"
+msgstr "السلفادور"
+
+msgid "Equatorial Guinea"
+msgstr "غينيا الإستوائية"
+
+msgid "Eritrea"
+msgstr "إريتريا"
+
+msgid "Estonia"
+msgstr "استونيا"
+
+msgid "Ethiopia"
+msgstr "أثيوبيا"
+
+msgid "Falkland Islands (Malvinas)"
+msgstr "جزر فوكلاند (مالفيناس)"
+
+msgid "Faroe Islands"
+msgstr "جزر فارو"
+
+msgid "Fiji"
+msgstr "فيجي"
+
+msgid "Finland"
+msgstr "فنلندا"
+
+msgid "France"
+msgstr "فرنسا"
+
+msgid "French Guiana"
+msgstr "جيانا الفرنسية"
+
+msgid "French Polynesia"
+msgstr "بولينيزيا الفرنسية"
+
+msgid "French Southern Territories"
+msgstr "الاقاليم الجنوبية الفرنسية"
+
+msgid "Gabon"
+msgstr "الغابون"
+
+msgid "Gambia"
+msgstr "غامبيا"
+
+msgid "Georgia"
+msgstr "جورجيا"
+
+msgid "Germany"
+msgstr "ألمانيا"
+
+msgid "Ghana"
+msgstr "غانا"
+
+msgid "Gibraltar"
+msgstr "جبل طارق"
+
+msgid "Greece"
+msgstr "اليونان"
+
+msgid "Greenland"
+msgstr "الأرض الخضراء"
+
+msgid "Grenada"
+msgstr "غرينادا"
+
+msgid "Guadeloupe"
+msgstr "جوادلوب"
+
+msgid "Guam"
+msgstr "غوام"
+
+msgid "Guatemala"
+msgstr "غواتيمالا"
+
+msgid "Guernsey"
+msgstr "غيرنسي"
+
+msgid "Guinea"
+msgstr "غينيا"
+
+msgid "Guinea-Bissau"
+msgstr "غينيا بيساو"
+
+msgid "Guyana"
+msgstr "غيانا"
+
+msgid "Haiti"
+msgstr "هايتي"
+
+msgid "Heard Island and McDonald Islands"
+msgstr "جزيرة هيرد وجزر ماكدونالد"
+
+msgid "Vatican City"
+msgstr "مدينة الفاتيكان"
+
+msgid "Honduras"
+msgstr "هندوراس"
+
+msgid "Hong Kong"
+msgstr "هونغ كونغ"
+
+msgid "Hungary"
+msgstr "هنغاريا"
+
+msgid "Iceland"
+msgstr "أيسلندا"
+
+msgid "India"
+msgstr "الهند"
+
+msgid "Indonesia"
+msgstr "أندونيسيا"
+
+msgid "Iran"
+msgstr "إيران"
+
+msgid "Iraq"
+msgstr "العراق"
+
+msgid "Republic of Ireland"
+msgstr "جمهورية ايرلندا"
+
+msgid "Isle of Man"
+msgstr "جزيرة آيل أوف مان"
+
+msgid "Israel"
+msgstr "إسرائيل"
+
+msgid "Italy"
+msgstr "إيطاليا"
+
+msgid "Jamaica"
+msgstr "جامايكا"
+
+msgid "Japan"
+msgstr "اليابان"
+
+msgid "Jersey"
+msgstr "جيرسي"
+
+msgid "Jordan"
+msgstr "الأردن"
+
+msgid "Kazakhstan"
+msgstr "كازاخستان"
+
+msgid "Kenya"
+msgstr "كينيا"
+
+msgid "Kiribati"
+msgstr "كيريباس"
+
+msgid "Kuwait"
+msgstr "الكويت"
+
+msgid "Kyrgyzstan"
+msgstr "قرغيزستان"
+
+msgid "Laos"
+msgstr "لاوس"
+
+msgid "Latvia"
+msgstr "لاتفيا"
+
+msgid "Lebanon"
+msgstr "لبنان"
+
+msgid "Lesotho"
+msgstr "ليسوتو"
+
+msgid "Liberia"
+msgstr "ليبيريا"
+
+msgid "Libya"
+msgstr "ليبيا"
+
+msgid "Liechtenstein"
+msgstr "ليختنشتاين"
+
+msgid "Lithuania"
+msgstr "ليتوانيا"
+
+msgid "Luxembourg"
+msgstr "لوكسمبورغ"
+
+msgid "Macao"
+msgstr "ماكاو"
+
+msgid "Republic of Macedonia"
+msgstr "جمهورية مقدونيا"
+
+msgid "Madagascar"
+msgstr "مدغشقر"
+
+msgid "Malawi"
+msgstr "ملاوي"
+
+msgid "Malaysia"
+msgstr "ماليزيا"
+
+msgid "Maldives"
+msgstr "جزر المالديف"
+
+msgid "Mali"
+msgstr "مالي"
+
+msgid "Malta"
+msgstr "مالطا"
+
+msgid "Marshall Islands"
+msgstr "جزر مارشال"
+
+msgid "Martinique"
+msgstr "مارتينيك"
+
+msgid "Mauritania"
+msgstr "موريتانيا"
+
+msgid "Mauritius"
+msgstr "موريشيوس"
+
+msgid "Mayotte"
+msgstr "مايوت"
+
+msgid "Mexico"
+msgstr "المكسيك"
+
+msgid "Federated States of Micronesia"
+msgstr "ولايات ميكرونيزيا الموحدة"
+
+msgid "Moldova"
+msgstr "مولدوفا"
+
+msgid "Monaco"
+msgstr "موناكو"
+
+msgid "Mongolia"
+msgstr "منغوليا"
+
+msgid "Montenegro"
+msgstr "الجبل الأسود"
+
+msgid "Montserrat"
+msgstr "مونتسيرات"
+
+msgid "Morocco"
+msgstr "المغرب"
+
+msgid "Mozambique"
+msgstr "موزمبيق"
+
+msgid "Myanmar (Burma)"
+msgstr "ميانمار (بورما)"
+
+msgid "Namibia"
+msgstr "ناميبيا"
+
+msgid "Nauru"
+msgstr "ناورو"
+
+msgid "Nepal"
+msgstr "نيبال"
+
+msgid "Netherlands"
+msgstr "هولندا"
+
+msgid "New Caledonia"
+msgstr "كاليدونيا الجديدة"
+
+msgid "New Zealand"
+msgstr "نيوزيلاندا"
+
+msgid "Nicaragua"
+msgstr "نيكاراغوا"
+
+msgid "Niger"
+msgstr "النيجر"
+
+msgid "Nigeria"
+msgstr "نيجيريا"
+
+msgid "Niue"
+msgstr "نيوي"
+
+msgid "Norfolk Island"
+msgstr "جزيرة نورفولك"
+
+msgid "North Korea"
+msgstr "كوريا الشمالية"
+
+msgid "Northern Mariana Islands"
+msgstr "جزر مريانا الشمالية"
+
+msgid "Norway"
+msgstr "النرويج"
+
+msgid "Oman"
+msgstr "سلطنة عمان"
+
+msgid "Pakistan"
+msgstr "باكستان"
+
+msgid "Palau"
+msgstr "بالاو"
+
+msgid "Palestine"
+msgstr "فلسطين"
+
+msgid "Panama"
+msgstr "بناما"
+
+msgid "Papua New Guinea"
+msgstr "بابوا غينيا الجديدة"
+
+msgid "Paraguay"
+msgstr "باراغواي"
+
+msgid "Peru"
+msgstr "بيرو"
+
+msgid "Philippines"
+msgstr "الفلبين"
+
+msgid "Pitcairn Islands"
+msgstr "جزر بيتكيرن"
+
+msgid "Poland"
+msgstr "بولندا"
+
+msgid "Portugal"
+msgstr "البرتغال"
+
+msgid "Puerto Rico"
+msgstr "بورتوريكو"
+
+msgid "Qatar"
+msgstr "قطر"
+
+msgid "Republic of Kosovo"
+msgstr "جمهورية كوسوفو"
+
+msgid "Réunion"
+msgstr "جمع شمل"
+
+msgid "Romania"
+msgstr "رومانيا"
+
+msgid "Russia"
+msgstr "روسيا"
+
+msgid "Rwanda"
+msgstr "رواندا"
+
+msgid "Saint Barthélemy"
+msgstr "سانت بارتيليمي"
+
+msgid "Saint Helena"
+msgstr "سانت هيلانة"
+
+msgid "Saint Kitts and Nevis"
+msgstr "سانت كيتس ونيفيس"
+
+msgid "Saint Lucia"
+msgstr "سانت لوسيا"
+
+msgid "Saint Martin"
+msgstr "سانت مارتن"
+
+msgid "Saint Pierre and Miquelon"
+msgstr "سان بيار وميكلون"
+
+msgid "Saint Vincent and the Grenadines"
+msgstr "سانت فنسنت وجزر غرينادين"
+
+msgid "Samoa"
+msgstr "ساموا"
+
+msgid "San Marino"
+msgstr "سان مارينو"
+
+msgid "São Tomé and Príncipe"
+msgstr "ساو تومي وبرينسيبي"
+
+msgid "Saudi Arabia"
+msgstr "المملكة العربية السعودية"
+
+msgid "Senegal"
+msgstr "السنغال"
+
+msgid "Serbia"
+msgstr "صربيا"
+
+msgid "Seychelles"
+msgstr "سيشيل"
+
+msgid "Sierra Leone"
+msgstr "سيرا ليون"
+
+msgid "Singapore"
+msgstr "سنغافورة"
+
+msgid "Sint Maarten"
+msgstr "سانت مارتن"
+
+msgid "Slovakia"
+msgstr "سلوفاكيا"
+
+msgid "Slovenia"
+msgstr "سلوفينيا"
+
+msgid "Solomon Islands"
+msgstr "جزر سليمان"
+
+msgid "Somalia"
+msgstr "الصومال"
+
+msgid "South Africa"
+msgstr "جنوب أفريقيا"
+
+msgid "South Georgia"
+msgstr "جورجيا الجنوبية"
+
+msgid "South Korea"
+msgstr "كوريا الجنوبية"
+
+msgid "South Sudan"
+msgstr "جنوب السودان"
+
+msgid "Spain"
+msgstr "إسبانيا"
+
+msgid "Sri Lanka"
+msgstr "سيريلانكا"
+
+msgid "Sudan"
+msgstr "سودان"
+
+msgid "Suriname"
+msgstr "سورينام"
+
+msgid "Svalbard and Jan Mayen"
+msgstr "سفالبارد وجان مايان"
+
+msgid "Swaziland"
+msgstr "سوازيلاند"
+
+msgid "Sweden"
+msgstr "السويد"
+
+msgid "Switzerland"
+msgstr "سويسرا"
+
+msgid "Syria"
+msgstr "سوريا"
+
+msgid "Taiwan"
+msgstr "تايوان"
+
+msgid "Tajikistan"
+msgstr "طاجيكستان"
+
+msgid "Tanzania"
+msgstr "تنزانيا"
+
+msgid "Thailand"
+msgstr "تايلاند"
+
+msgid "East Timor"
+msgstr "تيمور الشرقية"
+
+msgid "Togo"
+msgstr "توغو"
+
+msgid "Tokelau"
+msgstr "توكيلاو"
+
+msgid "Tonga"
+msgstr "تونغا"
+
+msgid "Trinidad and Tobago"
+msgstr "ترينداد وتوباغو"
+
+msgid "Tunisia"
+msgstr "تونس"
+
+msgid "Turkey"
+msgstr "ديك رومي"
+
+msgid "Turkmenistan"
+msgstr "تركمانستان"
+
+msgid "Turks and Caicos Islands"
+msgstr "جزر تركس وكايكوس"
+
+msgid "Tuvalu"
+msgstr "توفالو"
+
+msgid "Uganda"
+msgstr "أوغندا"
+
+msgid "Ukraine"
+msgstr "أوكرانيا"
+
+msgid "United Arab Emirates"
+msgstr "الإمارات العربية المتحدة"
+
+msgid "United Kingdom"
+msgstr "المملكة المتحدة"
+
+msgid "United States"
+msgstr "الولايات المتحدة"
+
+msgid "United States Minor Outlying Islands"
+msgstr "جزر الولايات المتحدة البعيدة الصغيرة"
+
+msgid "Uruguay"
+msgstr "أوروغواي"
+
+msgid "Uzbekistan"
+msgstr "أوزبكستان"
+
+msgid "Vanuatu"
+msgstr "فانواتو"
+
+msgid "Venezuela"
+msgstr "فنزويلا"
+
+msgid "Vietnam"
+msgstr "فيتنام"
+
+msgid "British Virgin Islands"
+msgstr "جزر العذراء البريطانية"
+
+msgid "United States Virgin Islands"
+msgstr "جزر فرجن التابعة للولايات المتحدة"
+
+msgid "Wallis and Futuna"
+msgstr "واليس وفوتونا"
+
+msgid "Western Sahara"
+msgstr "الصحراء الغربية"
+
+msgid "Yemen"
+msgstr "اليمن"
+
+msgid "Zambia"
+msgstr "زامبيا"
+
+msgid "Zimbabwe"
+msgstr "زيمبابوي"
