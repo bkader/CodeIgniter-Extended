@@ -12,7 +12,7 @@
 							<a href="#" role="button" class="btn btn-small toggle-dropdown" title="{{ current_lang('name') }}"><i class="flag flag-{{ current_lang('flag') }}"></i></a>
 							<ul class="menu-right menu-{{ current_lang('direction') }}">
 {% for lang in languages() if lang.folder != current_lang('folder') %}
-								<li><a href="{{ site_url('welcome/lang') }}/{{ lang.code }}"><i class="flag flag-{{ lang.flag }}"></i> {{ lang.name }}</a></li>
+								<li><a href="#" role="button" class="clang" data-lang="{{ lang.code|lower }}"><i class="flag flag-{{ lang.flag }}"></i> {{ lang.name }}</a></li>
 {% endfor %}
 							</ul>
 						</div>

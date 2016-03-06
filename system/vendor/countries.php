@@ -1694,14 +1694,14 @@ $countries = array(
 		'isd' => '680',                      
 	),
 	
-	// Palestinian territories
+	// Palestine
 	'PS' => array(
-		'region' => 'Asia',
-		'name' => 'Palestinian territories',
+		'region'  => 'Asia',
+		'name'    => 'Palestine',
 		'capital' => 'Ramallah',
-		'cca2' => 'PS',
-		'cca3' => 'PSE',
-		'isd' => '970',                      
+		'cca2'    => 'PS',
+		'cca3'    => 'PSE',
+		'isd'     => '970',                      
 	),
 	
 	// Panama

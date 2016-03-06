@@ -1,6 +1,15 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+/**
+ * CodeIgniter Twig Config File
+ *
+ * @package     CodeIgniter
+ * @author      Kader Bouyakoub
+ * @link        @bkader <github>
+ * @link        @KaderBouyakoub <twitter>
+ */
+
 $config['twig'] = array(
 
     // File extension

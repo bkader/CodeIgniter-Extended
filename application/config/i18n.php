@@ -1,6 +1,15 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+/**
+ * CodeIgniter I18n Config File
+ *
+ * @package     CodeIgniter
+ * @author      Kader Bouyakoub
+ * @link        @bkader <github>
+ * @link        @KaderBouyakoub <twitter>
+ */
+
 $config['i18n'] = array(
 
     // Website default language

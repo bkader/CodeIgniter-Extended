@@ -2,11 +2,11 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
- * DinaEngine
+ * CodeIgniter Config File
  *
  * A Social Network Script built on CodeIgniter with love
  *
- * @package 	DinaEngine
+ * @package 	CodeIgniter
  * @author 		Kader Bouyakoub
  * @link 		@KaderBouyakoub
  * @copyright 	Copyright (c) 2011 - 2016, Ian Dev Team
@@ -25,6 +25,11 @@ $config = array(
 		 * Website name (Used for page title)
 		 */
 		'name'        => 'CodeIgniter',
+
+		/**
+		 * Site Version (CodeIgniter)
+		 */
+		'version'     => '3.0.4',
 
 		/**
 		 * Default description

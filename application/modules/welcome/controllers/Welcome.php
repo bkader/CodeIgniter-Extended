@@ -22,6 +22,7 @@ class Welcome extends MY_Controller
 	 */
 	public function twig()
 	{
+		$this->load->library('twig');
 		$this->data['title'] = __("Welcome to CodeIgniter");
 		$this->twig->display('welcome_message', $this->data);
 	}

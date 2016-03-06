@@ -58,11 +58,7 @@ $autoload['packages'] = array();
 |
 |	$autoload['libraries'] = array('user_agent' => 'ua');
 */
-$autoload['libraries'] = array(
-    'events',
-    'i18n',
-    'twig',
-);
+$autoload['libraries'] = array('events','session','user_agent','i18n');
 
 /*
 | -------------------------------------------------------------------
@@ -87,7 +83,7 @@ $autoload['drivers'] = array();
 |
 |	$autoload['helper'] = array('url', 'file');
 */
-$autoload['helper'] = array('url','array');
+$autoload['helper'] = array('functions', 'url','array');
 
 /*
 | -------------------------------------------------------------------
@@ -101,9 +97,7 @@ $autoload['helper'] = array('url','array');
 | config files.  Otherwise, leave it blank.
 |
 */
-$autoload['config'] = array(
-    'application',
-);
+$autoload['config'] = array('core');
 
 /*
 | -------------------------------------------------------------------

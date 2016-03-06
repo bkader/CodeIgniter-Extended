@@ -320,7 +320,7 @@ $config['cache_query_string'] = false;
 | https://codeigniter.com/user_guide/libraries/encryption.html
 |
 */
-// The encryption key is automatically generated if it is not et
+// The encryption key is automatically generated if it is not set
 if (file_exists(APPPATH.'config/encryption_key.php'))
 {
     require_once(APPPATH.'config/encryption_key.php');
@@ -394,10 +394,10 @@ $config['encryption_key'] = $encryption_key;
 $config['sess_driver']             = 'files';
 $config['sess_cookie_name']        = 'ci_session';
 $config['sess_expiration']         = 7200;
-$config['sess_save_path']          = null;
+$config['sess_save_path']          = APPPATH.'sessions';
 $config['sess_match_ip']           = false;
 $config['sess_time_to_update']     = 300;
-$config['sess_regenerate_destroy'] = false;
+$config['sess_regenerate_destroy'] = true;
 
 /*
 |--------------------------------------------------------------------------
@@ -462,12 +462,14 @@ $config['global_xss_filtering'] = false;
 | 'csrf_regenerate' = Regenerate token on every submission
 | 'csrf_exclude_uris' = Array of URIs which ignore CSRF checks
 */
-$config['csrf_protection']   = false;
-$config['csrf_token_name']   = 'csrf_test_name';
-$config['csrf_cookie_name']  = 'csrf_cookie_name';
+$config['csrf_protection']   = true;
+$config['csrf_token_name']   = 'csrf_test';
+$config['csrf_cookie_name']  = 'csrf_cookie';
 $config['csrf_expire']       = 7200;
 $config['csrf_regenerate']   = true;
-$config['csrf_exclude_uris'] = array();
+$config['csrf_exclude_uris'] = array(
+	'ajax/[a-z_]+',
+);
 
 /*
 |--------------------------------------------------------------------------
@@ -547,6 +549,24 @@ $config['proxy_ips'] = '';
 |
 */
 $config['modules_locations'] = array(APPPATH.'modules/');
+
+/*
+| -------------------------------------------------------------------
+| Native Auto-load
+| -------------------------------------------------------------------
+|
+| Nothing to do with config/autoload.php, this allows PHP autoload to work
+| for base controllers and some third-party libraries.
+|
+*/
+function __autoload($class)
+{
+    if (strpos($class, 'CI_') !== 0)
+    {
+    	@include_once(APPPATH.'core/'.$class.'.php');
+    }
+}
+
 
 /* End of file config.php */
 /* Location: ./application/config/config.php */

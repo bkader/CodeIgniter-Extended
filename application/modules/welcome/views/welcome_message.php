@@ -31,7 +31,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							<a href="#" role="button" class="btn btn-small toggle-dropdown" title="<?php echo current_lang('name'); ?>"><i class="flag flag-<?php echo current_lang('flag'); ?>"></i></a>
 							<ul class="menu-right menu-<?php echo current_lang('direction'); ?>">
 <?php foreach($this->i18n->languages() as $key => $lang): if (current_lang('folder') <> $key): ?>
-								<li><a href="<?php echo site_url('welcome/lang/'.$lang['code']); ?>"><i class="flag flag-<?php echo $lang['flag']; ?>"></i> <?php echo $lang['name']; ?></a></li>
+								<li><a href="#" role="button" class="clang" data-lang="<?php echo $lang['code']; ?>"><i class="flag flag-<?php echo $lang['flag']; ?>"></i> <?php echo $lang['name']; ?></a></li>
 <?php endif; endforeach; ?>
 							</ul>
 						</div>
@@ -59,5 +59,29 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<script type="text/javascript" src="http://static.ianhub.com/dinakit/js/dinakit.js"></script>
+	<script>
+		(function() {
+			'use strict';
+			// Development [change language]
+			/*$(document).on('click', 'a.clang', function(e) {
+				e.preventDefault();
+				var code = $(this).attr('data-lang');
+				if (!code) return;
+				$.ajax({
+					type: "POST",
+					url: "<?php echo site_url('ajax/change_language'); ?>",
+					data: {code: code},
+					success: function(t) {
+						t = $.parseJSON(t);
+						if (typeof t === 'object' && t.status === true) {
+							window.location.reload();
+						}
+					}
+				});
+			});*/
+			// Production
+			$(document).on("click","a.clang",function(a){a.preventDefault();var t=$(this).attr("data-lang");t&&$.ajax({type:"POST",url:"<?php echo site_url('ajax/change_language'); ?>",data:{code:t},success:function(a){a=$.parseJSON(a),"object"==typeof a&&a.status===!0&&window.location.reload()}})});
+		}());
+	</script>
 </body>
 </html>

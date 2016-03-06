@@ -1,6 +1,14 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+/**
+ * MY_Controller
+ *
+ * @package CodeIgniter-Extended
+ * @author  Kader Bouyakoub
+ * @link    @kader
+ */
+
 class MY_Controller extends CI_Controller
 {
     /**
@@ -29,11 +37,9 @@ class MY_Controller extends CI_Controller
         parent::__construct();
         Events::trigger('before_my_controller');
 
-        // Constructor like method :D
+        // Constructor like method :D (Like on Fuelphp)
         if (method_exists($this, '_init'))
-        {
             $this->_init();
-        }
 
         // Prepare previous_page
         if ( ! preg_match('/\.(gif|jpg|jpeg|png|css|js|ico|shtml)$/i', $this->uri->uri_string()))
@@ -96,30 +102,6 @@ class MY_Controller extends CI_Controller
                 'content' => $content
             ));
         }
-    }
-}
-
-// ------------------------------------------------------------------------
-
-/**
- * Ajax Controller
- */
-class Ajax_Controller extends MY_Controller
-{
-    public function __construct()
-    {
-        parent::__construct();
-        Events::trigger('before_ajax_controller');
-        if ( ! $this->input->is_ajax_request())
-        {
-            redirect('');
-            exit;
-        }
-        else
-        {
-            $this->load->library('reponse');
-        }
-        Events::trigger('after_ajax_controller');
     }
 }
 
