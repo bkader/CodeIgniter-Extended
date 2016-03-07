@@ -18,6 +18,22 @@ if ( ! function_exists('_ci'))
 }
 
 /**
+ * Returns config item using dot-notation
+ *
+ * @access  public
+ * @param   string
+ * @param   mixed
+ * @return  mixed
+ */
+if ( ! function_exists('config'))
+{
+    function config($item, $default = false)
+    {
+        return _ci()->config->get($item, $default);
+    }
+}
+
+/**
  * Outputs anything in JSON format
  *
  * @access   public
@@ -113,26 +129,128 @@ if ( ! function_exists('beautify_json'))
     }
 }
 
+/* ============================================================
+ * ASSETS FUNCTIONS
+ * ============================================================ */
+
 /**
- * Generates a random password
+ * Generates the URL to assets folder
  *
- * @return string
+ * @access  public
+ * @param   string
+ * @return  string
  */
-if ( ! function_exists('generate_random_password'))
+if ( ! function_exists('assets_url'))
 {
-    function generate_random_password()
+    function assets_url($uri = '')
     {
-        $characters = "abcdefghijklmnopqrstuwxyzABCDEFGHIJKLMNOPQRSTUWXYZ0123456789";
-        $pass = array();
-        $alpha_length = strlen($characters) - 1;
+        return base_url('assets/'.$uri);
+    }
+}
 
-        for ($i = 0; $i < 8; $i++)
+/**
+ * Direct link to a CSS file
+ *
+ * @access  public
+ * @param   string
+ * @return  string
+ */
+if ( ! function_exists('css_url'))
+{
+    function css_url($file = null)
+    {
+        if ($file)
         {
-            $n = rand(0, $alpha_length);
-            $pass[] = $characters[$n];
-        }
+            if (filter_var($file, FILTER_VALIDATE_URL))
+            {
+                return $file;
+            }
+            $file = preg_replace('"\.css$"', '', $file).'.css';
+            return assets_url('css/'.$file);
 
-        return implode($pass);
+        }
+        return false;
+    }
+
+}
+
+/**
+ * Direct link to a JS file
+ *
+ * @access  public
+ * @param   string
+ * @param   boolean  (disable extension: for require.js)
+ * @return  string
+ */
+if ( ! function_exists('js_url'))
+{
+    function js_url($file = null, $ext = true)
+    {
+        if ($file)
+        {
+            if (filter_var($file, FILTER_VALIDATE_URL))
+            {
+                return $file;
+            }
+            $file = preg_replace('"\.js$"', '', $file).($ext === true ? '.js' : '');
+            return assets_url('js/'.$file);
+
+        }
+    }
+}
+
+/**
+ * Direct link to an image file
+ * (image extension is necessary)
+ *
+ * @access  public
+ * @param   string
+ * @return  string
+ */
+if ( ! function_exists('img_url'))
+{
+    function img_url($file = null)
+    {
+        if ($file)
+        {
+            if (filter_var($file, FILTER_VALIDATE_URL))
+            {
+                return $file;
+            }
+            return assets_url('img/'.$file);
+        }
+        return false;
+    }
+}
+
+/**
+ * Using $this->load->view()
+ *
+ * @access   public
+ * @param    string
+ * @param    array
+ * @param    boolean
+ * @return   void
+ */
+if ( ! function_exists('render'))
+{
+    function render($view, $data = array(), $return = false)
+    {
+        return _ci()->load->view($view, $data, $return);
+    }
+}
+
+/**
+ * Uses php htmlentities
+ *
+ * @param   string
+ * @return  string
+ */
+if ( ! function_exists('e'))
+{
+    function e($str)
+    {
+        return htmlentities($str, ENT_QUOTES, 'UTF-8');
     }
 }
 

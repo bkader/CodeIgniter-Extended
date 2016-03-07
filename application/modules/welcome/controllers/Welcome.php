@@ -11,7 +11,7 @@ class Welcome extends MY_Controller
 	 */
 	public function index()
 	{
-		$this->load->view('welcome_message', $this->data);
+		render('welcome_message', $this->data);
 	}
 
 	/**
@@ -26,18 +26,7 @@ class Welcome extends MY_Controller
 		$this->data['title'] = __("Welcome to CodeIgniter");
 		$this->twig->display('welcome_message', $this->data);
 	}
-
-	/**
-	 * Change current language
-	 *
-	 * @access 	public
-	 * @param 	string
-	 * @return 	void
-	 */
-	public function lang($code = false)
-	{
-		if ($code)
-			$this->i18n->change($code);
-		redirect('');
-	}
 }
+
+/* End of file Welcome.php */
+/* Location: ./application/modules/welcome/controllers/Welcome.php */

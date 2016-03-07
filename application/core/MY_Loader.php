@@ -71,13 +71,13 @@ class MY_Loader extends HMVC_Loader
         }
         // We'll test for both lowercase and capitalized versions of the file name
         foreach (array(ucfirst($class), strtolower($class)) as $class) {
-            $subclass = APPPATH . 'events/' . $subdir . config_item('subclass_prefix') . $class . '.php';
+            $subclass = APPPATH.'events/'.$subdir.config_item('subclass_prefix').$class.'.php';
             // Is this a class extension request?
             if (file_exists($subclass)) {
-                $baseclass = BASEPATH . 'events/' . ucfirst($class) . '.php';
+                $baseclass = BASEPATH.'events/'.ucfirst($class).'.php';
                 if (!file_exists($baseclass)) {
-                    log_message('error', "Unable to load the requested class: " . $class);
-                    show_error("Unable to load the requested class: " . $class);
+                    log_message('error', "Unable to load the requested class: ".$class);
+                    show_error("Unable to load the requested class: ".$class);
                 }
                 // Safety:  Was the class already loaded by a previous call?
                 if (in_array($subclass, $this->_ci_library_paths)) {
@@ -91,7 +91,7 @@ class MY_Loader extends HMVC_Loader
                         }
                     }
                     $is_duplicate = TRUE;
-                    log_message('debug', $class . " class already loaded. Second attempt ignored.");
+                    log_message('debug', $class." class already loaded. Second attempt ignored.");
                     return;
                 }
                 include_once($baseclass);
@@ -102,7 +102,7 @@ class MY_Loader extends HMVC_Loader
             // Lets search for the requested library file and load it.
             $is_duplicate = FALSE;
             foreach ($this->_ci_events_paths as $path) {
-                $filepath = $path . 'events/' . $subdir . $class . '.php';
+                $filepath = $path.'events/'.$subdir.$class.'.php';
                 // Does the file exist?  No?  Bummer...
                 if (!file_exists($filepath)) {
                     continue;
@@ -119,7 +119,7 @@ class MY_Loader extends HMVC_Loader
                         }
                     }
                     $is_duplicate = TRUE;
-                    log_message('debug', $class . " class already loaded. Second attempt ignored.");
+                    log_message('debug', $class." class already loaded. Second attempt ignored.");
                     return;
                 }
                 include_once($filepath);
@@ -129,14 +129,14 @@ class MY_Loader extends HMVC_Loader
         } // END FOREACH
         // One last attempt.  Maybe the library is in a subdirectory, but it wasn't specified?
         if ($subdir == '') {
-            $path = strtolower($class) . '/' . $class;
+            $path = strtolower($class).'/'.$class;
             return $this->_ci_load_class($path, $params);
         }
         // If we got this far we were unable to find the requested class.
         // We do not issue errors if the load call failed due to a duplicate request
         if ($is_duplicate == FALSE) {
-            log_message('error', "Unable to load the requested class: " . $class);
-            show_error("Unable to load the requested class: " . $class);
+            log_message('error', "Unable to load the requested class: ".$class);
+            show_error("Unable to load the requested class: ".$class);
         }
     }
 }

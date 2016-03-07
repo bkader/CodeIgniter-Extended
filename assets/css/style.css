@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+body {
+	font:14px/1.5 "Raleway",Tahoma,Arial,sans-serif;
+	padding-top: 10px;
+	background: #e5e5e5;
+}
+
+@media (min-width: 768px) {
+	body {
+		padding-top: 25px; 
+	}
+}
+
+.btn-dropdown>ul>li>a>.flag {
+	margin-right:5px;
+}
+
+.box-action.float-rtl {
+	right:auto!important;
+	left:0!important;
+}
+
+.menu-right.menu-rtl {
+	left:0!important;
+	right:auto!important;
+}
+
+.menu-right.menu-rtl>li>a {
+	text-align:right!important;
+}

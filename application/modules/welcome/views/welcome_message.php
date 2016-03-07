@@ -1,24 +1,74 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-?><!DOCTYPE html>
-<html lang="<?php echo strtolower(current_lang('code')); ?>" dir="<?php echo strtolower(current_lang('direction')); ?>">
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?><!DOCTYPE html>
+<!--[if IE 7]><html class="no-js lt-ie11 lt-ie10 lt-ie9 lt-ie8" lang="<?php echo strtolower(current_lang('code')); ?>" dir="<?php echo strtolower(current_lang('direction')); ?>"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie11 lt-ie10 lt-ie9" lang="<?php echo strtolower(current_lang('code')); ?>" dir="<?php echo strtolower(current_lang('direction')); ?>"> <![endif]-->
+<!--[if IE 9]><html class="no-js lt-ie11 lt-ie10" lang="<?php echo strtolower(current_lang('code')); ?>" dir="<?php echo strtolower(current_lang('direction')); ?>"> <![endif]-->
+<!--[if IE 10]><html class="no-js lt-ie11" lang="<?php echo strtolower(current_lang('code')); ?>" dir="<?php echo strtolower(current_lang('direction')); ?>"> <![endif]-->
+<!--[if gt IE 10]><!--><html class="no-js" lang="<?php echo strtolower(current_lang('code')); ?>" dir="<?php echo strtolower(current_lang('direction')); ?>"> <!--<![endif]-->
 <head>
 	<meta charset="utf-8">
 	<title><?php echo __("Welcome to CodeIgniter"); ?></title>
-	<link rel="stylesheet" href="http://static.ianhub.com/dinakit/css/dinakit.css">
-	<link href='https://fonts.googleapis.com/css?family=Ubuntu:400,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
-	<style>body{font:14px/1.5 "Ubuntu",Tahoma,Arial,sans-serif;padding-top:10px;background:#e5e5e5}@media (min-width: 768px){body{padding-top:25px}}.btn-dropdown>ul>li>a>.flag{margin-right:5px}.box-action.float-rtl{right:auto!important;left:0!important}.menu-right.menu-rtl{left:0!important;right:auto!important}.menu-right.menu-rtl>li>a{text-align:right!important}</style>
+	
+	<?php echo meta('description', config('site.description'))."\n"; ?>
+	<?php echo meta('keywords', config('site.keywords'))."\n"; ?>
+<?php if (config('google.verification')): ?>
+
+	<!-- Google Site Verification -->
+	<?php echo meta('google-site-verification', config('google.verification'))."\n"; ?>
+<?php endif; ?>
+<?php if (config('google.analytics')): ?>
+	
+	<!-- Google Analytics ID -->
+	<?php echo meta('google-analytics', config('google.analytics'))."\n"; ?>
+<?php endif; ?>
+
+        <!-- Open Graph -->
+<?php if (config('facebook.app_id')) { ?>
+        <meta property="fb:app_id" content="<?php echo config('facebook.app_id') ?>">
+<?php } ?>
+        <meta property="og:title" content="<?php echo isset($title) ? $title : config('site.name'); ?>">
+        <meta property="og:description" content="<?php echo isset($description) ? $description : config('site.description'); ?>">
+        <meta property="og:type" content="website">
+        <meta property="og:locale" content="<?php echo current_lang('locale'); ?>">
+        <meta property="og:site_name" content="<?php echo config('site.name') ?>">
+<?php if (config('facebook.image')) { ?>
+        <meta property="og:image" content="<?php echo img_url(config('facebook.image')) ?>">
+        <meta property="og:image:type" content="image/png">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="1200">
+<?php } ?>
+        <meta property="og:url" content="<?php echo base_url() ?>">
+        <link rel="canonical" href="<?php echo base_url() ?>">
+<?php foreach(languages() as $lang) { if ($lang['folder'] <> current_lang('folder')) { ?>
+        <link rel="alternate" hreflang="<?php echo $lang['code'] ?>" href="<?php echo site_url('process/lang/'.$lang['code'].'?redirect='.urlencode(current_url())); ?>">
+<?php } /* endif */ } /* endforeach */ ?>
+
+<?php if (config('site.use_cdn') === true): ?>
+	<?php echo css('http://static.ianhub.com/dinakit/css/dinakit.css')."\n"; ?>
+<?php else: ?>
+	<?php echo css('dinakit')."\n"; ?>
+<?php endif; ?>
+	<?php echo css('style')."\n"; ?>
+	<script type="text/javascript">
+		var config = {
+			site_url: "<?php echo site_url(); ?>",
+			ajax_url: "<?php echo site_url('ajax'); ?>",
+			base_url: "<?php echo base_url(); ?>",
+			current_url: "<?php echo current_url(); ?>",
+			lang: "<?php echo current_lang('code'); ?>",
+		};
+	</script>
 </head>
 <body>
-
+<?php if (config('google.analytics')): ?>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-73564021-2', 'auto');
+  ga('create', '<?php echo config("google.analytics"); ?>', 'auto');
   ga('send', 'pageview');
 </script>
+<?php endif; ?>
 
 <div class="container">
 	<div class="row">
@@ -57,31 +107,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	</div>
 </div>
 
+<?php if (config('site.use_cdn') === true): ?>
 	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<script type="text/javascript" src="http://static.ianhub.com/dinakit/js/dinakit.js"></script>
-	<script>
-		(function() {
-			'use strict';
-			// Development [change language]
-			/*$(document).on('click', 'a.clang', function(e) {
-				e.preventDefault();
-				var code = $(this).attr('data-lang');
-				if (!code) return;
-				$.ajax({
-					type: "POST",
-					url: "<?php echo site_url('ajax/change_language'); ?>",
-					data: {code: code},
-					success: function(t) {
-						t = $.parseJSON(t);
-						if (typeof t === 'object' && t.status === true) {
-							window.location.reload();
-						}
-					}
-				});
-			});*/
-			// Production
-			$(document).on("click","a.clang",function(a){a.preventDefault();var t=$(this).attr("data-lang");t&&$.ajax({type:"POST",url:"<?php echo site_url('ajax/change_language'); ?>",data:{code:t},success:function(a){a=$.parseJSON(a),"object"==typeof a&&a.status===!0&&window.location.reload()}})});
-		}());
-	</script>
+<?php else: ?>
+	<?php echo js('vendor/jquery.min')."\n"; ?>
+	<?php echo js('dinakit')."\n"; ?>
+<?php endif; ?>
+	<?php echo js('main')."\n"; ?>
+
 </body>
 </html>

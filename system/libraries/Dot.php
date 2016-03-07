@@ -1,7 +1,18 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Dot
+/**
+ * Part of CodeIgniter-Extended
+ *
+ * Using dot-notation to access array value
+ *
+ * @package     CodeIgniter-Extended
+ * @author      Kader Bouyakoub
+ * @link        @bkader <github>
+ * @link        @KaderBouyakoub <twitter>
+ */
+
+class CI_Dot
 {
     public static function get($index, array $array)
     {
@@ -28,6 +39,9 @@ class Dot
         }
     }
 }
+
+// Create an alias of the class above.
+class_alias('CI_Dot', 'Dot');
 
 /* End of file Dot.php */
 /* Location: ./application/libraries/Dot.php */

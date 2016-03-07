@@ -11,14 +11,14 @@ defined('BASEPATH') or exit('No direct script access allowed');
  * @link        @KaderBouyakoub
  */
 
-/**
- * Access multidimensional array
- *
- * @param   string
- * @return  mixed
- */
 if ( ! function_exists('dot'))
 {
+    /**
+     * Access multidimensional array
+     *
+     * @param   string
+     * @return  mixed
+     */
     function dot(&$arr, $path = null, $default = null)
     {
         if ( ! $path)
@@ -38,18 +38,22 @@ if ( ! function_exists('dot'))
         return $path;
     }
 }
-/**
- * Use of PHP : array_change_key_case
- *
- * @param   object
- * @param   string
- * @return  object
- */
-if ( ! function_exists('object_change_key_case ')) {
-    function object_change_key_case($object, $case = null) {
+
+if ( ! function_exists('object_change_key_case '))
+{
+    /**
+     * Use of PHP : array_change_key_case
+     *
+     * @param   object
+     * @param   string
+     * @return  object
+     */
+    function object_change_key_case($object, $case = null)
+    {
         is_array($object) or $object = (array) $object;
         // You can use alias: 'lower', 'lowercase', 'upper', 'uppercase'
-        switch ($case) {
+        switch ($case)
+        {
             // case of lowercased
             case CASE_LOWER:
             case 'lower':
@@ -72,176 +76,201 @@ if ( ! function_exists('object_change_key_case ')) {
     }
 }
 
-/**
- * Use of PHP : array_chunk
- *
- * @param   object
- * @param   string
- * @return  array
- */
-if ( ! function_exists('object_chunk')) {
-    function object_chunk($object, $size = 1, $preserve_keys = false) {
+if ( ! function_exists('object_chunk'))
+{
+    /**
+     * Use of PHP : array_chunk
+     *
+     * @param   object
+     * @param   string
+     * @return  array
+     */
+    function object_chunk($object, $size = 1, $preserve_keys = false)
+    {
         is_array($object) or $object = (array) $object;
         is_bool($preserve_keys) or $preserve_keys = (bool) $preserve_keys;
         return array_chunk($object, $size, $preserve_keys);
     }
 }
 
-/**
- * Use of PHP : array_column
- *
- * (PHP 5 >= 5.5.0, PHP 7)
- *
- * @param   object
- * @param   string
- * @return  array
- */
-if ( ! function_exists('object_column')) {
-    function object_column($object, $column_key, $index_key = null) {
+if ( ! function_exists('object_column'))
+{
+    /**
+     * Use of PHP : array_column
+     *
+     * (PHP 5 >= 5.5.0, PHP 7)
+     *
+     * @param   object
+     * @param   string
+     * @return  array
+     */
+    function object_column($object, $column_key, $index_key = null)
+    {
         is_array($object) or $object = (array) $object;
-        foreach ($object as &$child) {
+        foreach ($object as &$child)
+        {
             $child = (array) $child;
         }
         return array_column($object, $column_key, $index_key);
     }
 }
 
-/**
- * Use of PHP : array_combine
- *
- * (PHP 5, PHP 7)
- *
- * @param   object
- * @param   string
- * @return  object
- */
-if ( ! function_exists('object_combine')) {
-    function object_combine($keys, $values) {
+if ( ! function_exists('object_combine'))
+{
+    /**
+     * Use of PHP : array_combine
+     *
+     * (PHP 5, PHP 7)
+     *
+     * @param   object
+     * @param   string
+     * @return  object
+     */
+    function object_combine($keys, $values)
+    {
         is_array($keys) or $keys = (array) $keys;
         is_array($values) or $values = (array) $values;
         return (object) array_combine($keys, $values);
     }
 }
 
-/**
- * Use of PHP : array_merge
- *
- * @param   object
- * @param   string
- * @return  object
- */
-if ( ! function_exists('object_merge')) {
-    function object_merge($obj1, $obj2) {
+if ( ! function_exists('object_merge'))
+{
+    /**
+     * Use of PHP : array_merge
+     *
+     * @param   object
+     * @param   string
+     * @return  object
+     */
+    function object_merge($obj1, $obj2)
+    {
         if ( ! $obj1 or ! $obj2) return false;
         return (object) array_merge((array) $obj1, (array) $obj2);
     }
 }
 
-/**
- * Use of PHP : array_key_exists
- *
- * @param   string
- * @param   object
- * @return  boolean
- */
-if ( ! function_exists('object_key_exists')) {
-    function object_key_exists($key, $search) {
+if ( ! function_exists('object_key_exists'))
+{
+    /**
+     * Use of PHP : array_key_exists
+     *
+     * @param   string
+     * @param   object
+     * @return  boolean
+     */
+    function object_key_exists($key, $search)
+    {
         is_array($search) or $search = (array) $search;
         return array_key_exists($key, $search);
     }
 }
 
-/**
- * Use of PHP : array_keys
- *
- * @param   object
- * @param   string
- * @param   boolean
- * @return  array
- */
-if ( ! function_exists('object_keys')) {
-    function object_keys($object, $search_value = null, $strict = false) {
+if ( ! function_exists('object_keys'))
+{
+    /**
+     * Use of PHP : array_keys
+     *
+     * @param   object
+     * @param   string
+     * @param   boolean
+     * @return  array
+     */
+    function object_keys($object, $search_value = null, $strict = false)
+    {
         is_array($object) or $object = (array) $object;
         return array_keys($object, $search_value, $strict);
     }
 }
 
-/**
- * Use of PHP : array_map
- *
- * @param   object
- * @param   mixed
- * @return  array
- */
-if ( ! function_exists('object_map')) {
-    function object_map($object, $callback) {
+if ( ! function_exists('object_map'))
+{
+    /**
+     * Use of PHP : array_map
+     *
+     * @param   object
+     * @param   mixed
+     * @return  array
+     */
+    function object_map($object, $callback)
+    {
         is_array($object) or $object = (array) $object;
         return array_map($callback, $object);
     }
 }
 
-/**
- * Use of PHP : array_pop
- *
- * @param   object
- * @return  array
- */
-if ( ! function_exists('object_pop')) {
-    function object_pop($object) {
+if ( ! function_exists('object_pop'))
+{
+    /**
+     * Use of PHP : array_pop
+     *
+     * @param   object
+     * @return  array
+     */
+    function object_pop($object)
+    {
         is_array($object) or $object = (array) $object;
         return array_pop($object);
     }
 }
 
-/**
- * Use of PHP : array_rand
- *
- * @param   object
- * @param   integer
- * @return  array
- */
-if ( ! function_exists('object_rand')) {
-    function object_rand($object, $num = 1) {
+if ( ! function_exists('object_rand'))
+{
+    /**
+     * Use of PHP : array_rand
+     *
+     * @param   object
+     * @param   integer
+     * @return  array
+     */
+    function object_rand($object, $num = 1)
+    {
         is_array($object) or $object = (array) $object;
         return array_rand($object, $num);
     }
 }
 
-/**
- * Use of PHP : array_search
- *
- * @param   object
- * @param   integer
- * @return  array
- */
-if ( ! function_exists('object_search')) {
-    function object_search($needle, $haystack, $strict = false) {
+if ( ! function_exists('object_search'))
+{
+    /**
+     * Use of PHP : array_search
+     *
+     * @param   object
+     * @param   integer
+     * @return  array
+     */
+    function object_search($needle, $haystack, $strict = false)
+    {
         is_array($haystack) or $haystack = (array) $haystack;
         return array_search($needle, $haystack, $strict);
     }
 }
 
-/**
- * Use of PHP : array_shift
- *
- * @param   object
- * @return  array
- */
-if ( ! function_exists('object_shift')) {
-    function object_shift($object) {
+if ( ! function_exists('object_shift'))
+{
+    /**
+     * Use of PHP : array_shift
+     *
+     * @param   object
+     * @return  array
+     */
+    function object_shift($object)
+    {
         is_array($object) or $object = (array) $object;
         return array_shift($object);
     }
 }
 
-/**
- * Use of PHP : array_slice
- *
- * @param   object
- * @return  array
- */
-if ( ! function_exists('object_slice')) {
-    function object_slice($object, $offset = 0, $length = null, $preserve_keys = false) {
+if ( ! function_exists('object_slice'))
+{
+    /**
+     * Use of PHP : array_slice
+     *
+     * @param   object
+     * @return  array
+     */
+    function object_slice($object, $offset = 0, $length = null, $preserve_keys = false)
+    {
         is_array($object) or $object = (array) $object;
         return array_slice($object, $offset, $length, $preserve_keys);
     }

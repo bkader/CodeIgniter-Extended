@@ -849,3 +849,6 @@ if ( ! function_exists('function_usable'))
 		return FALSE;
 	}
 }
+
+/* End of file Common.php */
+/* Location: ./system/core/Common.php */

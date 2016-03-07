@@ -35,7 +35,7 @@ $config = array(
 		 * Default description
 		 * (used if there is no description set)
 		 */
-		'description' => 'PHP Framework',
+		'description' => 'CodeIgniter 3.0.4 - PHP Framework',
 
 		/**
 		 * Website keywords (for search engine ;)
@@ -69,41 +69,17 @@ $config = array(
 		 * you will have :
 		 *	cdn.example.com/(css|js|img)
 		 */
-		'use_cdn' => false,
+		'use_cdn' => true,
 		'cdn_url' => null,
-
-		/**
-		 * Google Analytics ID & Google Site Verification
-		 *
-		 * Set one of the to null to disable it
-		 */
-		'google' => array(
-			'analytics'    => null,
-			'verification' => null,
-		),
-
-		/**
-		 * Facebook Settings
-		 */
-		'facebook' => array(
-			'app_id' => null,
-			'image'  => null, // File name with extension or a full URL
-
-			/**
-			 * Facebook API
-			 */
-			'api_key' => null,	// API Key
-			'sec_key' => null,	// API secret key
-		),
 
 		/**
 		 * Different System Emails
 		 */
 		'emails' => array(
-			'noreply' => 'noreply@ianhub.com',
-			'admin'   => 'admin@ianhub.com',
-			'contact' => 'contact@ianhub.com',
-			'support' => 'support@ianhub.com',
+			'noreply' => 'noreply@localhost',
+			'admin'   => 'admin@localhost',
+			'contact' => 'contact@localhost',
+			'support' => 'support@localhost',
 			),
 
 		/**
@@ -120,6 +96,32 @@ $config = array(
 		'salt_pref' => '$2a$',
 		'salt_suff' => '$2a$',
 
+	),
+
+	/**
+	 * Google Analytics ID & Google Site Verification
+	 *
+	 * Set one of the to null to disable it
+	 */
+	'google' => array(
+		// put yours of course
+		'analytics'    => 'UA-73564021-2',
+		// set it to null or put yours
+		'verification' => "uMA5E-9EddgLSn2Da6zFp8M4Rl2xQ7Jnt5yLFBwYn4o",
+	),
+
+	/**
+	 * Facebook Settings
+	 */
+	'facebook' => array(
+		'app_id' => null,
+		'image'  => null, // File name with extension or a full URL
+
+		/**
+		 * Facebook API
+		 */
+		'api_key' => null,	// API Key
+		'sec_key' => null,	// API secret key
 	),
 
 	/**

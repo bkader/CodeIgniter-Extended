@@ -22,8 +22,24 @@ $config['twig'] = array(
     'cache' => APPPATH.'cache/twig',
 
     // Add as many functions as you want
-    'functions_asis' => array(),
+    'functions_asis' => array(
+    ),
     'functions_safe' => array(
+
+        // URL
+        'base_url',
+        'site_url',
+        'current_url',
+
+        // config
+        'config',
+
+        //
+        'assets_url',
+        'css_url', 'css',
+        'js_url', 'js',
+        'img_url', 'img',
+        'meta',
 
         // Language Functions
         'languages', 'current_lang', 'lang', 'line', '_e', '__', '_dgettext',
