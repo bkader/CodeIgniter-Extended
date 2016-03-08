@@ -11,11 +11,6 @@ class Welcome extends MY_Controller
 	 */
 	public function index()
 	{
-		$this->load->helper('directory');
-		debug(directory_map('D:/xampp/htdocs/codeigniter/application', 2), true);
-		debug_session();
-		exit;
-		//debug(current_lang(), true);
 		render('welcome_message', $this->data);
 	}
 
