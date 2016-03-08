@@ -1030,3 +1030,125 @@ if ( ! function_exists('_get_validation_object'))
 		return $return;
 	}
 }
+
+// ------------------------------------------------------------------------
+
+if ( ! function_exists('form_date'))
+{
+	/**
+	 * Date Field
+	 *
+	 * @access	public
+	 * @param	mixed
+	 * @param	string
+	 * @param	string
+	 * @param	string
+	 * @return	string
+	 */
+	function form_date($data = '', $value = '', $extra = '')
+	{
+		$defaults = array(
+			'type' => 'date', 
+			'name' => (( ! is_array($data)) ? $data : ''), 
+			'value' => $value
+			);
+		return "<input "._parse_form_attributes($data, $defaults).$extra." />";
+	}
+}
+
+if ( ! function_exists('form_email'))
+{
+	/**
+	 * Email Field
+	 *
+	 * @access	public
+	 * @param	mixed
+	 * @param	string
+	 * @param	string
+	 * @param	string
+	 * @return	string
+	 */
+	function form_email($data = '', $value = '', $placeholder = '', $extra = '')
+	{
+		$defaults = array(
+			'type' => 'email',
+			'name' => (( ! is_array($data)) ? $data : ''), 
+			'value' => $value, 
+			'placeholder' => $placeholder
+			);
+		return "<input "._parse_form_attributes($data, $defaults).$extra." />";
+	}
+}
+
+if( ! function_exists('form_number'))
+{
+	/**
+	 * Number Field
+	 * 
+	 * @access public
+	 * @param	mixed
+	 * @param	int
+	 * @param	int
+	 * @param	int
+	 * @return	int
+	 */
+	function form_number($data = '', $value = '', $min = '', $max = '', $step = '', $extra = '')
+	{
+		$defaults = array(
+			'type' => 'number', 
+			'name' => (( ! is_array($data)) ? $data : ''), 
+			'value' => $value,
+			'min' => $min,
+			'max' => $max,
+			'step' => $step
+			);
+		return "<input " . _parse_form_attributes($data, $defaults) . $extra . "/>";
+	}
+}
+
+if( ! function_exists('form_range'))
+{
+	/**
+	 * Range Field
+	 * 
+	 * @access public
+	 * @param	mixed
+	 * @param	int
+	 * @param	int
+	 * @param	int
+	 * @return	int
+	 */
+	function form_range($data = '', $value = '', $min = '', $max = '', $step = '', $extra = '')
+	{
+		$defaults = array(
+			'type' => 'range', 
+			'name' => (( ! is_array($data)) ? $data : ''), 
+			'value' => $value,
+			'min' => $min,
+			'max' => $max,
+			'step' => $step
+			);
+		return "<input " . _parse_form_attributes($data, $defaults) . $extra . "/>";
+	}
+}
+
+if ( ! function_exists('form_file'))
+{
+	/**
+	 * File Upload Field
+	 *
+	 * @access  public
+	 * @param	mixed
+	 * @param	string
+	 * @param	string
+	 * @return	string
+	 */
+	function form_file($data = '', $value = '', $extra = '')
+	{
+		$defaults = array('type' => 'file', 'name' => (( ! is_array($data)) ? $data : ''), 'value' => $value);
+		return "<input "._parse_form_attributes($data, $defaults).$extra." />";
+	}
+}
+
+/* End of file form_helper.php */
+/* Location: ./system/helpers/form_helper.php */

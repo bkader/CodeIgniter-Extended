@@ -156,3 +156,6 @@ if ( ! function_exists('force_download'))
 		exit;
 	}
 }
+
+/* End of file download_helper.php */
+/* Location: ./system/helpers/download_helper.php */

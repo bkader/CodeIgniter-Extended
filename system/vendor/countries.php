@@ -9,7 +9,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  *
  * @author 		Kader Bouyakoub
  * @link 		@bkader <github>
- * @link 		@Kader Bouyakoub <twitter>
+ * @link 		@KaderBouyakoub <twitter>
  */
 
 $countries = array(
@@ -2046,332 +2046,332 @@ $countries = array(
 	
 	// Solomon Islands
 	'SB' => array(
-		'region' => 'Oceania',
-		'name' => 'Solomon Islands',
+		'region'  => 'Oceania',
+		'name'    => 'Solomon Islands',
 		'capital' => 'Honiara',
-		'cca2' => 'SB',
-		'cca3' => 'SLB',
-		'isd' => '677',                      
+		'cca2'    => 'SB',
+		'cca3'    => 'SLB',
+		'isd'     => '677',                      
 	),
 	
 	// Somalia
 	'SO' => array(
-		'region' => 'Africa',
-		'name' => 'Somalia',
+		'region'  => 'Africa',
+		'name'    => 'Somalia',
 		'capital' => 'Mogadishu',
-		'cca2' => 'SO',
-		'cca3' => 'SOM',
-		'isd' => '252',                      
+		'cca2'    => 'SO',
+		'cca3'    => 'SOM',
+		'isd'     => '252',                      
 	),
 	
 	// South Africa
 	'ZA' => array(
-		'region' => 'Africa',
-		'name' => 'South Africa',
+		'region'  => 'Africa',
+		'name'    => 'South Africa',
 		'capital' => 'Cape Town',
-		'cca2' => 'ZA',
-		'cca3' => 'ZAF',
-		'isd' => '27',                        
+		'cca2'    => 'ZA',
+		'cca3'    => 'ZAF',
+		'isd'     => '27',                        
 	),
 	
 	// South Georgia
 	'GS' => array(
-		'region' => 'Americas',
-		'name' => 'South Georgia',
+		'region'  => 'Americas',
+		'name'    => 'South Georgia',
 		'capital' => '',
-		'cca2' => 'GS',
-		'cca3' => 'SGS',
-		'isd' => '500',                      
+		'cca2'    => 'GS',
+		'cca3'    => 'SGS',
+		'isd'     => '500',                      
 	),
 	
 	// South Korea
 	'KR' => array(
-		'region' => 'Asia',
-		'name' => 'South Korea',
+		'region'  => 'Asia',
+		'name'    => 'South Korea',
 		'capital' => 'Seoul',
-		'cca2' => 'KR',
-		'cca3' => 'KOR',
-		'isd' => '82',                        
+		'cca2'    => 'KR',
+		'cca3'    => 'KOR',
+		'isd'     => '82',                        
 	),
 	
 	// South Sudan
 	'SS' => array(
-		'region' => '',
-		'name' => 'South Sudan',
+		'region'  => '',
+		'name'    => 'South Sudan',
 		'capital' => 'Juba',
-		'cca2' => 'SS',
-		'cca3' => 'SSD',
-		'isd' => '211',                      
+		'cca2'    => 'SS',
+		'cca3'    => 'SSD',
+		'isd'     => '211',                      
 	),
 	
 	// Spain
 	'ES' => array(
-		'region' => 'Europe',
-		'name' => 'Spain',
+		'region'  => 'Europe',
+		'name'    => 'Spain',
 		'capital' => 'Madrid',
-		'cca2' => 'ES',
-		'cca3' => 'ESP',
-		'isd' => '34',                        
+		'cca2'    => 'ES',
+		'cca3'    => 'ESP',
+		'isd'     => '34',                        
 	),
 	
 	// Sri Lanka
 	'LK' => array(
-		'region' => 'Asia',
-		'name' => 'Sri Lanka',
+		'region'  => 'Asia',
+		'name'    => 'Sri Lanka',
 		'capital' => 'Colombo',
-		'cca2' => 'LK',
-		'cca3' => 'LKA',
-		'isd' => '94',                        
+		'cca2'    => 'LK',
+		'cca3'    => 'LKA',
+		'isd'     => '94',                        
 	),
 	
 	// Sudan
 	'SD' => array(
-		'region' => 'Africa',
-		'name' => 'Sudan',
+		'region'  => 'Africa',
+		'name'    => 'Sudan',
 		'capital' => 'Khartoum',
-		'cca2' => 'SD',
-		'cca3' => 'SDN',
-		'isd' => '249',                      
+		'cca2'    => 'SD',
+		'cca3'    => 'SDN',
+		'isd'     => '249',                      
 	),
 	
 	// Suriname
 	'SR' => array(
-		'region' => 'Americas',
-		'name' => 'Suriname',
+		'region'  => 'Americas',
+		'name'    => 'Suriname',
 		'capital' => 'Paramaribo',
-		'cca2' => 'SR',
-		'cca3' => 'SUR',
-		'isd' => '597',                      
+		'cca2'    => 'SR',
+		'cca3'    => 'SUR',
+		'isd'     => '597',                      
 	),
 	
 	// Svalbard and Jan Mayen
 	'SJ' => array(
-		'region' => 'Europe',
-		'name' => 'Svalbard and Jan Mayen',
+		'region'  => 'Europe',
+		'name'    => 'Svalbard and Jan Mayen',
 		'capital' => 'Longyearbyen',
-		'cca2' => 'SJ',
-		'cca3' => 'SJM',
-		'isd' => '4779',                    
+		'cca2'    => 'SJ',
+		'cca3'    => 'SJM',
+		'isd'     => '4779',                    
 	),
 	
 	// Swaziland
 	'SZ' => array(
-		'region' => 'Africa',
-		'name' => 'Swaziland',
+		'region'  => 'Africa',
+		'name'    => 'Swaziland',
 		'capital' => 'Lobamba',
-		'cca2' => 'SZ',
-		'cca3' => 'SWZ',
-		'isd' => '268',                      
+		'cca2'    => 'SZ',
+		'cca3'    => 'SWZ',
+		'isd'     => '268',                      
 	),
 	
 	// Sweden
 	'SE' => array(
-		'region' => 'Europe',
-		'name' => 'Sweden',
+		'region'  => 'Europe',
+		'name'    => 'Sweden',
 		'capital' => 'Stockholm',
-		'cca2' => 'SE',
-		'cca3' => 'SWE',
-		'isd' => '46',                        
+		'cca2'    => 'SE',
+		'cca3'    => 'SWE',
+		'isd'     => '46',                        
 	),
 	
 	// Switzerland
 	'CH' => array(
-		'region' => 'Europe',
-		'name' => 'Switzerland',
+		'region'  => 'Europe',
+		'name'    => 'Switzerland',
 		'capital' => 'Bern',
-		'cca2' => 'CH',
-		'cca3' => 'CHE',
-		'isd' => '41',                        
+		'cca2'    => 'CH',
+		'cca3'    => 'CHE',
+		'isd'     => '41',                        
 	),
 	
 	// Syria
 	'SY' => array(
-		'region' => 'Asia',
-		'name' => 'Syria',
+		'region'  => 'Asia',
+		'name'    => 'Syria',
 		'capital' => 'Damascus',
-		'cca2' => 'SY',
-		'cca3' => 'SYR',
-		'isd' => '963',                      
+		'cca2'    => 'SY',
+		'cca3'    => 'SYR',
+		'isd'     => '963',                      
 	),
 	
 	// Taiwan
 	'TW' => array(
-		'region' => 'Asia',
-		'name' => 'Taiwan',
+		'region'  => 'Asia',
+		'name'    => 'Taiwan',
 		'capital' => 'Taipei',
-		'cca2' => 'TW',
-		'cca3' => 'TWN',
-		'isd' => '886',                      
+		'cca2'    => 'TW',
+		'cca3'    => 'TWN',
+		'isd'     => '886',                      
 	),
 	
 	// Tajikistan
 	'TJ' => array(
-		'region' => 'Asia',
-		'name' => 'Tajikistan',
+		'region'  => 'Asia',
+		'name'    => 'Tajikistan',
 		'capital' => 'Dushanbe',
-		'cca2' => 'TJ',
-		'cca3' => 'TJK',
-		'isd' => '992',                      
+		'cca2'    => 'TJ',
+		'cca3'    => 'TJK',
+		'isd'     => '992',                      
 	),
 	
 	// Tanzania
 	'TZ' => array(
-		'region' => 'Africa',
-		'name' => 'Tanzania',
+		'region'  => 'Africa',
+		'name'    => 'Tanzania',
 		'capital' => 'Dodoma',
-		'cca2' => 'TZ',
-		'cca3' => 'TZA',
-		'isd' => '255',                      
+		'cca2'    => 'TZ',
+		'cca3'    => 'TZA',
+		'isd'     => '255',                      
 	),
 	
 	// Thailand
 	'TH' => array(
-		'region' => 'Asia',
-		'name' => 'Thailand',
+		'region'  => 'Asia',
+		'name'    => 'Thailand',
 		'capital' => 'Bangkok',
-		'cca2' => 'TH',
-		'cca3' => 'THA',
-		'isd' => '66',                        
+		'cca2'    => 'TH',
+		'cca3'    => 'THA',
+		'isd'     => '66',                        
 	),
 	
 	// East Timor
 	'TL' => array(
-		'region' => 'Asia',
-		'name' => 'East Timor',
+		'region'  => 'Asia',
+		'name'    => 'East Timor',
 		'capital' => 'Dili',
-		'cca2' => 'TL',
-		'cca3' => 'TLS',
-		'isd' => '670',                      
+		'cca2'    => 'TL',
+		'cca3'    => 'TLS',
+		'isd'     => '670',                      
 	),
 	
 	// Togo
 	'TG' => array(
-		'region' => 'Africa',
-		'name' => 'Togo',
+		'region'  => 'Africa',
+		'name'    => 'Togo',
 		'capital' => 'Lomé',
-		'cca2' => 'TG',
-		'cca3' => 'TGO',
-		'isd' => '228',                      
+		'cca2'    => 'TG',
+		'cca3'    => 'TGO',
+		'isd'     => '228',                      
 	),
 	
 	// Tokelau
 	'TK' => array(
-		'region' => 'Oceania',
-		'name' => 'Tokelau',
+		'region'  => 'Oceania',
+		'name'    => 'Tokelau',
 		'capital' => 'Fakaofo',
-		'cca2' => 'TK',
-		'cca3' => 'TKL',
-		'isd' => '690',                      
+		'cca2'    => 'TK',
+		'cca3'    => 'TKL',
+		'isd'     => '690',                      
 	),
 	
 	// Tonga
 	'TO' => array(
-		'region' => 'Oceania',
-		'name' => 'Tonga',
+		'region'  => 'Oceania',
+		'name'    => 'Tonga',
 		'capital' => 'Nuku\'alofa',
-		'cca2' => 'TO',
-		'cca3' => 'TON',
-		'isd' => '676',                      
+		'cca2'    => 'TO',
+		'cca3'    => 'TON',
+		'isd'     => '676',                      
 	),
 	
 	// Trinidad and Tobago
 	'TT' => array(
-		'region' => 'Americas',
-		'name' => 'Trinidad and Tobago',
+		'region'  => 'Americas',
+		'name'    => 'Trinidad and Tobago',
 		'capital' => 'Port of Spain',
-		'cca2' => 'TT',
-		'cca3' => 'TTO',
-		'isd' => '1868',                    
+		'cca2'    => 'TT',
+		'cca3'    => 'TTO',
+		'isd'     => '1868',                    
 	),
 	
 	// Tunisia
 	'TN' => array(
-		'region' => 'Africa',
-		'name' => 'Tunisia',
+		'region'  => 'Africa',
+		'name'    => 'Tunisia',
 		'capital' => 'Tunis',
-		'cca2' => 'TN',
-		'cca3' => 'TUN',
-		'isd' => '216',                      
+		'cca2'    => 'TN',
+		'cca3'    => 'TUN',
+		'isd'     => '216',                      
 	),
 	
 	// Turkey
 	'TR' => array(
-		'region' => 'Asia',
-		'name' => 'Turkey',
+		'region'  => 'Asia',
+		'name'    => 'Turkey',
 		'capital' => 'Ankara',
-		'cca2' => 'TR',
-		'cca3' => 'TUR',
-		'isd' => '90',                        
+		'cca2'    => 'TR',
+		'cca3'    => 'TUR',
+		'isd'     => '90',                        
 	),
 	
 	// Turkmenistan
 	'TM' => array(
-		'region' => 'Asia',
-		'name' => 'Turkmenistan',
+		'region'  => 'Asia',
+		'name'    => 'Turkmenistan',
 		'capital' => 'Ashgabat',
-		'cca2' => 'TM',
-		'cca3' => 'TKM',
-		'isd' => '993',                      
+		'cca2'    => 'TM',
+		'cca3'    => 'TKM',
+		'isd'     => '993',                      
 	),
 	
 	// Turks and Caicos Islands
 	'TC' => array(
-		'region' => 'Americas',
-		'name' => 'Turks and Caicos Islands',
+		'region'  => 'Americas',
+		'name'    => 'Turks and Caicos Islands',
 		'capital' => 'Cockburn Town',
-		'cca2' => 'TC',
-		'cca3' => 'TCA',
-		'isd' => '1649',                    
+		'cca2'    => 'TC',
+		'cca3'    => 'TCA',
+		'isd'     => '1649',                    
 	),
 	
 	// Tuvalu
 	'TV' => array(
-		'region' => 'Oceania',
-		'name' => 'Tuvalu',
+		'region'  => 'Oceania',
+		'name'    => 'Tuvalu',
 		'capital' => 'Funafuti',
-		'cca2' => 'TV',
-		'cca3' => 'TUV',
-		'isd' => '688',                      
+		'cca2'    => 'TV',
+		'cca3'    => 'TUV',
+		'isd'     => '688',                      
 	),
 	
 	// Uganda
 	'UG' => array(
-		'region' => 'Africa',
-		'name' => 'Uganda',
+		'region'  => 'Africa',
+		'name'    => 'Uganda',
 		'capital' => 'Kampala',
-		'cca2' => 'UG',
-		'cca3' => 'UGA',
-		'isd' => '256',                      
+		'cca2'    => 'UG',
+		'cca3'    => 'UGA',
+		'isd'     => '256',                      
 	),
 	
 	// Ukraine
 	'UA' => array(
-		'region' => 'Europe',
-		'name' => 'Ukraine',
+		'region'  => 'Europe',
+		'name'    => 'Ukraine',
 		'capital' => 'Kiev',
-		'cca2' => 'UA',
-		'cca3' => 'UKR',
-		'isd' => '380',                      
+		'cca2'    => 'UA',
+		'cca3'    => 'UKR',
+		'isd'     => '380',                      
 	),
 	
 	// United Arab Emirates
 	'AE' => array(
-		'region' => 'Asia',
-		'name' => 'United Arab Emirates',
+		'region'  => 'Asia',
+		'name'    => 'United Arab Emirates',
 		'capital' => 'Abu Dhabi',
-		'cca2' => 'AE',
-		'cca3' => 'ARE',
-		'isd' => '971',                      
+		'cca2'    => 'AE',
+		'cca3'    => 'ARE',
+		'isd'     => '971',                      
 	),
 	
 	// United Kingdom
 	'GB' => array(
-		'region' => 'Europe',
-		'name' => 'United Kingdom',
+		'region'  => 'Europe',
+		'name'    => 'United Kingdom',
 		'capital' => 'London',
-		'cca2' => 'GB',
-		'cca3' => 'GBR',
-		'isd' => '44',                        
+		'cca2'    => 'GB',
+		'cca3'    => 'GBR',
+		'isd'     => '44',                        
 	),
 	
 	// United States

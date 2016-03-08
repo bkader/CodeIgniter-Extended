@@ -91,3 +91,44 @@ if ( ! function_exists('byte_format'))
 		return number_format($num, $precision).' '.$unit;
 	}
 }
+
+// ------------------------------------------------------------------------
+
+if ( ! function_exists('quantity'))
+{
+	/**
+	 * Converts a number into a more readable human-type number.
+	 *
+	 * @author 	Kader Bouyakoub <bkader.com>
+	 * @link 	@bkader <github>
+	 * @link 	@KaderBouyakoub <twitter>
+	 *
+	 * @param   integer
+	 * @param   integer
+	 * @return  string
+	 */
+	function quantity($num, $decimals = 0)
+	{
+		if ($num >= 1000 && $num < 1000000)
+		{
+			$num = sprintf('%01.'.$decimals.'f', (sprintf('%01.0f', $num) / 1000)).'K';
+		}
+		elseif ($num >= 1000000 && $num < 1000000000)
+		{
+			$num = sprintf('%01.'.$decimals.'f', (sprintf('%01.0f', $num) / 1000000)).'M';
+		}
+		elseif ($num >= 1000000000 && $num < 1000000000000)
+		{
+			$num = sprintf('%01.'.$decimals.'f', (sprintf('%01.0f', $num) / 1000000000)).'B';
+		}
+		elseif ($num >= 1000000000000)
+		{
+			$num = sprintf('%01.'.$decimals.'f', (sprintf('%01.0f', $num) / 1000000000000)).'T';
+		}
+
+		return $num;
+	}
+}
+
+/* End of file number_helper.php */
+/* Location: ./system/helpers/number_helper.php */

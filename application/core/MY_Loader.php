@@ -1,10 +1,11 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-require BASEPATH.'vendor/HMVC/Loader.php';
+/* load the HMVC_Loader class */
+require APPPATH.'third_party/HMVC/Loader.php';
+
 class MY_Loader extends HMVC_Loader
 {
-
     protected $_ci_events_paths = array();
     public function __construct()
     {

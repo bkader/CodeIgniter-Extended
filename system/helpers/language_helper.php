@@ -73,3 +73,78 @@ if ( ! function_exists('lang'))
 		return $line;
 	}
 }
+
+// ------------------------------------------------------------------------
+
+if ( ! function_exists('line'))
+{
+	/**
+	 * Get a single phrase by name and index
+	 *
+	 * @access  public
+	 * @param   string
+	 * @param   string
+	 * @param   array
+	 * @return  string
+	 */
+    function line($name, $args = null, $default = false)
+    {
+        $line = _ci()->lang->line($name);
+        $line or $line = ( ! $default) ? $name: $default;
+        return ($args !== null) ? vsprintf($line, (array) $args): $line;
+    }
+}
+
+if ( ! function_exists('_e'))
+{
+	/**
+	 * Echo a single phrase
+	 *
+	 * @access  public
+	 * @param   string
+	 * @param   array
+	 * @param   string
+	 * @return  string
+	 */
+    function _e($str, $args = null, $default = false)
+    {
+        echo line($str, $args, $default);
+    }
+}
+
+// ------------------------------------------------------------------------
+
+if ( ! function_exists('languages'))
+{
+	function languages($single = false)
+	{
+		$CI =& get_instance();
+		if ( ! class_exists('CI_I18n'))
+			$CI->load->library('i18n');
+		$languages = $CI->i18n->languages();
+        return ($single and array_key_exists($single, $languages))
+                ? $languages[$single] : $languages;
+	}
+}
+
+// ------------------------------------------------------------------------
+
+if ( ! function_exists('current_lang'))
+{
+	/**
+	 * Get current language data
+	 *
+	 * @param   string
+	 * @return  mixed
+	 */
+    function current_lang($return = FALSE)
+    {
+    	$CI =& get_instance();
+		if ( ! class_exists('CI_I18n'))
+			$CI->load->library('i18n');
+        return $CI->i18n->get_current($return);
+    }
+}
+
+/* End of file language_helper.php */
+/* Location: ./system/helpers/language_helper.php */

@@ -379,6 +379,58 @@ class CI_Config {
 		$this->config[$item] = $value;
 	}
 
+	/* [ADDED] */
+
+    /**
+     * Get a config item and return a default value if it does not exist
+     *
+     * @package 	CodeIgniter
+     * @author 		Kader Bouyakoub
+     * @link 		@bkader <github>
+     * @link 		@KaderBouyakoub <twitter>
+     *
+     * @param   mixed
+     * @param   mixed
+     * @return  mixed
+     */
+    public function get($item, $default = false)
+    {
+        return $this->dot($this->config, $item, $default);
+    }
+
+    /**
+     * Access multidimensional array using
+     * dot-notation method.
+     *
+     * @package 	CodeIgniter
+     * @author 		Kader Bouyakoub
+     * @link 		@bkader <github>
+     * @link 		@KaderBouyakoub <twitter>
+     *
+     * @param   array
+     * @param   string
+     * @param   mixed
+     * @return  mixed
+     */
+    private function dot(&$arr, $path = null, $default = false)
+    {
+        if ( ! $path)
+        {
+            user_error(__("Missing array path for array"), E_USER_WARNING);
+        }
+        $parts = explode(".", $path);
+        $path  =& $arr;
+        foreach ($parts as $e)
+        {
+            if ( ! isset($path[$e]) or empty($path[$e]))
+            {
+                return $default;
+            }
+            $path =& $path[$e];
+        }
+        return $path;
+    }
+
 }
 
 /* End of file Config.php */

@@ -84,7 +84,7 @@ if ( ! function_exists('random_element'))
 	}
 }
 
-// --------------------------------------------------------------------
+// ------------------------------------------------------------------------
 
 if ( ! function_exists('elements'))
 {
@@ -112,6 +112,116 @@ if ( ! function_exists('elements'))
 
 		return $return;
 	}
+}
+
+// ------------------------------------------------------------------------
+
+/* [ADDED] */
+
+if ( ! function_exists('dot'))
+{
+    /**
+     * Access multidimensional array
+     *
+     * @author 	Kader Bouyakoub
+     * @link 	@bkader <github>
+     * @link 	@KaderBouyakoub <twitter>
+     * @link 	http://www.bkader.com/
+     *
+     * @param   string
+     * @return  mixed
+     */
+    function dot(&$arr, $path = null, $default = null)
+    {
+        if ( ! $path)
+        {
+            user_error("Missing array path for array", E_USER_WARNING);
+        }
+        $parts = explode(".", $path);
+        $path  =& $arr;
+        foreach ($parts as $e)
+        {
+            if ( ! isset($path[$e]) or empty($path[$e]))
+            {
+                return $default;
+            }
+            $path =& $path[$e];
+        }
+        return $path;
+    }
+}
+
+if ( ! function_exists('array_divide'))
+{
+    /**
+     * Divides an array into two, one with keys ad the other with values.
+     *
+     * @author 	Kader Bouyakoub
+     * @link 	@bkader <github>
+     * @link 	@KaderBouyakoub <twitter>
+     * @link 	http://www.bkader.com/
+     *
+     * @access  public
+     * @param   array
+     * @return  array
+     */
+    function array_divide($array)
+    {
+
+        return array(array_keys($array), array_values($array));
+    }
+}
+
+if ( ! function_exists('array_subset'))
+{
+    /**
+     * Extract elements from a given array into a new array
+     *
+     * @author 	Kader Bouyakoub
+     * @link 	@bkader <github>
+     * @link 	@KaderBouyakoub <twitter>
+     * @link 	http://www.bkader.com/
+     *
+     * @access  public
+     * @param   array
+     * @param   array
+     * @return  array
+     */
+    function array_subset($array, $keys)
+    {
+        return array_intersect_key($array, array_flip((array) $keys));
+    }
+}
+
+/**
+ * Get all of the given array except for a specified array of items.
+ *
+ * @param  array  $array
+ * @param  array  $keys
+ * @return array
+ */
+if ( ! function_exists('array_remove'))
+{
+    /**
+     * Returns a new array from a given one after removing
+     * the specified elements
+     *
+     * @author 	Kader Bouyakoub
+     * @link 	@bkader <github>
+     * @link 	@KaderBouyakoub <twitter>
+     * @link 	http://www.bkader.com/
+     *
+     * @access  public
+     * @param   array
+     * @param   array
+     * @return  array
+     */
+    function array_remove($array, $keys)
+    {
+
+        return array_diff_key($array, array_flip((array) $keys));
+    }
+
 }
 
 /* End of file array_helper.php */

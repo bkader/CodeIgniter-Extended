@@ -241,6 +241,36 @@ if ( ! function_exists('random_string'))
 
 // ------------------------------------------------------------------------
 
+if ( ! function_exists('readable_random_string'))
+{
+	/**
+	 * Generates a human readable random string
+	 *
+	 * @access 	public
+	 * @param 	integer
+	 * @param 	boolean
+	 * @return 	string
+	 */
+	function readable_random_string($length = 6, $camelize = false)
+	{
+		$conso  = array("b","c","d","f","g","h","j","k","l","m","n","p","r","s","t","v","w","x","y","z");
+		$vocal  = array("a","e","i","o","u");
+		$string = "";
+	    
+	    srand ((double)microtime()*1000000);
+	    
+	    $max = $length / 2;
+	    for($i = 1; $i <= $max; $i++)
+	    {
+			$string .=$conso[rand(0,19)];
+			$string .=$vocal[rand(0,4)];
+	    }
+	    return ($camelize) ? ucwords($string) : $string;
+	} 
+}
+
+// ------------------------------------------------------------------------
+
 if ( ! function_exists('increment_string'))
 {
 	/**
@@ -304,3 +334,45 @@ if ( ! function_exists('repeater'))
 		return ($num > 0) ? str_repeat($data, $num) : '';
 	}
 }
+
+// ------------------------------------------------------------------------
+
+if ( ! function_exists('mask_string'))
+{
+	/**
+	 * Masks a string with a give char
+	 *
+	 * @access 	public
+	 * @param 	string
+	 * @param 	integer
+	 * @param 	integer
+	 * @param 	string
+	 * @return 	string
+	 */
+	function mask_string($str = null, $start = 3, $end = 3, $mask = '*')
+	{
+		// Prepare the length of the string
+		$length = strlen($str);
+
+		// We then prepare the array that will holds all of chars
+		$chars = array();
+
+		foreach(str_split($str) as $index => $char)
+		{
+			if ($char === ' ')
+			{
+				$chars[$index] = ' ';
+			}
+			else
+			{
+				$chars[$index] = ($index <= ($start - 1) or $index >= ($length - $end))
+									? $char : $mask;
+			}
+			//$chars[$index] = ($char === ' ') ? ' ' : $mask;
+		}
+		return implode('', $chars);
+	}
+}
+
+/* End of file string_helper.php */
+/* Location: ./system/helpers/string_helper.php */

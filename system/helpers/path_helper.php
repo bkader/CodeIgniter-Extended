@@ -80,3 +80,81 @@ if ( ! function_exists('set_realpath'))
 		return is_dir($path) ? rtrim($path, DIRECTORY_SEPARATOR).DIRECTORY_SEPARATOR : $path;
 	}
 }
+
+/* [ADDED] */
+
+if ( ! function_exists('real_path'))
+{
+    /**
+     * This function does the same as realpath WITHOUT checking for existence.
+     *
+     * @author 	Kader Bouyakoub
+     * @link 	@bkader <github>
+     * @link 	@KaderBouyakoub <twitter>
+     * @link 	http://www.bkader.com/
+     *
+     * @access  public
+     * @param   string
+     * @return  string
+     */
+    function real_path($path)
+    {
+        $path = str_replace('\\', '/', $path);
+        $out = array();
+        foreach (explode('/', $path) as $i => $fold)
+        {
+            if ($fold == '' or $fold == '.')
+            {
+                continue;
+            }
+
+            if ($fold == '..' and $i > 0 and end($out) != '..')
+            {
+                array_pop($out);
+            }
+            else
+            {
+                $out[] = $fold;
+            }
+        }
+        return ($path{0} == '/' ? '/' : '').join('/', $out); 
+    }
+}
+
+if ( ! function_exists('path_merge'))
+{
+    /**
+     * Merges two strings with common middle part
+     *
+     * @author  Kader Bouyakoub
+     * @link    @bkader <github>
+     * @link    @KaderBouyakoub <twitter>
+     * @link    http://www.bkader.com/
+     *
+     * @access  public
+     * @param   string
+     * @param   string
+     * @return  string
+     */
+    function path_merge($path1, $path2)
+    {
+        $p1 = explode('/', trim($path1,' /'));
+        $p2 = explode('/', trim($path2,' /'));
+        $len = count($p1);
+        do
+        {
+            if (array_slice($p1, -$len) === array_slice($p2, 0, $len))
+            {
+
+                return '/'.implode('/', array_slice($p1, 0, -$len)).'/'.implode('/', $p2);
+            }
+        }
+        while (--$len);
+
+        return '/'.implode('/', array_merge($p1, $p2));
+    }
+
+}
+
+/* End of file path_helper.php */
+/* Location: ./system/helpers/path_helper.php */

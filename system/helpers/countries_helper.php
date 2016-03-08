@@ -13,18 +13,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 
 
-/**
- * Generates a html select with all countries
- *
- * @access 	public
- * @param 	string
- * @param 	string
- * @param 	string
- * @param 	mixed
- * @return 	string
- */
 if ( ! function_exists('countries_menu'))
 {
+	/**
+	 * Generates a html select with all countries
+	 *
+	 * @access 	public
+	 * @param 	string
+	 * @param 	string
+	 * @param 	string
+	 * @param 	mixed
+	 * @return 	string
+	 */
 	function countries_menu($default = 'DZ', $class = '', $name = 'countries', $attributes = '')
 	{
 		$CI =& get_instance();
@@ -50,15 +50,15 @@ if ( ! function_exists('countries_menu'))
 	}
 }
 
-/**
- * List all countries or only one
- *
- * @access 	public
- * @param 	string
- * @return 	array
- */
 if ( ! function_exists('countries'))
 {
+	/**
+	 * List all countries or only one
+	 *
+	 * @access 	public
+	 * @param 	string
+	 * @return 	array
+	 */
 	function countries($single = '', $return = false)
 	{
 		include_once BASEPATH.'vendor/countries.php';

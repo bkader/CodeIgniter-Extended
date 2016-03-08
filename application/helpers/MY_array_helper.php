@@ -11,33 +11,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
  * @link        @KaderBouyakoub
  */
 
-if ( ! function_exists('dot'))
-{
-    /**
-     * Access multidimensional array
-     *
-     * @param   string
-     * @return  mixed
-     */
-    function dot(&$arr, $path = null, $default = null)
-    {
-        if ( ! $path)
-        {
-            user_error("Missing array path for array", E_USER_WARNING);
-        }
-        $parts = explode(".", $path);
-        $path  =& $arr;
-        foreach ($parts as $e)
-        {
-            if ( ! isset($path[$e]) or empty($path[$e]))
-            {
-                return $default;
-            }
-            $path =& $path[$e];
-        }
-        return $path;
-    }
-}
+
 
 if ( ! function_exists('object_change_key_case '))
 {

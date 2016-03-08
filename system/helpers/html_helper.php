@@ -49,6 +49,46 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 // ------------------------------------------------------------------------
 
+if ( ! function_exists('html_tag'))
+{
+	/**
+	 * Creates a HTML tag
+	 *
+	 * @access 	public
+	 * @param 	string
+	 * @param 	mixed
+	 * @param 	mixed
+	 * @return 	string
+	 */
+	function html_tag($tag, $attr = array(), $content = false)
+	{
+		// list of void elements (tags that can not have content)
+		static $void_elements = array(
+			// html4
+			"area","base","br","col","hr","img","input","link","meta","param",
+			// html5
+			"command","embed","keygen","source","track","wbr",
+			// html5.1
+			"menuitem",
+		);
+
+		// construct the HTML
+		$html = '<'.$tag;
+		if ( ! empty($attr))
+			$html .= ' '.(is_array($attr)) ? _stringify_attributes($attr) : $attr;
+
+		// a void element?
+		if (in_array(strtolower($tag), $void_elements))
+			$html .= ' />';
+		else
+			$html .= '>'.$content.'</'.$tag.'>';
+
+		return $html;
+	}
+}
+
+// ------------------------------------------------------------------------
+
 if ( ! function_exists('heading'))
 {
 	/**
@@ -215,6 +255,45 @@ if ( ! function_exists('img'))
 
 // ------------------------------------------------------------------------
 
+if ( ! function_exists('gravatar'))
+{
+	/**
+	 * Generates a <img> tag with with Gravatar
+	 *
+	 * @author 	Kader Bouyakoub <bkader.com>
+	 * @link 	@bkader <github>
+	 * @link 	@KaderBouyakoub <tiwtter>
+	 *
+	 * @access 	public
+	 * @param 	string
+	 * @param 	integer
+	 * @param 	integer
+	 * @param 	integer
+	 * @return 	string
+	 */
+	function gravatar($email, $size = false, $default = false, $rating = false)  
+	{
+		$tag = '<img src="http://www.gravatar.com/avatar.php?gravatar_id='.md5($email);
+
+		if ($default)
+			$tag .= '&default='.$default;
+
+		if ($size)
+			$tag .= '&size='.$size;
+		
+		if ($rating)
+			$tag .= '&rating='.$rating;
+		$tag .= '"';
+		if ($size)
+			$tag .= ' width="" height=""';
+
+		$tag .= ' />';
+		return $tag;
+	}  
+}
+
+// ------------------------------------------------------------------------
+
 if ( ! function_exists('doctype'))
 {
 	/**
@@ -338,40 +417,66 @@ if ( ! function_exists('link_tag'))
 if ( ! function_exists('meta'))
 {
 	/**
-	 * Generates meta tags from an array of key/values
+	 * Generates a html meta tag
 	 *
-	 * @param	array
-	 * @param	string
-	 * @param	string
-	 * @param	string
+	 * @param	string|array	multiple inputs or name/http-equiv value
+	 * @param	string			content value
+	 * @param	string			name or http-equiv
 	 * @return	string
 	 */
-	function meta($name = '', $content = '', $type = 'name', $newline = "\n")
+
+	/**
+	 * Completely changed and enhanced
+	 *
+	 * @author 	Kader Bouyakoub <http://www.bkader.com/>
+	 * @link 	@bkader <github>
+	 * @link 	@KaderBouyakoub <twitter>
+	 */
+
+	function meta($name = '', $content = '', $type = 'name')
 	{
-		// Since we allow the data to be passes as a string, a simple array
-		// or a multidimensional one, we need to do a little prepping.
-		if ( ! is_array($name))
+		if (is_array($name))
 		{
-			$name = array(array('name' => $name, 'content' => $content, 'type' => $type, 'newline' => $newline));
+			$output = '';
+			foreach ($name as $key => $val)
+			{
+				$output[] = meta($key, $val);
+			}
+			return implode("\n", $output);
 		}
-		elseif (isset($name['name']))
+		$meta = '<meta ';
+		$meta .= (strpos($name, 'og:') === 0 or strpos($name, 'fb:') === 0) 
+				? 'property="'.$name.'"'
+				: 'name="'.$name.'"';
+		$meta .= ' content="'.$content.'" />';
+		return $meta;
+	}
+}
+
+// ------------------------------------------------------------------------
+
+if ( ! function_exists('audio'))
+{
+	/**
+	 * Generates a html5 audio tag
+	 * It is required that you set html5 as the doctype to use this method
+	 *
+	 * @param	mixed 	one or multiple audio sources
+	 * @param	mixed 	tag attributes
+	 * @return	string
+	 */
+	function audio($src = '', $attr = null)
+	{
+		if (is_array($src))
 		{
-			// Turn single array into multidimensional
-			$name = array($name);
+			$output = '';
+			foreach ($src as $elem)
+			{
+				$output[] = audio($elem);
+			}
+			return implode("\n", $output);
 		}
-
-		$str = '';
-		foreach ($name as $meta)
-		{
-			$type		= (isset($meta['type']) && $meta['type'] !== 'name')	? 'http-equiv' : 'name';
-			$name		= isset($meta['name'])					? $meta['name'] : '';
-			$content	= isset($meta['content'])				? $meta['content'] : '';
-			$newline	= isset($meta['newline'])				? $meta['newline'] : "\n";
-
-			$str .= '<meta '.$type.'="'.$name.'" content="'.$content.'" />'.$newline;
-		}
-
-		return $str;
+		return '<source src="'.$src.'"'.($attr ? _stringify_attributes($attr) : '').' />';
 	}
 }
 
@@ -406,6 +511,39 @@ if ( ! function_exists('nbs'))
 	function nbs($num = 1)
 	{
 		return str_repeat('&nbsp;', $num);
+	}
+}
+
+// ------------------------------------------------------------------------
+
+if ( ! function_exists('tag_cloud'))
+{
+	/**
+	 * Creates tags cloud
+	 *
+	 * @access 	public
+	 * @param 	array
+	 * @param 	integer
+	 * @param 	integer
+	 * @return 	string
+	 */
+	function tag_cloud($data = array(), $min_fsize = 10, $max_fsize = 30)  
+	{  
+	    $min_count = min($data);  
+	    $max_count = max($data);  
+	    $spread       = $max_count - $min_count;  
+	    $html_cloud    = '';  
+	    $tags_cloud    = array();  
+	  
+	    $spread == 0 && $spread = 1;  
+	  
+	    foreach($data as $tag => $count)
+	    {  
+	        $size = $min_fsize + ($count - $min_count) * ($max_fsize - $min_fsize) / $spread;
+	        $tags_cloud[] = '<a style="font-size:'.floor( $size ).'px;" class="tag-cloud" href="#" role="button">'.htmlspecialchars(stripslashes($tag)).'</a>';
+	    }  
+	      
+	    return join( "\n", $tags_cloud )."\n";  
 	}
 }
 

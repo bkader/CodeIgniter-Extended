@@ -99,3 +99,6 @@ if ( ! function_exists('directory_map'))
 		return FALSE;
 	}
 }
+
+/* End of file directory_helper.php */
+/* Location: ./system/helpers/directory_helper.php */

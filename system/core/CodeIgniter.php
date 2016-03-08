@@ -66,13 +66,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /*
  * ------------------------------------------------------
- * Load the dot-notation function
- * ------------------------------------------------------
- */
-	require_once BASEPATH.'vendor/dot-notation.php';
-
-/*
- * ------------------------------------------------------
  *  Load the framework constants
  * ------------------------------------------------------
  */
@@ -89,6 +82,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * ------------------------------------------------------
  */
 	require_once(BASEPATH.'core/Common.php');
+
+/*
+ * --------------------------------------------------------------------
+ * Load PHP environment settings
+ * --------------------------------------------------------------------
+ */
+	if (file_exists(APPPATH.'config/'.ENVIRONMENT.'/environment.php'))
+		require_once(APPPATH.'config/'.ENVIRONMENT.'/environment.php');
+	else
+		require_once(APPPATH.'config/environment.php');
 
 /*
  * ------------------------------------------------------

@@ -102,31 +102,38 @@ define('EXT', '.php');
 /**
  * Path to the front controller (this file)
  */
-defined('FCPATH') or define('FCPATH', dirname(__FILE__).'/');
+defined('FCPATH')
+	or define('FCPATH', rtrim(str_replace('\\', '/', realpath(__DIR__)), '/').'/');
 
 /**
  * Path to root folder
  */
-defined('DOCROOT') or define('DOCROOT', realpath(__DIR__.'/').DS);
+defined('DOCROOT') 
+	or define('DOCROOT', rtrim(str_replace('\\', '/', realpath(__DIR__)), '/').'/');
 
 /**
  * Path to the System Folder
  */
-defined('BASEPATH') or define('BASEPATH', realpath(DOCROOT.'system/').DS);
+defined('BASEPATH') 
+	or define('BASEPATH', rtrim(str_replace('\\', '/', realpath(DOCROOT.'system/')), '/').'/');
 
 /**
  * Path to the application folder name
  */
-defined('APPPATH') or define('APPPATH', realpath(DOCROOT.'application/').DS);
+defined('APPPATH') 
+	or define('APPPATH', rtrim(str_replace('\\', '/', realpath(DOCROOT.'application/')), '/').'/');
 
 /**
  * Define the path to view files
  */
-defined('VIEWPATH') or define('VIEWPATH', realpath(APPPATH.'views/').DS);
+
+defined('VIEWPATH') 
+	or define('VIEWPATH', rtrim(str_replace('\\', '/', realpath(APPPATH.'views/')), '/').'/');
 
 // Resolve the system path for increased reliability
 
 // Set the current directory correctly for CLI requests
+define('CLI', (PHP_SAPI == 'cli') or defined(('STDIN')));
 if (defined('STDIN'))
 {
 	chdir(dirname(__FILE__));

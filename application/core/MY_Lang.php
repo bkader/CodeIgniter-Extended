@@ -23,6 +23,7 @@
  * @link        http://codeigniter.com/user_guide/libraries/language.html
  */
 defined('BASEPATH') or exit('No direct script access allowed');
+
 class MY_Lang extends CI_Lang
 {
     /**

@@ -282,6 +282,37 @@ if ( ! function_exists('get_config'))
 
 // ------------------------------------------------------------------------
 
+if ( ! function_exists('dot'))
+{
+	/**
+	 * Access multidimensional array using dot-notation
+	 *
+	 * @param   string
+	 * @return  mixed
+	 */
+    function dot(&$arr, $path = null, $default = null)
+    {
+        if ( ! $path)
+        {
+            user_error("Missing array path for array", E_USER_WARNING);
+        }
+        $parts = explode(".", $path);
+        is_array($arr) or $arr = (array) $arr;
+        $path  =& $arr;
+        foreach ($parts as $e)
+        {
+            if ( ! isset($path[$e]) or empty($path[$e]))
+            {
+                return $default;
+            }
+            $path =& $path[$e];
+        }
+        return $path;
+    }
+}
+
+// ------------------------------------------------------------------------
+
 if ( ! function_exists('config_item'))
 {
 	/**
@@ -302,6 +333,23 @@ if ( ! function_exists('config_item'))
 
 		return isset($_config[0][$item]) ? $_config[0][$item] : NULL;
 	}
+}
+
+if ( ! function_exists('config'))
+{
+    /**
+     * Returns config item using dot-notation
+     *
+     * @access  public
+     * @param   string
+     * @param   mixed
+     * @return  mixed
+     */
+    function config($item, $default = false)
+    {
+    	$CI =& get_instance();
+        return $CI->config->get($item, $default);
+    }
 }
 
 // ------------------------------------------------------------------------

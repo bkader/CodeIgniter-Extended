@@ -187,7 +187,7 @@ class MY_Exceptions extends CI_Exceptions
             ob_start();
 
             // This will include the custom error file.
-            require BASEPATH.'vendor/errors/error_php_custom.php';
+            require APPPATH.'errors/error_php_custom.php';
 
             // Display the contents of the output buffer
             echo ob_get_clean();
@@ -485,7 +485,7 @@ class MY_Exceptions extends CI_Exceptions
                 ob_end_flush();
             }
             ob_start();
-            include(BASEPATH.'vendor/errors/'.$template.EXT);
+            include(APPPATH.'errors/'.$template.EXT);
             $buffer = ob_get_contents();
             ob_end_clean();
             return $buffer;

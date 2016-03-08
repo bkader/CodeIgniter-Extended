@@ -100,10 +100,17 @@ if ( ! function_exists('current_url'))
 	 *
 	 * @return	string
 	 */
+
+	/**
+	 * Enhanced by Kader Bouyakoub
+	 * @link 	@bkader <github>
+	 * @link 	@KaderBouyakoub <github>
+	 */
 	function current_url()
 	{
 		$CI =& get_instance();
-		return $CI->config->site_url($CI->uri->uri_string());
+		$url = $CI->config->site_url($CI->uri->uri_string());
+		return $_SERVER['QUERY_STRING'] ? $url.'?'.$_SERVER['QUERY_STRING'] : $url;
 	}
 }
 
@@ -250,16 +257,26 @@ if ( ! function_exists('mailto'))
 	 * @param	mixed	any attributes
 	 * @return	string
 	 */
-	function mailto($email, $title = '', $attributes = '')
+
+	/**
+	 * NOTICE:
+	 *
+	 * This functions was simply enhanced
+	 *
+	 * @author 	Kader Bouyaoub <http://www.bkader.com/>
+	 * @link 	@bkader <github>
+	 * @link 	@KaderBouyaoub <twiiter>
+	 */
+
+	function mailto($email, $title = null, $attr = null, $subject = null)
 	{
-		$title = (string) $title;
-
-		if ($title === '')
-		{
-			$title = $email;
-		}
-
-		return '<a href="mailto:'.$email.'"'._stringify_attributes($attributes).'>'.$title.'</a>';
+		$title or $title = $email;
+		$subject and $subject = '?subject='.rawurlencode($subject);
+		$tag = '<a href="mailto:'.$email.$subject.'"';
+		if ($attr)
+			$tag .= _stringify_attributes($attr);
+		$tag .= '>'.$title.'</a>';
+		return $tag;
 	}
 }
 
@@ -277,99 +294,82 @@ if ( ! function_exists('safe_mailto'))
 	 * @param	mixed	any attributes
 	 * @return	string
 	 */
-	function safe_mailto($email, $title = '', $attributes = '')
+
+	/**
+	 * Enhanced by Kader Bouyakoub <http://www.bkader.com/>
+	 * @link 	@bkader <github>
+	 * @link 	@KaderBouyaoub <twiiter>
+	 */
+
+	function safe_mailto($email, $text = null, $attr = null, $subject = null)
 	{
-		$title = (string) $title;
+		$text or $text = str_replace('@', '[at]', $email);
+		$email = explode("@", $email);
+		$subject and $subject = '?subject='.rawurlencode($subject);
 
-		if ($title === '')
-		{
-			$title = $email;
-		}
+		$attr = _stringify_attributes($attr);
+		$attr = ($attr == '' ? '' : ' ').$attr;
 
-		$x = str_split('<a href="mailto:', 1);
-
-		for ($i = 0, $l = strlen($email); $i < $l; $i++)
-		{
-			$x[] = '|'.ord($email[$i]);
-		}
-
-		$x[] = '"';
-
-		if ($attributes !== '')
-		{
-			if (is_array($attributes))
-			{
-				foreach ($attributes as $key => $val)
-				{
-					$x[] = ' '.$key.'="';
-					for ($i = 0, $l = strlen($val); $i < $l; $i++)
-					{
-						$x[] = '|'.ord($val[$i]);
-					}
-					$x[] = '"';
-				}
-			}
-			else
-			{
-				for ($i = 0, $l = strlen($attributes); $i < $l; $i++)
-				{
-					$x[] = $attributes[$i];
-				}
-			}
-		}
-
-		$x[] = '>';
-
-		$temp = array();
-		for ($i = 0, $l = strlen($title); $i < $l; $i++)
-		{
-			$ordinal = ord($title[$i]);
-
-			if ($ordinal < 128)
-			{
-				$x[] = '|'.$ordinal;
-			}
-			else
-			{
-				if (count($temp) === 0)
-				{
-					$count = ($ordinal < 224) ? 2 : 3;
-				}
-
-				$temp[] = $ordinal;
-				if (count($temp) === $count)
-				{
-					$number = ($count === 3)
-							? (($temp[0] % 16) * 4096) + (($temp[1] % 64) * 64) + ($temp[2] % 64)
-							: (($temp[0] % 32) * 64) + ($temp[1] % 64);
-					$x[] = '|'.$number;
-					$count = 1;
-					$temp = array();
-				}
-			}
-		}
-
-		$x[] = '<'; $x[] = '/'; $x[] = 'a'; $x[] = '>';
-
-		$x = array_reverse($x);
-
-		$output = "<script type=\"text/javascript\">\n"
-			."\t//<![CDATA[\n"
-			."\tvar l=new Array();\n";
-
-		for ($i = 0, $c = count($x); $i < $c; $i++)
-		{
-			$output .= "\tl[".$i."] = '".$x[$i]."';\n";
-		}
-
-		$output .= "\n\tfor (var i = l.length-1; i >= 0; i=i-1) {\n"
-			."\t\tif (l[i].substring(0, 1) === '|') document.write(\"&#\"+unescape(l[i].substring(1))+\";\");\n"
-			."\t\telse document.write(unescape(l[i]));\n"
-			."\t}\n"
-			."\t//]]>\n"
-			.'</script>';
-
+		$output = '<script type="text/javascript">';
+		$output .= '(function() {';
+		$output .= 'var user = "'.$email[0].'";';
+		$output .= 'var at = "@";';
+		$output .= 'var server = "'.$email[1].'";';
+		$output .= "document.write('<a href=\"' + 'mail' + 'to:' + user + at + server + '$subject\"$attr>$text</a>');";
+		$output .= '})();';
+		$output .= '</script>';
 		return $output;
+	}
+}
+
+if ( ! function_exists('encode_emailto'))
+{
+	/**
+	 * Encodes any email address into HTML entities so that spam bots do not find it.
+	 *
+	 * @author 	Kader Bouyakoub <http://www.bkader.com/>
+	 * @link 	@bkader <github>
+	 * @link 	@KaderBouyakoub <twitter>
+	 *
+	 * @access 	public
+	 * @param 	string
+	 * @param 	string
+	 * @param 	mixed
+	 * @param 	string
+	 * @return 	string
+	 */
+	function encode_emailto($email, $text = null, $attr = null, $subject = null)
+	{  
+	    $text or $text = $email;
+	    // remplazar aroba y puntos  
+	    $email = str_replace('@', '&#64;', $email);
+	    $email = str_replace('.', '&#46;', $email);
+	    $email = str_split($email, 5);
+
+	    $text = str_replace('@', '&#64;', $text);
+	    $text = str_replace('.', '&#46;', $text);
+	    $text = str_split($text, 5);
+
+	    $part1 = '<a href="ma';
+	    $part2 = 'ilto&#58;';
+	    $part3 = '"'._stringify_attributes($attr).'>';
+	    $part4 = '</a>';
+
+	    $encoded = '<script type="text/javascript">';
+	    $encoded .= "document.write('$part1');";
+	    $encoded .= "document.write('$part2');";
+	    
+	    foreach($email as $e)
+	    	$encoded .= "document.write('$e');";
+
+	    $encoded .= "document.write('$part3');";
+
+	    foreach($text as $l)
+	    	$encoded .= "document.write('$l');";
+
+	    $encoded .= "document.write('$part4');";
+	    $encoded .= '</script>';
+	    return $encoded;
 	}
 }
 
@@ -497,7 +497,9 @@ if ( ! function_exists('url_title'))
 			'('.$q_separator.')+'	=> $separator
 		);
 
-		$str = strip_tags($str);
+		//$str = strip_tags($str); // Edited
+        get_instance()->load->helper('text');
+        $str = strip_tags(convert_accented_characters($str));
 		foreach ($trans as $key => $val)
 		{
 			$str = preg_replace('#'.$key.'#i'.(UTF8_ENABLED ? 'u' : ''), $val, $str);
@@ -567,3 +569,6 @@ if ( ! function_exists('redirect'))
 		exit;
 	}
 }
+
+/* End of file url_helper.php */
+/* Location: ./system/helpers/url_helper.php */

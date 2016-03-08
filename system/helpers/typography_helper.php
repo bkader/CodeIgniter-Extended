@@ -102,3 +102,6 @@ if ( ! function_exists('entity_decode'))
 		return get_instance()->security->entity_decode($str, $charset);
 	}
 }
+
+/* End of file typography_helper.php */
+/* Location: ./system/helpers/typography_helper.php */
