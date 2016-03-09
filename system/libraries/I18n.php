@@ -84,23 +84,16 @@ class CI_I18n
         class_exists('CI_Session') or $this->CI->load->library('session');
 
         // List all available languages
-        require_once BASEPATH.'vendor/languages.php';
-        foreach ($config['languages'] as $language)
-        {
-            $this->languages[$language] = $languages[$language];
-        }
-        unset($folder, $language);
-        //$this->languages = $config['languages'];
+        $this->languages = $config['languages'];
 
         // Set default language.
         // AS you can see, even if we set the default language
         // we do a little check up to make sure in exists on the
         // available languages list. If it doesn't, we set it to
         // CodeIgniter default language (english).
-        $this->default = $this->languages[config_item('language')];
-        /*$this->default = (array_key_exists($config['default'], $this->languages))
+        $this->default = (array_key_exists($config['default'], $this->languages))
                             ? $this->languages[$config['default']]
-                            : $this->languages[config_item('language')];*/
+                            : $this->languages[config_item('language')];
 
         // We now set the session and cookie names
         $this->session = ($config['session']) ? $config['session'] : 'lang';

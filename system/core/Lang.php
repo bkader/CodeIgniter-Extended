@@ -49,6 +49,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class CI_Lang {
 
 	/**
+	 * Language to fallback in case of issue
+	 *
+	 * @var string
+	 */
+	public $fallback = 'english';
+
+	/**
 	 * List of translations
 	 *
 	 * @var	array
@@ -69,24 +76,8 @@ class CI_Lang {
 	 */
 	public function __construct()
 	{
-		log_message('info', 'Language Class Initialized');
-		$this->_init();
-	}
-
-	// ------------------------------------------------------------------------
-	// ADDED METHOD | [edit]
-	// ------------------------------------------------------------------------
-	/**
-	 * Set locale
-	 *
-	 * @access  private
-	 * @param   void
-	 * @return  void
-	 */
-	private function _init()
-	{
 		$config =& get_config();
-		$lang = empty($config['language']) ? 'english' : $config['language'];
+		$lang = empty($config['language']) ? $this->fallback : $config['language'];
         T_setlocale(LC_MESSAGES, $lang);
 
         // Application Language then system's
@@ -95,7 +86,9 @@ class CI_Lang {
         T_bind_textdomain_codeset('application', 'UTF-8');
         T_textdomain('application');
         unset($lang);
+		log_message('info', 'Language Class Initialized');
 	}
+
 	// --------------------------------------------------------------------
 
 	// --------------------------------------------------------------------
@@ -135,7 +128,7 @@ class CI_Lang {
 		if (empty($idiom) OR ! preg_match('/^[a-z_-]+$/i', $idiom))
 		{
 			$config =& get_config();
-			$idiom = empty($config['language']) ? 'english' : $config['language'];
+			$idiom = empty($config['language']) ? $this->fallback : $config['language'];
 		}
 
 		if ($return === FALSE && isset($this->is_loaded[$langfile]) && $this->is_loaded[$langfile] === $idiom)
@@ -213,7 +206,7 @@ class CI_Lang {
 	 * @param	bool	$log_errors	Whether to log an error message if the line is not found
 	 * @return	string	Translation
 	 */
-	public function line($line, $log_errors = TRUE)
+	/*public function line($line, $log_errors = TRUE)
 	{
 		$value = isset($this->language[$line]) ? $this->language[$line] : FALSE;
 
@@ -224,6 +217,47 @@ class CI_Lang {
 		}
 
 		return $value;
-	}
+	}*/
+    public function line($line, $default = false, $log_errors = true)
+    {
+    	$value = (function_exists('dot'))
+    				? dot($this->language, $line, $default)
+    				: $this->dot($this->language, $line, $default);
+        if ($value === null and $default === false and $log_errors === true)
+        {
+            log_message('error', 'Could not find the language line "'.$line.'"');
+        }
+        return $value;
+    }
 
+    /**
+     * Access multidimensional array using
+     * dot-notation method.
+     *
+     * @param   array
+     * @param   string
+     * @param   mixed
+     * @return  mixed
+     */
+    private function dot(&$arr, $path = null, $default = null)
+    {
+        if ( ! $path)
+        {
+            user_error("Missing array path for array", E_USER_WARNING);
+        }
+        $parts = explode(".", $path);
+        $path  =& $arr;
+        foreach ($parts as $e)
+        {
+            if ( ! isset($path[$e]) or empty($path[$e]))
+            {
+                return $default;
+            }
+            $path =& $path[$e];
+        }
+        return $path;
+    }
 }
+
+/* End of file Lang.php */
+/* Location: ./system/core/Lang.php */

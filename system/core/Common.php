@@ -49,6 +49,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * @link		https://codeigniter.com/user_guide/
  */
 
+// NOTICE : This file was edited by @KaderBouyakoub
+
 // ------------------------------------------------------------------------
 
 if ( ! function_exists('is_php'))
@@ -280,13 +282,73 @@ if ( ! function_exists('get_config'))
 	}
 }
 
+if ( ! function_exists('load_config'))
+{
+	/**
+	 * Loads a config file
+	 *
+	 * This function lets load a config file even if the Config class
+	 * hasn't been instantiated yet
+     *
+     * @author 	Kader Bouyakoub  <contact@bkader.com>
+     * @link    @bkader          <github>
+     * @link    @KaderBouyakoub  <twitter>
+     *
+	 * @param	mixed
+	 * @return	void
+	 */
+	function &load_config($file = false)
+	{
+		static $config;
+		if ($file)
+		{
+			$filepath = APPPATH.'config/'.$file.EXT;
+			$found = false;
+			if (file_exists($filepath))
+			{
+				$found = true;
+				require_once($filepath);
+			}
+			// Is the config file in the environment folder?
+			if (file_exists($file_path = APPPATH.'config/'.ENVIRONMENT.'/'.$file.EXT))
+			{
+				require_once($file_path);
+			}
+			elseif ( ! $found)
+			{
+				set_status_header(503);
+				echo 'The configuration file "'.$file.'" does not exist.';
+				exit(3); // EXIT_CONFIG
+			}
+			else return $config;
+
+			// Does the $config array exist in the file?
+			if ( ! isset($config))
+			{
+				set_status_header(503);
+				echo 'Your "'.$file.'" config file does not appear to be formatted correctly.';
+				exit(3); // EXIT_CONFIG
+			}
+			print_r($config);
+			exit;
+			return $config;
+			
+		}
+		return false;
+	}
+}
+
 // ------------------------------------------------------------------------
 
 if ( ! function_exists('dot'))
 {
 	/**
 	 * Access multidimensional array using dot-notation
-	 *
+     *
+     * @author 	Kader Bouyakoub  <contact@bkader.com>
+     * @link    @bkader          <github>
+     * @link    @KaderBouyakoub  <twitter>
+     *
 	 * @param   string
 	 * @return  mixed
 	 */
@@ -339,6 +401,10 @@ if ( ! function_exists('config'))
 {
     /**
      * Returns config item using dot-notation
+     *
+     * @author 	Kader Bouyakoub  <contact@bkader.com>
+     * @link    @bkader          <github>
+     * @link    @KaderBouyakoub  <twitter>
      *
      * @access  public
      * @param   string
@@ -812,6 +878,25 @@ if ( ! function_exists('html_escape'))
 	}
 }
 
+if ( ! function_exists('e'))
+{
+    /**
+     * Alias of the above function
+     *
+     * @author 	Kader Bouyakoub  <contact@bkader.com>
+     * @link    @bkader          <github>
+     * @link    @KaderBouyakoub  <twitter>
+     *
+     * @param   string
+     * @param   boolean
+     * @return  string
+     */
+    function e($var, $double_encode = TRUE)
+    {
+        return html_escape($var, $double_encode);
+    }
+}
+
 // ------------------------------------------------------------------------
 
 if ( ! function_exists('_stringify_attributes'))
@@ -897,6 +982,209 @@ if ( ! function_exists('function_usable'))
 		return FALSE;
 	}
 }
+
+// ------------------------------------------------------------------------
+
+if ( ! function_exists('get_host'))
+{
+    /**
+     * Returns server's name
+     *
+     * @author 	Kader Bouyakoub  <contact@bkader.com>
+     * @link    @bkader          <github>
+     * @link    @KaderBouyakoub  <twitter>
+     *
+     * @access  public
+     * @param   void
+     * @return  string
+     */
+    function get_host()
+    {
+        if (isset($_SERVER['SERVER_NAME']))
+        {
+            return $_SERVER['SERVER_NAME'];
+        }
+        elseif (isset($_SERVER['HOSTNAME']))
+        {
+            return $_SERVER['HOSTNAME'];
+        }
+        elseif (isset($_SERVER['SERVER_ADDR']))
+        {
+            return strpos($_SERVER['SERVER_ADDR'], '::') === false
+                    ? $_SERVER['SERVER_ADDR']
+                    : '['.$_SERVER['SERVER_ADDR'].']';
+        }
+        else
+        {
+            return 'localhost';
+        }
+    }
+}
+
+// ------------------------------------------------------------------------
+
+if ( ! function_exists('urlinfo'))
+{
+    /**
+     * Returns an array of URL and URI data
+     *
+     * @author 	Kader Bouyakoub  <contact@bkader.com>
+     * @link    @bkader          <github>
+     * @link    @KaderBouyakoub  <twitter>
+     *
+     * @access  public
+     * @param   void
+     * @return  array
+     */
+    function urlinfo() 
+    {
+        if ( ! function_exists('path_merge'))
+        {
+            $CI =& get_instance();
+            $CI->load->helper('path');
+        }
+        $is_https        = is_https();
+        $server_protocol = is_https() ? 'https' : 'http';
+        $server_name     = get_host();
+
+        if (isset($_SERVER['SERVER_PORT']) and !(strpos($server_name, '::') === false ? strpos($server_name, ':') === false : strpos($server_name, ']:') === false)
+                and (($server_protocol == 'http'
+                and $_SERVER['SERVER_PORT'] != 80 ) || ($server_protocol == 'https' and $_SERVER['SERVER_PORT'] != 443)))
+        {
+            $server_name_extra = $server_name.':'.$_SERVER['SERVER_PORT'];
+            $port = (int) $_SERVER['SERVER_PORT'];
+
+        }
+        else
+        {
+            $server_name_extra = $server_name;
+            $port = $is_https ? 443 : 80;
+        }
+        $server_url = $server_protocol.'://'.$server_name_extra;
+
+        $script_name = $_SERVER['SCRIPT_NAME'];
+        $script_path = str_replace(basename($script_name), '', $script_name);
+
+        if (defined('FCPATH'))
+        {
+            $base_url = $server_url.rtrim(preg_replace('/'.preg_quote(str_replace(FCPATH, '', path_merge(FCPATH, $script_path).'/'), '/').'$/', '', $script_path), '/').'/';
+
+        }
+        else
+        {
+            $base_url = $server_url.'/';
+        }
+
+        $base_uri = parse_url($base_url, PHP_URL_PATH);
+
+        if (substr($base_uri, 0, 1) != '/')
+        {
+            $base_uri = '/'.$base_uri;
+        }
+
+        if (substr($base_uri, -1, 1) != '/')
+        {
+            $base_uri .= '/';
+        }
+        $current_uri = isset($_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI'] : '/';
+        $current_url = $server_url.$current_uri;
+        $server_url .= '/';
+
+        $current_uri_string   = parse_url($current_url, PHP_URL_PATH);
+        $current_query_string = parse_url($current_url, PHP_URL_QUERY);
+
+        return compact(
+            'base_url',
+            'base_uri',
+            'current_url',
+            'current_uri',
+            'current_uri_string',
+            'current_query_string',
+            'server_url',
+            'server_name',
+            'server_protocol',
+            'is_https',
+            'script_name',
+            'script_path',
+            'port'
+        );
+    }
+}
+
+// ------------------------------------------------------------------------
+
+if ( ! function_exists('str_to_bool'))
+{
+    /**
+     * Coverts a string boolean representation to a true boolean
+     *
+     * @author 	Kader Bouyakoub  <contact@bkader.com>
+     * @link    @bkader          <github>
+     * @link    @KaderBouyakoub  <twitter>
+     *
+     * @access  public
+     * @param   string
+     * @param   boolean
+     * @return  boolean
+     */
+    function str_to_bool($str, $strict = false)
+    {
+        // If no string is provided, we return 'false'
+        if (empty($str))
+        {
+            return false;
+        }
+
+        // If the string is already a boolean, no need to convert it
+        if (is_bool($str))
+        {
+            return $str;
+        }
+
+        $str = strtolower(@ (string) $str);
+        
+        if (in_array($str, array('no', 'n', 'false', 'off')))
+        {
+            return false;
+        }
+
+        if ($strict)
+        {
+            return in_array($str, array('yes', 'y', 'true', 'on', '1'));
+        }
+        return true;
+    }
+}
+
+if ( ! function_exists('is_str_to_bool'))
+{
+    /**
+     * Checks whether a given value can be a strict string
+     * representation or a true boolean
+     *
+     * @author 	Kader Bouyakoub  <contact@bkader.com>
+     * @link    @bkader          <github>
+     * @link    @KaderBouyakoub  <twitter>
+     *
+     * @access  public
+     * @param   string
+     * @param   boolean
+     * @return  boolean
+     */
+    function is_str_to_bool($str, $strict = false)
+    {
+        if ( ! $strict)
+        {
+            $str_test = @ (string) $str;
+            if (is_numeric($str_test))
+            {
+                return true;
+            }
+        }
+        return ( ! str_to_bool($str) or str_to_bool($str, true) );
+    }
+}
+
 
 /* End of file Common.php */
 /* Location: ./system/core/Common.php */

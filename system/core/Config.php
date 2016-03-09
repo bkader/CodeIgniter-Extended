@@ -395,7 +395,9 @@ class CI_Config {
      */
     public function get($item, $default = false)
     {
-        return $this->dot($this->config, $item, $default);
+        return (function_exists('dot'))
+        		? dot($this->config, $item, $default)
+        		: $this->dot($this->config, $item, $default);
     }
 
     /**
